@@ -20,6 +20,10 @@
 | Design an API | `wiki/tier3-working/api-design/overview.md` | `checklists/design-review.md` |
 | Add observability | `wiki/tier3-working/observability/overview.md` | `checklists/code-review.md` |
 | Write a commit message | `wiki/tier2-core/conventional-commits/overview.md` | `checklists/pre-commit.md` |
+| Set up source control / branching | `wiki/tier2-core/engineering-playbook/source-control.md` | `checklists/pre-commit.md` |
+| Plan a sprint / manage backlog | `wiki/tier2-core/engineering-playbook/agile-development.md` | `wiki/tier1-sources/swebok-v4/ka09-engineering-management.md` |
+| Improve developer experience | `wiki/tier2-core/engineering-playbook/developer-experience.md` | `checklists/pre-commit.md` |
+| Write or review documentation | `wiki/tier2-core/engineering-playbook/documentation-practices.md` | `checklists/code-review.md` |
 
 ---
 
@@ -117,6 +121,11 @@
 | `wiki/tier2-core/security-practices/zero-trust.md` | Zero Trust Architecture | NIST SP 800-207 | never trust, always verify, microsegmentation |
 | `wiki/tier2-core/conventional-commits/overview.md` | Conventional Commits Overview | conventionalcommits.org 1.0.0 / SWEBOK KA8 | commit message, feat, fix, BREAKING CHANGE, SemVer, changelog |
 | `wiki/tier2-core/conventional-commits/specification.md` | Conventional Commits Specification | conventionalcommits.org 1.0.0 | 16 rules, RFC 2119, footer format, type prefix, scope |
+| `wiki/tier2-core/engineering-playbook/overview.md` | Engineering Playbook Overview | Microsoft ISE / SWEBOK KA8, KA9, KA10, KA12 | playbook, ISE, engineering fundamentals, coverage map |
+| `wiki/tier2-core/engineering-playbook/source-control.md` | Source Control Practices | Microsoft ISE / SWEBOK KA8 | git, branch naming, PR workflow, commit hygiene, merge strategy, secrets |
+| `wiki/tier2-core/engineering-playbook/agile-development.md` | Agile Development Practices | Microsoft ISE / SWEBOK KA9, KA10 | agile, sprint, backlog, DoR, DoD, retrospective, working agreements, technical debt |
+| `wiki/tier2-core/engineering-playbook/developer-experience.md` | Developer Experience (DevEx) | Microsoft ISE / SWEBOK KA6, KA4 | DevEx, F5 contract, onboarding, build, test, start, debug, local mock |
+| `wiki/tier2-core/engineering-playbook/documentation-practices.md` | Documentation Practices | Microsoft ISE / SWEBOK KA12 | documentation, README, anti-patterns, OpenAPI, onboarding docs, PR description |
 
 ---
 
@@ -174,6 +183,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 |------|-------------|---------------|
 | Abstract Base Class (ABC) | `tier2-core/solid-principles/ocp.md` | `tier3-working/python/idioms.md` |
 | Access control | `tier1-sources/owasp/a01-broken-access-control.md` | `tier1-sources/swebok-v4/ka13-security.md` |
+| Agile development | `tier2-core/engineering-playbook/agile-development.md` | `tier1-sources/swebok-v4/ka10-process.md` |
 | ADR (Architecture Decision Record) | `tier1-sources/swebok-v4/ka02-architecture.md` | — |
 | Agile | `tier1-sources/swebok-v4/ka10-process.md` | `tier2-core/twelve-factor-app/overview.md` |
 | Algorithm complexity | `tier1-sources/swebok-v4/ka16-computing-foundations.md` | — |
@@ -186,7 +196,9 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Bandwidth fallacy | `tier2-core/distributed-systems/fallacies.md` | — |
 | bcrypt | `tier1-sources/owasp/a02-cryptographic-failures.md` | `tier2-core/security-practices/python-pyscg.md` |
 | Behavioral patterns | `tier2-core/design-patterns/behavioral.md` | `tier2-core/design-patterns/overview.md` |
-| Branch strategy | `tier1-sources/swebok-v4/ka08-config-management.md` | — |
+| Backlog management | `tier2-core/engineering-playbook/agile-development.md` | `tier1-sources/swebok-v4/ka09-engineering-management.md` |
+| Branch naming | `tier2-core/engineering-playbook/source-control.md` | `tier1-sources/swebok-v4/ka08-config-management.md` |
+| Branch strategy | `tier1-sources/swebok-v4/ka08-config-management.md` | `tier2-core/engineering-playbook/source-control.md` |
 | BREAKING CHANGE | `tier2-core/conventional-commits/overview.md` | `tier2-core/conventional-commits/specification.md` |
 | Builder pattern | `tier2-core/design-patterns/creational.md` | — |
 | Bulkhead pattern | `tier2-core/distributed-systems/resilience-patterns.md` | — |
@@ -200,6 +212,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Code coverage | `tier1-sources/swebok-v4/ka05-testing.md` | `tier2-core/testing-strategies/mutation-testing.md` |
 | Code review | `tier1-sources/swebok-v4/ka12-quality.md` | `tier3-working/checklists/code-review.md` |
 | Cohesion | `tier1-sources/swebok-v4/ka03-design.md` | `tier2-core/solid-principles/srp.md` |
+| CONTRIBUTING.md | `tier2-core/engineering-playbook/source-control.md` | `tier2-core/engineering-playbook/documentation-practices.md` |
 | Command pattern | `tier2-core/design-patterns/behavioral.md` | — |
 | Config (12-Factor III) | `tier2-core/twelve-factor-app/factors.md` | `tier1-sources/owasp/a05-security-misconfiguration.md` |
 | Connection pooling | `tier3-working/database-patterns/query-optimization.md` | — |
@@ -217,7 +230,12 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Database migrations | `tier3-working/database-patterns/migrations.md` | — |
 | Decorator pattern | `tier2-core/design-patterns/structural.md` | — |
 | Defensive programming | `tier1-sources/swebok-v4/ka04-construction.md` | — |
+| Definition of Done (DoD) | `tier2-core/engineering-playbook/agile-development.md` | `tier1-sources/swebok-v4/ka12-quality.md` |
+| Definition of Ready (DoR) | `tier2-core/engineering-playbook/agile-development.md` | `tier1-sources/swebok-v4/ka09-engineering-management.md` |
 | Dependency injection | `tier2-core/solid-principles/dip.md` | `tier3-working/worked-examples/dependency-injection.md` |
+| Developer experience | `tier2-core/engineering-playbook/developer-experience.md` | `tier1-sources/swebok-v4/ka06-operations.md` |
+| DevEx | `tier2-core/engineering-playbook/developer-experience.md` | — |
+| Documentation | `tier2-core/engineering-playbook/documentation-practices.md` | `tier1-sources/swebok-v4/ka12-quality.md` |
 | Dependency Inversion Principle | `tier2-core/solid-principles/dip.md` | `tier1-sources/swebok-v4/ka03-design.md` |
 | Deserialization (insecure) | `tier1-sources/owasp/a08-software-integrity-failures.md` | `tier2-core/security-practices/python-pyscg.md` |
 | DevOps | `tier1-sources/swebok-v4/ka06-operations.md` | `tier1-sources/swebok-v4/ka10-process.md` |
@@ -226,13 +244,16 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Domain-Driven Design | `tier3-working/database-patterns/repository-pattern.md` | `tier2-core/solid-principles/srp.md` |
 | E2E testing | `tier2-core/testing-strategies/test-pyramid.md` | `tier1-sources/swebok-v4/ka05-testing.md` |
 | Effective Go | `tier3-working/golang/idioms.md` | `tier3-working/golang/overview.md` |
+| Engineering Fundamentals Playbook | `tier2-core/engineering-playbook/overview.md` | — |
 | Error budget | `tier3-working/observability/slo-sli-sla.md` | — |
 | Error handling | `tier3-working/worked-examples/error-handling.md` | `tier1-sources/python-peps/pep-020-zen.md` |
 | Ethics | `tier1-sources/acm-ieee-ethics/code-of-ethics.md` | `tier1-sources/swebok-v4/ka14-professional-practice.md` |
 | Event-driven architecture | `tier1-sources/swebok-v4/ka02-architecture.md` | `tier2-core/distributed-systems/overview.md` |
 | Exponential backoff | `tier2-core/distributed-systems/resilience-patterns.md` | — |
 | Facade pattern | `tier2-core/design-patterns/structural.md` | — |
+| F5 Contract | `tier2-core/engineering-playbook/developer-experience.md` | — |
 | Factory pattern | `tier2-core/design-patterns/creational.md` | — |
+| Feature flag | `tier2-core/engineering-playbook/source-control.md` | — |
 | feat (commit type) | `tier2-core/conventional-commits/overview.md` | `tier2-core/conventional-commits/specification.md` |
 | fix (commit type) | `tier2-core/conventional-commits/overview.md` | `tier2-core/conventional-commits/specification.md` |
 | Fallacies of distributed computing | `tier2-core/distributed-systems/fallacies.md` | — |
@@ -245,6 +266,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | goroutine | `tier3-working/golang/concurrency.md` | — |
 | gRPC | `tier3-working/api-design/grpc.md` | — |
 | Hardcoded secrets | `tier1-sources/swebok-v4/ka13-security.md` | `tier2-core/security-practices/python-pyscg.md` |
+| git revert | `tier2-core/engineering-playbook/source-control.md` | `tier1-sources/swebok-v4/ka08-config-management.md` |
 | Histogram (metrics) | `tier3-working/observability/metrics.md` | — |
 | Hypothesis (library) | `tier2-core/testing-strategies/property-based-testing.md` | `tier1-sources/swebok-v4/ka05-testing.md` |
 | Idempotency | `tier2-core/distributed-systems/resilience-patterns.md` | — |
@@ -260,6 +282,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Jitter (backoff) | `tier2-core/distributed-systems/resilience-patterns.md` | — |
 | JSON logging | `tier3-working/observability/structured-logging.md` | — |
 | Keyword argument | `tier3-working/python/idioms.md` | — |
+| Knowledge silo | `tier2-core/engineering-playbook/documentation-practices.md` | — |
 | Latency (distributed) | `tier2-core/distributed-systems/cap-pacelc.md` | `tier2-core/distributed-systems/fallacies.md` |
 | Layered architecture | `tier1-sources/swebok-v4/ka02-architecture.md` | — |
 | Least privilege | `tier1-sources/owasp/a01-broken-access-control.md` | `tier1-sources/swebok-v4/ka13-security.md` |
@@ -269,6 +292,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Logging | `tier3-working/observability/structured-logging.md` | `tier1-sources/owasp/a09-logging-monitoring.md` |
 | LSP | `tier2-core/solid-principles/lsp.md` | — |
 | Make-vs-buy | `tier1-sources/swebok-v4/ka15-economics.md` | — |
+| Merge strategy | `tier2-core/engineering-playbook/source-control.md` | `tier1-sources/swebok-v4/ka08-config-management.md` |
 | Microservices | `tier1-sources/swebok-v4/ka02-architecture.md` | `tier2-core/distributed-systems/overview.md` |
 | Migration (database) | `tier3-working/database-patterns/migrations.md` | — |
 | Mock (testing) | `tier2-core/testing-strategies/test-pyramid.md` | `tier3-working/worked-examples/dependency-injection.md` |
@@ -278,6 +302,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | mutmut | `tier2-core/testing-strategies/mutation-testing.md` | — |
 | mypy | `tier1-sources/python-peps/pep-484-type-hints.md` | `tier3-working/python/type-system.md` |
 | N+1 query | `tier3-working/database-patterns/query-optimization.md` | — |
+| Onboarding | `tier2-core/engineering-playbook/developer-experience.md` | `tier2-core/engineering-playbook/documentation-practices.md` |
 | Named return values (Go) | `tier3-working/golang/idioms.md` | — |
 | Naming conventions | `tier1-sources/python-peps/pep-008-style.md` | `tier3-working/golang/idioms.md` |
 | NFR (non-functional requirements) | `tier1-sources/swebok-v4/ka01-requirements.md` | — |
@@ -301,6 +326,8 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | pip-audit | `tier1-sources/owasp/a06-vulnerable-components.md` | `tier3-working/checklists/security-review.md` |
 | Process model | `tier1-sources/swebok-v4/ka10-process.md` | — |
 | Project management | `tier1-sources/swebok-v4/ka09-engineering-management.md` | — |
+| Pull request | `tier2-core/engineering-playbook/source-control.md` | `tier3-working/checklists/code-review.md` |
+| Pull request template | `tier2-core/engineering-playbook/source-control.md` | — |
 | Property-based testing | `tier2-core/testing-strategies/property-based-testing.md` | `tier1-sources/swebok-v4/ka05-testing.md` |
 | Protocol (Python) | `tier2-core/solid-principles/isp.md` | `tier3-working/python/type-system.md` |
 | protobuf | `tier3-working/api-design/grpc.md` | — |
@@ -314,7 +341,9 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | pyscg-0041 | `tier2-core/security-practices/python-pyscg.md` | — |
 | Quality attributes | `tier1-sources/swebok-v4/ka12-quality.md` | `tier1-sources/swebok-v4/ka02-architecture.md` |
 | Rate limiting | `tier1-sources/owasp/a07-auth-failures.md` | — |
+| README.md | `tier2-core/engineering-playbook/documentation-practices.md` | `tier2-core/engineering-playbook/source-control.md` |
 | Refactoring | `tier1-sources/swebok-v4/ka07-maintenance.md` | `tier1-sources/swebok-v4/ka04-construction.md` |
+| Retrospective | `tier2-core/engineering-playbook/agile-development.md` | `tier1-sources/swebok-v4/ka10-process.md` |
 | Release management | `tier1-sources/swebok-v4/ka08-config-management.md` | `tier2-core/twelve-factor-app/factors.md` |
 | Release automation | `tier2-core/conventional-commits/overview.md` | `tier1-sources/swebok-v4/ka08-config-management.md` |
 | Repository pattern | `tier3-working/database-patterns/repository-pattern.md` | `tier3-working/worked-examples/repository-pattern.md` |
@@ -327,6 +356,9 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Runbook | `tier1-sources/swebok-v4/ka06-operations.md` | — |
 | SBOM | `tier1-sources/owasp/a06-vulnerable-components.md` | — |
 | Scrum | `tier1-sources/swebok-v4/ka10-process.md` | — |
+| Source control practices | `tier2-core/engineering-playbook/source-control.md` | `tier1-sources/swebok-v4/ka08-config-management.md` |
+| Sprint | `tier2-core/engineering-playbook/agile-development.md` | `tier1-sources/swebok-v4/ka09-engineering-management.md` |
+| Sprint planning | `tier2-core/engineering-playbook/agile-development.md` | — |
 | Secret management | `tier2-core/security-practices/python-pyscg.md` | `tier1-sources/owasp/a05-security-misconfiguration.md` |
 | Semantic versioning | `tier2-core/conventional-commits/overview.md` | `tier1-sources/swebok-v4/ka08-config-management.md` |
 | SemVer | `tier2-core/conventional-commits/overview.md` | `tier2-core/conventional-commits/specification.md` |
@@ -351,7 +383,8 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Supply chain security | `tier1-sources/owasp/a08-software-integrity-failures.md` | — |
 | SWEBOK | `wiki/tier1-sources/swebok-v4/overview.md` | — |
 | TDD | `tier1-sources/swebok-v4/ka05-testing.md` | `tier2-core/testing-strategies/overview.md` |
-| Technical debt | `tier1-sources/swebok-v4/ka07-maintenance.md` | `tier1-sources/swebok-v4/ka15-economics.md` |
+| Technical debt | `tier1-sources/swebok-v4/ka07-maintenance.md` | `tier2-core/engineering-playbook/agile-development.md` |
+| Time to First Commit | `tier2-core/engineering-playbook/developer-experience.md` | — |
 | Template Method pattern | `tier2-core/design-patterns/behavioral.md` | — |
 | Test doubles | `tier2-core/testing-strategies/test-pyramid.md` | — |
 | Test pyramid | `tier2-core/testing-strategies/test-pyramid.md` | `tier1-sources/swebok-v4/ka05-testing.md` |
@@ -363,9 +396,10 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | UML | `tier1-sources/swebok-v4/ka11-models-methods.md` | — |
 | Unit testing | `tier2-core/testing-strategies/test-pyramid.md` | `tier1-sources/swebok-v4/ka05-testing.md` |
 | URL validation | `tier1-sources/owasp/a10-ssrf.md` | — |
-| Version control | `tier1-sources/swebok-v4/ka08-config-management.md` | — |
+| Version control | `tier1-sources/swebok-v4/ka08-config-management.md` | `tier2-core/engineering-playbook/source-control.md` |
 | Virtual environment | `tier3-working/python/overview.md` | — |
 | WaitGroup (Go) | `tier3-working/golang/concurrency.md` | — |
+| Working agreements | `tier2-core/engineering-playbook/agile-development.md` | — |
 | with statement | `tier3-working/python/idioms.md` | `tier2-core/security-practices/python-pyscg.md` |
 | XXE | `tier1-sources/owasp/a03-injection.md` | — |
 | Zen of Python | `tier1-sources/python-peps/pep-020-zen.md` | `tier1-sources/swebok-v4/ka04-construction.md` |

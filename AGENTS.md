@@ -62,6 +62,10 @@ For each task type, read the listed files **in order** before producing output:
 | **Ethics / professional judgment** | `wiki/tier1-sources/acm-ieee-ethics/code-of-ethics.md` | `wiki/tier1-sources/swebok-v4/ka14-professional-practice.md` | — |
 | **Release / deployment** | `wiki/tier1-sources/swebok-v4/ka06-operations.md` | `wiki/tier2-core/twelve-factor-app/factors.md`, `wiki/tier3-working/observability/slo-sli-sla.md` | `wiki/tier3-working/checklists/pre-commit.md` |
 | **Write commit messages** | `wiki/tier2-core/conventional-commits/overview.md` | `wiki/tier2-core/conventional-commits/specification.md` | `wiki/tier3-working/checklists/pre-commit.md` |
+| **Set up / manage source control** | `wiki/tier2-core/engineering-playbook/source-control.md` | `wiki/tier1-sources/swebok-v4/ka08-config-management.md` | `wiki/tier3-working/checklists/pre-commit.md` |
+| **Sprint planning / backlog management** | `wiki/tier2-core/engineering-playbook/agile-development.md` | `wiki/tier1-sources/swebok-v4/ka09-engineering-management.md` | — |
+| **Developer experience / onboarding** | `wiki/tier2-core/engineering-playbook/developer-experience.md` | `wiki/tier2-core/engineering-playbook/documentation-practices.md` | `wiki/tier3-working/checklists/pre-commit.md` |
+| **Write or review documentation** | `wiki/tier2-core/engineering-playbook/documentation-practices.md` | `wiki/tier3-working/api-design/openapi.md` | `wiki/tier3-working/checklists/code-review.md` |
 
 ---
 
@@ -179,6 +183,10 @@ These paths are defined in full in `KNOWLEDGE_GRAPH.md`. Abbreviated here for qu
 | Design a REST API | api-design/overview → rest-conventions → openapi → a01 + a03 → design-review |
 | Add observability | observability/overview → structured-logging → metrics → slo-sli-sla |
 | Write commit messages | conventional-commits/overview → conventional-commits/specification → pre-commit |
+| Set up source control | engineering-playbook/source-control → ka08-config-management → pre-commit |
+| Plan a sprint | engineering-playbook/agile-development → ka09-engineering-management |
+| Onboard a developer | engineering-playbook/developer-experience → engineering-playbook/documentation-practices |
+| Write documentation | engineering-playbook/documentation-practices → api-design/openapi (if API) |
 
 ---
 

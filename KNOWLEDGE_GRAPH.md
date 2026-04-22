@@ -96,6 +96,21 @@
 | conventional-commits/overview | COMPLEMENTS | twelve-factor-app/factors | Both enforce process discipline: commits communicate scope; 12-factor governs deployment |
 | conventional-commits/specification | REFERENCES | conventional-commits/overview | Detailed 16-rule normative spec; overview is the entry point |
 | code-review checklist | ENFORCES | conventional-commits/overview | Commit message format checked at review time |
+| engineering-playbook/source-control | EXTENDS | ka08-config-management | Playbook operationalizes SCM policy as Git-specific branch and PR practices |
+| engineering-playbook/source-control | COMPLEMENTS | conventional-commits/overview | Both govern commit discipline; CC defines format, playbook defines workflow |
+| engineering-playbook/source-control | IMPLEMENTS | ka08-config-management | Branch naming, merge strategy, and PR workflow implement KA8 change management |
+| engineering-playbook/agile-development | EXTENDS | ka09-engineering-management | Playbook operationalizes estimation, planning, risk as sprint ceremonies and DoR/DoD |
+| engineering-playbook/agile-development | EXTENDS | ka10-process | Sprint model, retrospectives, and working agreements are the KA10 process model in practice |
+| engineering-playbook/agile-development | IMPLEMENTS | ka12-quality | DoD is the team-level quality gate; retrospectives drive process improvement |
+| engineering-playbook/developer-experience | EXTENDS | ka06-operations | F5 Contract and essential tasks operationalize KA6's operational readiness requirements |
+| engineering-playbook/developer-experience | IMPLEMENTS | solid-principles/dip | Dependency injection for local mocks is the DevEx application of DIP |
+| engineering-playbook/developer-experience | REQUIRES | engineering-playbook/documentation-practices | Onboarding docs are a DevEx dependency |
+| engineering-playbook/documentation-practices | IMPLEMENTS | ka12-quality | Documentation anti-patterns and DoD standards implement KA12 quality assurance |
+| engineering-playbook/documentation-practices | COMPLEMENTS | api-design/openapi | Documentation practices mandate OpenAPI for all HTTP APIs |
+| engineering-playbook/overview | REFERENCES | engineering-playbook/source-control | Primary sub-page for source control practices |
+| engineering-playbook/overview | REFERENCES | engineering-playbook/agile-development | Primary sub-page for agile practices |
+| engineering-playbook/overview | REFERENCES | engineering-playbook/developer-experience | Primary sub-page for DevEx |
+| engineering-playbook/overview | REFERENCES | engineering-playbook/documentation-practices | Primary sub-page for documentation |
 
 ---
 
@@ -203,12 +218,36 @@ These are the recommended reading sequences for common agent tasks. Follow in or
 
 ### "Write a Commit Message"
 ```
-1. wiki/tier2-core/conventional-commits/overview.md     # Format, type taxonomy, SemVer mapping
-2. wiki/tier2-core/conventional-commits/specification.md # 16 formal rules for ambiguous cases
-3. wiki/tier3-working/checklists/pre-commit.md          # Apply before every commit
+1. wiki/tier2-core/conventional-commits/overview.md        # Format, type taxonomy, SemVer mapping
+2. wiki/tier2-core/conventional-commits/specification.md   # 16 formal rules for ambiguous cases
+3. wiki/tier3-working/checklists/pre-commit.md             # Apply before every commit
+```
+
+### "Set Up a New Repository"
+```
+1. wiki/tier2-core/engineering-playbook/source-control.md         # Branch strategy, protection rules, essential files
+2. wiki/tier1-sources/swebok-v4/ka08-config-management.md         # SCM policy and release strategy
+3. wiki/tier2-core/conventional-commits/overview.md               # Configure commit convention
+4. wiki/tier2-core/engineering-playbook/documentation-practices.md # README and CONTRIBUTING.md minimum standard
+5. wiki/tier3-working/checklists/pre-commit.md                    # Pre-commit hook setup
+```
+
+### "Onboard a New Developer"
+```
+1. wiki/tier2-core/engineering-playbook/developer-experience.md   # F5 Contract expectations, essential tasks
+2. wiki/tier2-core/engineering-playbook/documentation-practices.md # README/CONTRIBUTING standards
+3. wiki/tier2-core/engineering-playbook/source-control.md          # Branch naming and PR workflow
+4. wiki/tier2-core/engineering-playbook/agile-development.md       # Working agreements and DoD
+```
+
+### "Start a Sprint"
+```
+1. wiki/tier2-core/engineering-playbook/agile-development.md      # DoR, DoD, sprint ceremonies
+2. wiki/tier1-sources/swebok-v4/ka09-engineering-management.md    # Estimation and risk management
+3. wiki/tier1-sources/swebok-v4/ka10-process.md                   # Process model authority
 ```
 
 ---
 
 *This file is part of the software-backend-wiki. Update when new entities or relationships are added.*
-*Last updated: 2026-04-22*
+*Last updated: 2026-04-22 (engineering-playbook added)*

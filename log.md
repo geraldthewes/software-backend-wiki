@@ -117,3 +117,12 @@ Append-only record of all ingest, creation, and update events. Never edit or del
 | 2026-04-22 | UPDATE | index.md | — | claude-sonnet-4-6 | Added Conventional Commits entries to Quick Reference, Tier 2 table, and keyword index |
 | 2026-04-22 | UPDATE | AGENTS.md | — | claude-sonnet-4-6 | Added "Write commit messages" row to Task Routing Table and Quick Reference |
 | 2026-04-22 | UPDATE | KNOWLEDGE_GRAPH.md | — | claude-sonnet-4-6 | Added Conventional Commits relationships and "Write a Commit Message" navigation path |
+| 2026-04-22 | INGEST | https://microsoft.github.io/code-with-engineering-playbook/ | Microsoft ISE | human | Microsoft Engineering Fundamentals Playbook; source for new Tier 2 engineering-playbook section |
+| 2026-04-22 | CREATE | wiki/tier2-core/engineering-playbook/overview.md | Microsoft ISE Playbook | claude-sonnet-4-6 | Playbook orientation: coverage map, core philosophy, tier relationships |
+| 2026-04-22 | CREATE | wiki/tier2-core/engineering-playbook/source-control.md | Microsoft ISE Playbook — Source Control / Git Guidance / Pull Requests | claude-sonnet-4-6 | Branch naming, commit best practices, PR workflow, merge strategies, rollback, secrets |
+| 2026-04-22 | CREATE | wiki/tier2-core/engineering-playbook/agile-development.md | Microsoft ISE Playbook — Agile Development / Backlog Management | claude-sonnet-4-6 | 8 essential elements, DoR, DoD, backlog management, working agreements, sprint ceremonies, AI tooling |
+| 2026-04-22 | CREATE | wiki/tier2-core/engineering-playbook/developer-experience.md | Microsoft ISE Playbook — Developer Experience | claude-sonnet-4-6 | F5 Contract, essential tasks, DevEx metrics, organizational roles, implementation strategies |
+| 2026-04-22 | CREATE | wiki/tier2-core/engineering-playbook/documentation-practices.md | Microsoft ISE Playbook — Documentation | claude-sonnet-4-6 | 8 anti-patterns, 7 doc types, quality standards, README minimum, OpenAPI requirement |
+| 2026-04-22 | UPDATE | index.md | — | claude-sonnet-4-6 | Added engineering-playbook entries to Quick Reference, Tier 2 table, and keyword index |
+| 2026-04-22 | UPDATE | AGENTS.md | — | claude-sonnet-4-6 | Added source control, agile, DevEx, and documentation rows to Task Routing Table |
+| 2026-04-22 | UPDATE | KNOWLEDGE_GRAPH.md | — | claude-sonnet-4-6 | Added 16 engineering-playbook relationships and 3 new navigation paths |
