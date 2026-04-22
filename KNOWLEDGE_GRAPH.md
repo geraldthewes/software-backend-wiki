@@ -91,6 +91,11 @@
 | testing-review checklist | ENFORCES | mutation-testing | Mutation score is a testing review item |
 | cap-pacelc | CONFLICTS_WITH | availability-vs-consistency | CP systems sacrifice availability; AP sacrifice consistency |
 | twelve-factor/III-config | COMPLEMENTS | pyscg-0041 | Both mandate externalizing configuration and secrets |
+| conventional-commits/overview | EXTENDS | ka08-config-management | Conventional Commits formalizes commit message discipline within SCM |
+| conventional-commits/overview | IMPLEMENTS | ka08-config-management | Provides the machine-readable commit format for automated release tooling |
+| conventional-commits/overview | COMPLEMENTS | twelve-factor-app/factors | Both enforce process discipline: commits communicate scope; 12-factor governs deployment |
+| conventional-commits/specification | REFERENCES | conventional-commits/overview | Detailed 16-rule normative spec; overview is the entry point |
+| code-review checklist | ENFORCES | conventional-commits/overview | Commit message format checked at review time |
 
 ---
 
@@ -196,7 +201,14 @@ These are the recommended reading sequences for common agent tasks. Follow in or
 6. wiki/tier3-working/worked-examples/repository-pattern.md           # Concrete Python example
 ```
 
+### "Write a Commit Message"
+```
+1. wiki/tier2-core/conventional-commits/overview.md     # Format, type taxonomy, SemVer mapping
+2. wiki/tier2-core/conventional-commits/specification.md # 16 formal rules for ambiguous cases
+3. wiki/tier3-working/checklists/pre-commit.md          # Apply before every commit
+```
+
 ---
 
 *This file is part of the software-backend-wiki. Update when new entities or relationships are added.*
-*Last updated: 2026-04-14*
+*Last updated: 2026-04-22*

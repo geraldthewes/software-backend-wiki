@@ -19,6 +19,7 @@
 | Design a database layer | `wiki/tier3-working/database-patterns/overview.md` | `checklists/security-review.md` |
 | Design an API | `wiki/tier3-working/api-design/overview.md` | `checklists/design-review.md` |
 | Add observability | `wiki/tier3-working/observability/overview.md` | `checklists/code-review.md` |
+| Write a commit message | `wiki/tier2-core/conventional-commits/overview.md` | `checklists/pre-commit.md` |
 
 ---
 
@@ -114,6 +115,8 @@
 | `wiki/tier2-core/security-practices/python-pyscg.md` | Python Secure Coding | Pyscg | pyscg-0010, parameterized queries, pickle, secrets |
 | `wiki/tier2-core/security-practices/threat-modeling.md` | Threat Modeling | STRIDE | STRIDE, attack surface, trust boundaries |
 | `wiki/tier2-core/security-practices/zero-trust.md` | Zero Trust Architecture | NIST SP 800-207 | never trust, always verify, microsegmentation |
+| `wiki/tier2-core/conventional-commits/overview.md` | Conventional Commits Overview | conventionalcommits.org 1.0.0 / SWEBOK KA8 | commit message, feat, fix, BREAKING CHANGE, SemVer, changelog |
+| `wiki/tier2-core/conventional-commits/specification.md` | Conventional Commits Specification | conventionalcommits.org 1.0.0 | 16 rules, RFC 2119, footer format, type prefix, scope |
 
 ---
 
@@ -184,10 +187,14 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | bcrypt | `tier1-sources/owasp/a02-cryptographic-failures.md` | `tier2-core/security-practices/python-pyscg.md` |
 | Behavioral patterns | `tier2-core/design-patterns/behavioral.md` | `tier2-core/design-patterns/overview.md` |
 | Branch strategy | `tier1-sources/swebok-v4/ka08-config-management.md` | — |
+| BREAKING CHANGE | `tier2-core/conventional-commits/overview.md` | `tier2-core/conventional-commits/specification.md` |
 | Builder pattern | `tier2-core/design-patterns/creational.md` | — |
 | Bulkhead pattern | `tier2-core/distributed-systems/resilience-patterns.md` | — |
 | CAP theorem | `tier2-core/distributed-systems/cap-pacelc.md` | `tier1-sources/swebok-v4/ka02-architecture.md` |
+| CHANGELOG | `tier2-core/conventional-commits/overview.md` | `tier1-sources/swebok-v4/ka08-config-management.md` |
 | CI/CD | `tier1-sources/swebok-v4/ka06-operations.md` | `tier2-core/twelve-factor-app/factors.md` |
+| Commit message | `tier2-core/conventional-commits/overview.md` | `tier2-core/conventional-commits/specification.md` |
+| Conventional Commits | `tier2-core/conventional-commits/overview.md` | `tier2-core/conventional-commits/specification.md` |
 | CIA triad | `tier1-sources/swebok-v4/ka13-security.md` | — |
 | Circuit breaker | `tier2-core/distributed-systems/resilience-patterns.md` | — |
 | Code coverage | `tier1-sources/swebok-v4/ka05-testing.md` | `tier2-core/testing-strategies/mutation-testing.md` |
@@ -226,6 +233,8 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Exponential backoff | `tier2-core/distributed-systems/resilience-patterns.md` | — |
 | Facade pattern | `tier2-core/design-patterns/structural.md` | — |
 | Factory pattern | `tier2-core/design-patterns/creational.md` | — |
+| feat (commit type) | `tier2-core/conventional-commits/overview.md` | `tier2-core/conventional-commits/specification.md` |
+| fix (commit type) | `tier2-core/conventional-commits/overview.md` | `tier2-core/conventional-commits/specification.md` |
 | Fallacies of distributed computing | `tier2-core/distributed-systems/fallacies.md` | — |
 | Formal methods | `tier1-sources/swebok-v4/ka11-models-methods.md` | — |
 | Functional core / imperative shell | `tier3-working/python/functional-core.md` | `tier1-sources/swebok-v4/ka03-design.md` |
@@ -307,6 +316,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Rate limiting | `tier1-sources/owasp/a07-auth-failures.md` | — |
 | Refactoring | `tier1-sources/swebok-v4/ka07-maintenance.md` | `tier1-sources/swebok-v4/ka04-construction.md` |
 | Release management | `tier1-sources/swebok-v4/ka08-config-management.md` | `tier2-core/twelve-factor-app/factors.md` |
+| Release automation | `tier2-core/conventional-commits/overview.md` | `tier1-sources/swebok-v4/ka08-config-management.md` |
 | Repository pattern | `tier3-working/database-patterns/repository-pattern.md` | `tier3-working/worked-examples/repository-pattern.md` |
 | Requirements | `tier1-sources/swebok-v4/ka01-requirements.md` | — |
 | Resilience | `tier2-core/distributed-systems/resilience-patterns.md` | — |
@@ -318,6 +328,8 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | SBOM | `tier1-sources/owasp/a06-vulnerable-components.md` | — |
 | Scrum | `tier1-sources/swebok-v4/ka10-process.md` | — |
 | Secret management | `tier2-core/security-practices/python-pyscg.md` | `tier1-sources/owasp/a05-security-misconfiguration.md` |
+| Semantic versioning | `tier2-core/conventional-commits/overview.md` | `tier1-sources/swebok-v4/ka08-config-management.md` |
+| SemVer | `tier2-core/conventional-commits/overview.md` | `tier2-core/conventional-commits/specification.md` |
 | Security misconfiguration | `tier1-sources/owasp/a05-security-misconfiguration.md` | — |
 | Service discovery | `tier2-core/distributed-systems/fallacies.md` | — |
 | Session management | `tier1-sources/owasp/a07-auth-failures.md` | — |

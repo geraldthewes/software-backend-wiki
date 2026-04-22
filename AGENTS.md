@@ -61,6 +61,7 @@ For each task type, read the listed files **in order** before producing output:
 | **Observability / logging** | `wiki/tier3-working/observability/overview.md` | `wiki/tier3-working/observability/structured-logging.md`, `wiki/tier1-sources/owasp/a09-logging-monitoring.md` | `wiki/tier3-working/checklists/code-review.md` |
 | **Ethics / professional judgment** | `wiki/tier1-sources/acm-ieee-ethics/code-of-ethics.md` | `wiki/tier1-sources/swebok-v4/ka14-professional-practice.md` | — |
 | **Release / deployment** | `wiki/tier1-sources/swebok-v4/ka06-operations.md` | `wiki/tier2-core/twelve-factor-app/factors.md`, `wiki/tier3-working/observability/slo-sli-sla.md` | `wiki/tier3-working/checklists/pre-commit.md` |
+| **Write commit messages** | `wiki/tier2-core/conventional-commits/overview.md` | `wiki/tier2-core/conventional-commits/specification.md` | `wiki/tier3-working/checklists/pre-commit.md` |
 
 ---
 
@@ -177,6 +178,7 @@ These paths are defined in full in `KNOWLEDGE_GRAPH.md`. Abbreviated here for qu
 | Build a distributed system | ka02 → cap-pacelc → fallacies → resilience-patterns → twelve-factor-app |
 | Design a REST API | api-design/overview → rest-conventions → openapi → a01 + a03 → design-review |
 | Add observability | observability/overview → structured-logging → metrics → slo-sli-sla |
+| Write commit messages | conventional-commits/overview → conventional-commits/specification → pre-commit |
 
 ---
 

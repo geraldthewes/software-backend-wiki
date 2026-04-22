@@ -111,3 +111,9 @@ Append-only record of all ingest, creation, and update events. Never edit or del
 | 2026-04-14 | CREATE | wiki/tier3-working/worked-examples/dependency-injection.md | SOLID-D | claude-sonnet-4-6 | Dependency injection worked example (Python) |
 | 2026-04-14 | CREATE | wiki/tier3-working/worked-examples/error-handling.md | PEP 20 | claude-sonnet-4-6 | Error handling worked example (Python) |
 | 2026-04-14 | CREATE | wiki/tier4-archive/README.md | — | claude-sonnet-4-6 | Archive policy |
+| 2026-04-22 | INGEST | https://www.conventionalcommits.org/en/v1.0.0/ | conventionalcommits.org | human | Conventional Commits 1.0.0 specification; source for new Tier 2 pages |
+| 2026-04-22 | CREATE | wiki/tier2-core/conventional-commits/overview.md | conventionalcommits.org 1.0.0 | claude-sonnet-4-6 | Conventional Commits overview: format, type taxonomy, SemVer mapping, agent guidance |
+| 2026-04-22 | CREATE | wiki/tier2-core/conventional-commits/specification.md | conventionalcommits.org 1.0.0 | claude-sonnet-4-6 | Full normative 16-rule spec with examples and FAQ |
+| 2026-04-22 | UPDATE | index.md | — | claude-sonnet-4-6 | Added Conventional Commits entries to Quick Reference, Tier 2 table, and keyword index |
+| 2026-04-22 | UPDATE | AGENTS.md | — | claude-sonnet-4-6 | Added "Write commit messages" row to Task Routing Table and Quick Reference |
+| 2026-04-22 | UPDATE | KNOWLEDGE_GRAPH.md | — | claude-sonnet-4-6 | Added Conventional Commits relationships and "Write a Commit Message" navigation path |
