@@ -31,8 +31,24 @@ These four rules apply to every Python file an agent writes or reviews:
 |------|----------------|
 | wiki/tier3-working/python/idioms.md | Pythonic patterns: comprehensions, dataclasses, unpacking, generators, anti-patterns |
 | wiki/tier3-working/python/type-system.md | `typing` module guide: Protocols, TypeVar, Literal, TypedDict, mypy config |
-| wiki/tier3-working/python/functional-core.md | Functional Core / Imperative Shell pattern; pure functions; testable business logic |
-| wiki/tier3-working/python/async-patterns.md | asyncio: gather, TaskGroup, aiohttp, timeouts, sync/async boundaries |
+| wiki/tier3-working/python/functional-core.md | Functional Core / Imperative Shell pattern; pure functions; itertools, functools, operator |
+| wiki/tier3-working/python/async-patterns.md | asyncio: gather, TaskGroup, aiohttp, timeouts, sync/async boundaries, synchronization |
+| wiki/tier3-working/python/logging.md | logging module: levels, handlers, formatters, configuration, NullHandler for libraries |
+| wiki/tier3-working/python/logging-cookbook.md | Advanced logging recipes: rotation, multi-dest, context, QueueHandler, multiprocessing |
+| wiki/tier3-working/python/regex.md | re module: pattern syntax, groups, flags, compilation, ReDoS security |
+| wiki/tier3-working/python/enum.md | Enum, IntEnum, StrEnum, Flag, auto(), @unique, comparison rules |
+| wiki/tier3-working/python/sorting.md | sorted(), list.sort(), key functions, operator module, stability, multi-pass sorts |
+| wiki/tier3-working/python/annotations.md | __annotations__, inspect.get_annotations(), PEP 563, version-safe access |
+| wiki/tier3-working/python/descriptors.md | __get__, __set__, __delete__, property, classmethod, staticmethod, __slots__ |
+| wiki/tier3-working/python/unicode.md | str vs bytes, encode/decode, normalization (NFC/NFD), file I/O, security |
+| wiki/tier3-working/python/argparse.md | ArgumentParser, positional/optional args, subcommands, testing CLI tools |
+| wiki/tier3-working/python/urllib.md | urllib.request, POST/GET, error handling; when to use requests/httpx instead |
+| wiki/tier3-working/python/sockets.md | TCP sockets, reliable send/recv, message framing, select, IPC |
+| wiki/tier3-working/python/ipaddress.md | IPv4/IPv6 addresses and networks, CIDR containment, SSRF prevention |
+| wiki/tier3-working/python/mro.md | C3 linearization, MRO, super(), cooperative multiple inheritance |
+| wiki/tier3-working/python/curses.md | Terminal UI: windows, color, keyboard input, wrapper(), noutrefresh/doupdate |
+| wiki/tier3-working/python/free-threading.md | Free-threaded CPython 3.13+, GIL removal, thread safety, migration guide |
+| wiki/tier3-working/python/isolating-extensions.md | C extension modules: per-module state, heap types, multi-phase init, subinterpreters |
 
 ## Key Tools
 
@@ -51,6 +67,8 @@ These four rules apply to every Python file an agent writes or reviews:
 - wiki/tier3-working/python/idioms.md
 - wiki/tier3-working/python/type-system.md
 - wiki/tier3-working/python/functional-core.md
+- wiki/tier3-working/python/logging.md
+- wiki/tier3-working/python/async-patterns.md
 
 ## Source
 

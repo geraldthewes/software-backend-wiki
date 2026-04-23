@@ -140,6 +140,22 @@
 | `wiki/tier3-working/python/type-system.md` | Python Type System | typing, Optional, Union, TypeVar, Protocol |
 | `wiki/tier3-working/python/functional-core.md` | Functional Core / Imperative Shell | pure functions, side effects, immutability |
 | `wiki/tier3-working/python/async-patterns.md` | Python Async | asyncio, await, async def, TaskGroup |
+| `wiki/tier3-working/python/logging.md` | Python Logging | logging, handlers, formatters, NullHandler, log levels |
+| `wiki/tier3-working/python/logging-cookbook.md` | Python Logging Cookbook | QueueHandler, LoggerAdapter, rotation, multiprocessing logging |
+| `wiki/tier3-working/python/regex.md` | Python Regular Expressions | re module, regex, pattern, ReDoS, groups, flags |
+| `wiki/tier3-working/python/enum.md` | Python Enumerations | Enum, IntEnum, StrEnum, Flag, auto, unique |
+| `wiki/tier3-working/python/sorting.md` | Python Sorting | sorted, key function, attrgetter, itemgetter, stability |
+| `wiki/tier3-working/python/annotations.md` | Python Annotations | __annotations__, inspect.get_annotations, PEP 563, type hints |
+| `wiki/tier3-working/python/descriptors.md` | Python Descriptors | __get__, __set__, property, classmethod, staticmethod, __slots__ |
+| `wiki/tier3-working/python/unicode.md` | Python Unicode | str, bytes, encode, decode, NFC, NFD, normalization, encoding |
+| `wiki/tier3-working/python/argparse.md` | Python argparse | ArgumentParser, CLI, subcommands, positional, optional arguments |
+| `wiki/tier3-working/python/urllib.md` | Python urllib | HTTP client, urllib.request, requests, httpx, SSRF |
+| `wiki/tier3-working/python/sockets.md` | Python Sockets | socket, TCP, recv, send, select, framing, IPC |
+| `wiki/tier3-working/python/ipaddress.md` | Python ipaddress | IPv4, IPv6, CIDR, network, address, SSRF prevention |
+| `wiki/tier3-working/python/mro.md` | Python MRO | method resolution order, C3, super, multiple inheritance |
+| `wiki/tier3-working/python/curses.md` | Python curses | terminal UI, ncurses, window, color, keyboard input |
+| `wiki/tier3-working/python/free-threading.md` | Python Free-Threading | GIL, free-threaded, CPython 3.13, thread safety, parallelism |
+| `wiki/tier3-working/python/isolating-extensions.md` | Python Extension Isolation | C extension, per-module state, heap types, subinterpreters |
 | `wiki/tier3-working/golang/overview.md` | Go Best Practices | Go, Effective Go, idiomatic |
 | `wiki/tier3-working/golang/idioms.md` | Go Idioms | error wrapping, interfaces, defer, named returns |
 | `wiki/tier3-working/golang/concurrency.md` | Go Concurrency | goroutines, channels, WaitGroup, select, context |
@@ -182,6 +198,8 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Term | Primary Page | Secondary Page |
 |------|-------------|---------------|
 | Abstract Base Class (ABC) | `tier2-core/solid-principles/ocp.md` | `tier3-working/python/idioms.md` |
+| Annotations (__annotations__) | `tier3-working/python/annotations.md` | `tier1-sources/python-peps/pep-484-type-hints.md` |
+| argparse | `tier3-working/python/argparse.md` | `tier3-working/python/overview.md` |
 | Access control | `tier1-sources/owasp/a01-broken-access-control.md` | `tier1-sources/swebok-v4/ka13-security.md` |
 | Agile development | `tier2-core/engineering-playbook/agile-development.md` | `tier1-sources/swebok-v4/ka10-process.md` |
 | ADR (Architecture Decision Record) | `tier1-sources/swebok-v4/ka02-architecture.md` | — |
@@ -190,12 +208,13 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | alembic | `tier3-working/database-patterns/migrations.md` | — |
 | API versioning | `tier3-working/api-design/rest-conventions.md` | — |
 | assert (security risk) | `tier2-core/security-practices/python-pyscg.md` | `tier1-sources/swebok-v4/ka13-security.md` |
-| asyncio | `tier3-working/python/async-patterns.md` | — |
+| asyncio | `tier3-working/python/async-patterns.md` | `tier3-working/python/free-threading.md` |
 | Availability (CAP) | `tier2-core/distributed-systems/cap-pacelc.md` | — |
 | Backoff (exponential) | `tier2-core/distributed-systems/resilience-patterns.md` | `tier2-core/distributed-systems/fallacies.md` |
 | Bandwidth fallacy | `tier2-core/distributed-systems/fallacies.md` | — |
 | bcrypt | `tier1-sources/owasp/a02-cryptographic-failures.md` | `tier2-core/security-practices/python-pyscg.md` |
 | Behavioral patterns | `tier2-core/design-patterns/behavioral.md` | `tier2-core/design-patterns/overview.md` |
+| bytes vs str | `tier3-working/python/unicode.md` | `tier3-working/python/overview.md` |
 | Backlog management | `tier2-core/engineering-playbook/agile-development.md` | `tier1-sources/swebok-v4/ka09-engineering-management.md` |
 | Branch naming | `tier2-core/engineering-playbook/source-control.md` | `tier1-sources/swebok-v4/ka08-config-management.md` |
 | Branch strategy | `tier1-sources/swebok-v4/ka08-config-management.md` | `tier2-core/engineering-playbook/source-control.md` |
@@ -227,6 +246,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | CVE | `tier1-sources/owasp/a06-vulnerable-components.md` | — |
 | Cyclomatic complexity | `tier1-sources/swebok-v4/ka03-design.md` | `tier1-sources/swebok-v4/ka04-construction.md` |
 | dataclass | `tier3-working/python/idioms.md` | `tier3-working/python/type-system.md` |
+| Descriptors | `tier3-working/python/descriptors.md` | `tier3-working/python/type-system.md` |
 | Database migrations | `tier3-working/database-patterns/migrations.md` | — |
 | Decorator pattern | `tier2-core/design-patterns/structural.md` | — |
 | Defensive programming | `tier1-sources/swebok-v4/ka04-construction.md` | — |
@@ -245,6 +265,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | E2E testing | `tier2-core/testing-strategies/test-pyramid.md` | `tier1-sources/swebok-v4/ka05-testing.md` |
 | Effective Go | `tier3-working/golang/idioms.md` | `tier3-working/golang/overview.md` |
 | Engineering Fundamentals Playbook | `tier2-core/engineering-playbook/overview.md` | — |
+| Enum (Python) | `tier3-working/python/enum.md` | `tier3-working/python/overview.md` |
 | Error budget | `tier3-working/observability/slo-sli-sla.md` | — |
 | Error handling | `tier3-working/worked-examples/error-handling.md` | `tier1-sources/python-peps/pep-020-zen.md` |
 | Ethics | `tier1-sources/acm-ieee-ethics/code-of-ethics.md` | `tier1-sources/swebok-v4/ka14-professional-practice.md` |
@@ -259,6 +280,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Fallacies of distributed computing | `tier2-core/distributed-systems/fallacies.md` | — |
 | Formal methods | `tier1-sources/swebok-v4/ka11-models-methods.md` | — |
 | Functional core / imperative shell | `tier3-working/python/functional-core.md` | `tier1-sources/swebok-v4/ka03-design.md` |
+| Free-threading (Python) | `tier3-working/python/free-threading.md` | `tier3-working/python/async-patterns.md` |
 | Functional programming | `tier3-working/python/functional-core.md` | `tier3-working/python/idioms.md` |
 | Generic (typing) | `tier3-working/python/type-system.md` | `tier1-sources/python-peps/pep-484-type-hints.md` |
 | GoF design patterns | `tier2-core/design-patterns/overview.md` | `tier1-sources/swebok-v4/ka03-design.md` |
@@ -276,6 +298,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Incident management | `tier1-sources/swebok-v4/ka06-operations.md` | — |
 | Indexing (database) | `tier3-working/database-patterns/query-optimization.md` | — |
 | Injection (SQL/command) | `tier1-sources/owasp/a03-injection.md` | `tier2-core/security-practices/python-pyscg.md` |
+| ipaddress (Python) | `tier3-working/python/ipaddress.md` | `tier1-sources/owasp/a10-ssrf.md` |
 | Integration testing | `tier2-core/testing-strategies/test-pyramid.md` | `tier1-sources/swebok-v4/ka05-testing.md` |
 | Interface Segregation Principle | `tier2-core/solid-principles/isp.md` | — |
 | ISP | `tier2-core/solid-principles/isp.md` | — |
@@ -290,6 +313,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Liskov Substitution Principle | `tier2-core/solid-principles/lsp.md` | — |
 | log.md (this wiki) | `log.md` | — |
 | Logging | `tier3-working/observability/structured-logging.md` | `tier1-sources/owasp/a09-logging-monitoring.md` |
+| Logging (Python stdlib) | `tier3-working/python/logging.md` | `tier3-working/python/logging-cookbook.md` |
 | LSP | `tier2-core/solid-principles/lsp.md` | — |
 | Make-vs-buy | `tier1-sources/swebok-v4/ka15-economics.md` | — |
 | Merge strategy | `tier2-core/engineering-playbook/source-control.md` | `tier1-sources/swebok-v4/ka08-config-management.md` |
@@ -297,12 +321,14 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Migration (database) | `tier3-working/database-patterns/migrations.md` | — |
 | Mock (testing) | `tier2-core/testing-strategies/test-pyramid.md` | `tier3-working/worked-examples/dependency-injection.md` |
 | Monitoring | `tier1-sources/swebok-v4/ka06-operations.md` | `tier3-working/observability/metrics.md` |
+| MRO (Method Resolution Order) | `tier3-working/python/mro.md` | `tier2-core/solid-principles/lsp.md` |
 | mTLS | `tier2-core/security-practices/zero-trust.md` | — |
 | Mutation testing | `tier2-core/testing-strategies/mutation-testing.md` | `tier1-sources/swebok-v4/ka05-testing.md` |
 | mutmut | `tier2-core/testing-strategies/mutation-testing.md` | — |
 | mypy | `tier1-sources/python-peps/pep-484-type-hints.md` | `tier3-working/python/type-system.md` |
 | N+1 query | `tier3-working/database-patterns/query-optimization.md` | — |
 | Onboarding | `tier2-core/engineering-playbook/developer-experience.md` | `tier2-core/engineering-playbook/documentation-practices.md` |
+| ncurses / curses | `tier3-working/python/curses.md` | `tier3-working/python/overview.md` |
 | Named return values (Go) | `tier3-working/golang/idioms.md` | — |
 | Naming conventions | `tier1-sources/python-peps/pep-008-style.md` | `tier3-working/golang/idioms.md` |
 | NFR (non-functional requirements) | `tier1-sources/swebok-v4/ka01-requirements.md` | — |
@@ -341,6 +367,8 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | pyscg-0041 | `tier2-core/security-practices/python-pyscg.md` | — |
 | Quality attributes | `tier1-sources/swebok-v4/ka12-quality.md` | `tier1-sources/swebok-v4/ka02-architecture.md` |
 | Rate limiting | `tier1-sources/owasp/a07-auth-failures.md` | — |
+| Regex (regular expressions) | `tier3-working/python/regex.md` | `tier2-core/security-practices/python-pyscg.md` |
+| ReDoS | `tier3-working/python/regex.md` | `tier1-sources/swebok-v4/ka13-security.md` |
 | README.md | `tier2-core/engineering-playbook/documentation-practices.md` | `tier2-core/engineering-playbook/source-control.md` |
 | Refactoring | `tier1-sources/swebok-v4/ka07-maintenance.md` | `tier1-sources/swebok-v4/ka04-construction.md` |
 | Retrospective | `tier2-core/engineering-playbook/agile-development.md` | `tier1-sources/swebok-v4/ka10-process.md` |
@@ -366,6 +394,8 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Service discovery | `tier2-core/distributed-systems/fallacies.md` | — |
 | Session management | `tier1-sources/owasp/a07-auth-failures.md` | — |
 | singledispatch | `tier1-sources/python-peps/pep-443-singledispatch.md` | — |
+| Sockets (Python) | `tier3-working/python/sockets.md` | `tier3-working/python/urllib.md` |
+| Sorting (Python) | `tier3-working/python/sorting.md` | `tier3-working/python/idioms.md` |
 | Single Responsibility Principle | `tier2-core/solid-principles/srp.md` | `tier1-sources/swebok-v4/ka03-design.md` |
 | SLI | `tier3-working/observability/slo-sli-sla.md` | — |
 | SLO | `tier3-working/observability/slo-sli-sla.md` | `tier1-sources/swebok-v4/ka06-operations.md` |
@@ -394,8 +424,10 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Type hints | `tier1-sources/python-peps/pep-484-type-hints.md` | `tier3-working/python/type-system.md` |
 | TypeVar | `tier3-working/python/type-system.md` | `tier1-sources/python-peps/pep-484-type-hints.md` |
 | UML | `tier1-sources/swebok-v4/ka11-models-methods.md` | — |
+| Unicode | `tier3-working/python/unicode.md` | `tier1-sources/owasp/a02-cryptographic-failures.md` |
 | Unit testing | `tier2-core/testing-strategies/test-pyramid.md` | `tier1-sources/swebok-v4/ka05-testing.md` |
-| URL validation | `tier1-sources/owasp/a10-ssrf.md` | — |
+| URL validation | `tier1-sources/owasp/a10-ssrf.md` | `tier3-working/python/ipaddress.md` |
+| urllib | `tier3-working/python/urllib.md` | `tier1-sources/owasp/a10-ssrf.md` |
 | Version control | `tier1-sources/swebok-v4/ka08-config-management.md` | `tier2-core/engineering-playbook/source-control.md` |
 | Virtual environment | `tier3-working/python/overview.md` | — |
 | WaitGroup (Go) | `tier3-working/golang/concurrency.md` | — |
@@ -416,4 +448,4 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 ---
 
 *This file is part of the software-backend-wiki. Updated whenever new pages are created.*
-*Last updated: 2026-04-14*
+*Last updated: 2026-04-22*

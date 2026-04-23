@@ -205,12 +205,88 @@ async def query_sync_db() -> list:
 | No timeout on network calls | `await fetch(url)` | `await asyncio.wait_for(fetch(url), timeout=5.0)` |
 | CPU work in event loop | `result = heavy_compute(data)` | `await asyncio.to_thread(heavy_compute, data)` |
 
+## Concurrency Model: Cooperative Multitasking
+
+The asyncio event loop runs in a single thread. Coroutines cooperate by yielding control at `await` points. Key concepts from the asyncio concepts model:
+
+**Awaitables** — objects that can be used in an `await` expression:
+- Coroutines (`async def` functions)
+- `asyncio.Task` objects (wrap coroutines for concurrent execution)
+- `asyncio.Future` objects (low-level, rarely used directly)
+
+**Tasks** — coroutines scheduled to run concurrently on the event loop:
+```python
+# create_task() schedules a coroutine to run concurrently
+async def main() -> None:
+    task = asyncio.create_task(some_coroutine())
+    # ... do other work ...
+    result = await task   # wait for it to finish
+```
+
+**Cancellation** — tasks can be cancelled; always handle `asyncio.CancelledError`:
+```python
+async def cancellable_work() -> None:
+    try:
+        await long_running_operation()
+    except asyncio.CancelledError:
+        # perform cleanup
+        raise   # must re-raise CancelledError — never swallow it
+```
+
+## Synchronization Primitives
+
+For coordinating coroutines that share state:
+
+```python
+import asyncio
+
+# Lock — mutual exclusion (async equivalent of threading.Lock)
+lock = asyncio.Lock()
+async def critical_section() -> None:
+    async with lock:
+        # only one coroutine at a time
+        await modify_shared_state()
+
+# Event — signal between coroutines
+event = asyncio.Event()
+async def waiter() -> None:
+    await event.wait()
+    print("Event was set!")
+
+async def setter() -> None:
+    await asyncio.sleep(1)
+    event.set()
+
+# Semaphore — limit concurrent access
+semaphore = asyncio.Semaphore(5)   # at most 5 concurrent
+async def rate_limited_fetch(url: str) -> str:
+    async with semaphore:
+        return await fetch(url)
+
+# Queue — producer/consumer pattern
+queue: asyncio.Queue[str] = asyncio.Queue(maxsize=100)
+
+async def producer() -> None:
+    for item in data_source():
+        await queue.put(item)
+    await queue.put(None)   # sentinel
+
+async def consumer() -> None:
+    while True:
+        item = await queue.get()
+        if item is None:
+            break
+        await process(item)
+        queue.task_done()
+```
+
 ## See Also
 
 - wiki/tier3-working/python/idioms.md
+- wiki/tier3-working/python/free-threading.md
 - wiki/tier3-working/golang/concurrency.md
 - wiki/tier3-working/observability/structured-logging.md
 
 ## Source
 
-Python docs: asyncio, aiohttp. PEP 492 — Coroutines with async and await. PEP 654 — Exception Groups (Python 3.11+). "Using Asyncio in Python" (Caleb Hattingh, O'Reilly 2020).
+Python docs: asyncio, aiohttp. PEP 492 — Coroutines with async and await. PEP 654 — Exception Groups (Python 3.11+). "Using Asyncio in Python" (Caleb Hattingh, O'Reilly 2020). Python asyncio concepts HOWTO, docs.python.org/3/howto/asyncio-concepts.html.

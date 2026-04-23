@@ -32,6 +32,15 @@
 - [ ] No new `interface{}` without justification (Go) — use generics or specific types
 - [ ] No `cast()` calls that mask real type errors
 
+### Python Logging
+
+- [ ] No `print()` calls used for operational or diagnostic logging (use `logger.*` instead)
+- [ ] Every module defines `logger = logging.getLogger(__name__)` at module level
+- [ ] Library packages add only `NullHandler()` to their root logger — no `StreamHandler`
+- [ ] No sensitive data (passwords, tokens, PII) in any log message or format string
+- [ ] `logger.exception()` used inside `except` blocks (not `logger.error` + manual traceback)
+- [ ] `dictConfig`/`basicConfig` called once at startup with `disable_existing_loggers: False`
+
 ### Security (pyscg / OWASP)
 
 - [ ] No new hardcoded configuration values — use environment variables
@@ -64,6 +73,8 @@
 - wiki/tier1-sources/python-peps/pep-008-style.md
 - wiki/tier1-sources/python-peps/pep-484-type-hints.md
 - wiki/tier3-working/golang/toolchain.md
+- wiki/tier3-working/python/logging.md
+- wiki/tier3-working/observability/structured-logging.md
 
 ## Source
 

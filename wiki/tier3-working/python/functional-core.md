@@ -195,6 +195,111 @@ def process_order(order_id: int) -> Invoice:
 
 This function is impossible to unit-test without mocking the database and external API. Extract the calculation into a pure function first.
 
+## itertools, functools, and operator in the Functional Core
+
+The Python standard library provides tools specifically designed for functional-style data transformation. These belong in the functional core because they are pure (no I/O, no side effects) and composable.
+
+### itertools — Lazy Iteration
+
+```python
+import itertools
+
+# chain — flatten iterables without building intermediate lists
+all_events = list(itertools.chain(monday_events, tuesday_events))
+
+# islice — take the first N items from any iterator
+first_10 = list(itertools.islice(infinite_stream(), 10))
+
+# groupby — group sorted data by key (input must be sorted by the same key)
+from operator import attrgetter
+records.sort(key=attrgetter('category'))
+for category, items in itertools.groupby(records, key=attrgetter('category')):
+    process_group(category, list(items))
+
+# combinations and permutations — combinatoric generators
+pairs = list(itertools.combinations(['a', 'b', 'c', 'd'], 2))
+# [('a','b'), ('a','c'), ('a','d'), ('b','c'), ('b','d'), ('c','d')]
+
+# takewhile / dropwhile — conditional slicing
+valid = list(itertools.takewhile(lambda x: x > 0, [3, 2, 1, -1, 2]))
+# [3, 2, 1]
+
+# filterfalse — complement of filter
+odd = list(itertools.filterfalse(lambda x: x % 2 == 0, range(10)))
+```
+
+### functools — Higher-Order Functions
+
+```python
+import functools
+
+# partial — create specialized functions from general ones
+from operator import add
+add5 = functools.partial(add, 5)
+add5(3)   # 8
+
+# reduce — fold a sequence into a single value
+total = functools.reduce(lambda acc, x: acc + x, [1, 2, 3, 4], 0)  # 10
+
+# lru_cache — memoize pure functions (safe because they are pure)
+@functools.lru_cache(maxsize=None)
+def fibonacci(n: int) -> int:
+    if n < 2:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+# cached_property — compute once, cache on instance
+from functools import cached_property
+
+class Report:
+    def __init__(self, data: list[dict]) -> None:
+        self.data = data
+
+    @cached_property
+    def summary(self) -> dict:
+        """Expensive computation — runs once, cached as instance attribute."""
+        return {
+            'count': len(self.data),
+            'total': sum(r['amount'] for r in self.data),
+        }
+```
+
+### operator — Functional Operators
+
+```python
+from operator import attrgetter, itemgetter, add, mul, eq
+
+# Attribute and item access as callables (faster than lambdas)
+get_name = attrgetter('name')
+get_first = itemgetter(0)
+
+names = list(map(attrgetter('name'), employees))
+sorted_by_salary = sorted(employees, key=attrgetter('salary'))
+
+# Operator functions for functools.reduce
+from functools import reduce
+product = reduce(mul, [1, 2, 3, 4, 5])   # 120
+```
+
+### Composing the Functional Core with These Tools
+
+```python
+import itertools, functools
+from operator import attrgetter, itemgetter
+
+# PURE: aggregate invoice totals by department (no I/O)
+def totals_by_department(invoices: list[Invoice]) -> dict[str, float]:
+    sorted_invoices = sorted(invoices, key=attrgetter('department'))
+    return {
+        dept: functools.reduce(
+            lambda acc, inv: acc + inv.total,
+            group,
+            0.0
+        )
+        for dept, group in itertools.groupby(sorted_invoices, key=attrgetter('department'))
+    }
+```
+
 ## See Also
 
 - wiki/tier3-working/python/idioms.md
@@ -202,7 +307,8 @@ This function is impossible to unit-test without mocking the database and extern
 - wiki/tier2-core/solid-principles/srp.md
 - wiki/tier2-core/solid-principles/dip.md
 - wiki/tier3-working/worked-examples/dependency-injection.md
+- wiki/tier3-working/python/sorting.md
 
 ## Source
 
-Gary Bernhardt, "Boundaries," Strange Loop (2012). "Architecture Patterns with Python" (Percival & Gregory, 2020). SWEBOK V4, KA4 Software Construction.
+Gary Bernhardt, "Boundaries," Strange Loop (2012). "Architecture Patterns with Python" (Percival & Gregory, 2020). SWEBOK V4, KA4 Software Construction. Python Functional Programming HOWTO, docs.python.org/3/howto/functional.html.
