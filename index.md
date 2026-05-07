@@ -19,6 +19,8 @@
 | Design a database layer | `wiki/tier3-working/database-patterns/overview.md` | `checklists/security-review.md` |
 | Design an API | `wiki/tier3-working/api-design/overview.md` | `checklists/design-review.md` |
 | Add observability | `wiki/tier3-working/observability/overview.md` | `checklists/code-review.md` |
+| Design a domain-driven service | `wiki/tier2-core/architecture-patterns/overview.md` | `checklists/design-review.md` |
+| Build an event-driven service | `wiki/tier2-core/architecture-patterns/domain-events-message-bus.md` | `checklists/design-review.md` |
 | Write a commit message | `wiki/tier2-core/conventional-commits/overview.md` | `checklists/pre-commit.md` |
 | Set up source control / branching | `wiki/tier2-core/engineering-playbook/source-control.md` | `checklists/pre-commit.md` |
 | Plan a sprint / manage backlog | `wiki/tier2-core/engineering-playbook/agile-development.md` | `wiki/tier1-sources/swebok-v4/ka09-engineering-management.md` |
@@ -126,6 +128,20 @@
 | `wiki/tier2-core/engineering-playbook/agile-development.md` | Agile Development Practices | Microsoft ISE / SWEBOK KA9, KA10 | agile, sprint, backlog, DoR, DoD, retrospective, working agreements, technical debt |
 | `wiki/tier2-core/engineering-playbook/developer-experience.md` | Developer Experience (DevEx) | Microsoft ISE / SWEBOK KA6, KA4 | DevEx, F5 contract, onboarding, build, test, start, debug, local mock |
 | `wiki/tier2-core/engineering-playbook/documentation-practices.md` | Documentation Practices | Microsoft ISE / SWEBOK KA12 | documentation, README, anti-patterns, OpenAPI, onboarding docs, PR description |
+| `wiki/tier2-core/architecture-patterns/overview.md` | Architecture Patterns Overview | "Architecture Patterns with Python" / SWEBOK KA02, KA03, DDD | Cosmic Python, hexagonal, DDD, ports and adapters, event-driven, domain model |
+| `wiki/tier2-core/architecture-patterns/domain-model.md` | Domain Model | "Architecture Patterns with Python" Ch 1 | domain model, entity, value object, domain service, rich model, plain Python |
+| `wiki/tier2-core/architecture-patterns/repository.md` | Repository Pattern (Tier 2) | "Architecture Patterns with Python" Ch 2 | repository, classical ORM mapping, SQLAlchemy, collection abstraction |
+| `wiki/tier2-core/architecture-patterns/service-layer.md` | Service Layer | "Architecture Patterns with Python" Ch 4 | service layer, orchestration, use case, Flask adapter, thin entrypoint |
+| `wiki/tier2-core/architecture-patterns/unit-of-work.md` | Unit of Work | "Architecture Patterns with Python" Ch 6 | unit of work, transaction, context manager, session, event collection |
+| `wiki/tier2-core/architecture-patterns/aggregates.md` | Aggregates and Consistency Boundaries | "Architecture Patterns with Python" Ch 7 | aggregate, aggregate root, consistency boundary, invariant, optimistic concurrency, bounded context |
+| `wiki/tier2-core/architecture-patterns/domain-events-message-bus.md` | Domain Events and Message Bus | "Architecture Patterns with Python" Ch 8–9 | domain event, message bus, event handler, in-process bus, cascading dispatch |
+| `wiki/tier2-core/architecture-patterns/commands-vs-events.md` | Commands vs Events | "Architecture Patterns with Python" Ch 10 | command, event, command handler, fire-and-forget, routing rules |
+| `wiki/tier2-core/architecture-patterns/event-driven-integration.md` | Event-Driven Integration | "Architecture Patterns with Python" Ch 11 | external events, Redis pub/sub, choreography, orchestration, distributed ball of mud |
+| `wiki/tier2-core/architecture-patterns/cqrs.md` | CQRS | "Architecture Patterns with Python" Ch 12 | CQRS, read model, write model, N+1, raw SQL, denormalized view |
+| `wiki/tier2-core/architecture-patterns/dependency-injection-bootstrap.md` | Dependency Injection and Bootstrap | "Architecture Patterns with Python" Ch 13 | composition root, bootstrap, DI, partial application, inject |
+| `wiki/tier2-core/architecture-patterns/ports-and-adapters.md` | Ports and Adapters | "Architecture Patterns with Python" / Cockburn 2005 | hexagonal architecture, onion architecture, clean architecture, ports, adapters, functional core |
+| `wiki/tier2-core/architecture-patterns/validation.md` | Validation Placement | "Architecture Patterns with Python" App E | validation, syntactic, semantic, pragmatic, Postel's Law |
+| `wiki/tier2-core/architecture-patterns/legacy-migration.md` | Legacy Migration | "Architecture Patterns with Python" Epilogue | strangler fig, big ball of mud, architecture tax, incremental adoption, Django |
 
 ---
 
@@ -198,6 +214,8 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Term | Primary Page | Secondary Page |
 |------|-------------|---------------|
 | Abstract Base Class (ABC) | `tier2-core/solid-principles/ocp.md` | `tier3-working/python/idioms.md` |
+| Aggregate | `tier2-core/architecture-patterns/aggregates.md` | `tier2-core/architecture-patterns/overview.md` |
+| Aggregate Root | `tier2-core/architecture-patterns/aggregates.md` | `tier2-core/architecture-patterns/domain-model.md` |
 | Annotations (__annotations__) | `tier3-working/python/annotations.md` | `tier1-sources/python-peps/pep-484-type-hints.md` |
 | argparse | `tier3-working/python/argparse.md` | `tier3-working/python/overview.md` |
 | Access control | `tier1-sources/owasp/a01-broken-access-control.md` | `tier1-sources/swebok-v4/ka13-security.md` |
@@ -211,6 +229,9 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | asyncio | `tier3-working/python/async-patterns.md` | `tier3-working/python/free-threading.md` |
 | Availability (CAP) | `tier2-core/distributed-systems/cap-pacelc.md` | — |
 | Backoff (exponential) | `tier2-core/distributed-systems/resilience-patterns.md` | `tier2-core/distributed-systems/fallacies.md` |
+| Big Ball of Mud | `tier2-core/architecture-patterns/legacy-migration.md` | `tier2-core/architecture-patterns/overview.md` |
+| Bootstrap (composition root) | `tier2-core/architecture-patterns/dependency-injection-bootstrap.md` | `tier3-working/worked-examples/dependency-injection.md` |
+| Bounded Context | `tier2-core/architecture-patterns/aggregates.md` | `tier2-core/architecture-patterns/overview.md` |
 | Bandwidth fallacy | `tier2-core/distributed-systems/fallacies.md` | — |
 | bcrypt | `tier1-sources/owasp/a02-cryptographic-failures.md` | `tier2-core/security-practices/python-pyscg.md` |
 | Behavioral patterns | `tier2-core/design-patterns/behavioral.md` | `tier2-core/design-patterns/overview.md` |
@@ -228,7 +249,13 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Conventional Commits | `tier2-core/conventional-commits/overview.md` | `tier2-core/conventional-commits/specification.md` |
 | CIA triad | `tier1-sources/swebok-v4/ka13-security.md` | — |
 | Circuit breaker | `tier2-core/distributed-systems/resilience-patterns.md` | — |
+| Clean Architecture | `tier2-core/architecture-patterns/ports-and-adapters.md` | `tier2-core/architecture-patterns/overview.md` |
 | Code coverage | `tier1-sources/swebok-v4/ka05-testing.md` | `tier2-core/testing-strategies/mutation-testing.md` |
+| Command (domain) | `tier2-core/architecture-patterns/commands-vs-events.md` | `tier2-core/architecture-patterns/domain-events-message-bus.md` |
+| Command Handler | `tier2-core/architecture-patterns/commands-vs-events.md` | `tier2-core/architecture-patterns/service-layer.md` |
+| Composition Root | `tier2-core/architecture-patterns/dependency-injection-bootstrap.md` | `tier2-core/solid-principles/dip.md` |
+| Consistency Boundary | `tier2-core/architecture-patterns/aggregates.md` | `tier2-core/distributed-systems/cap-pacelc.md` |
+| CQRS | `tier2-core/architecture-patterns/cqrs.md` | `tier2-core/architecture-patterns/commands-vs-events.md` |
 | Code review | `tier1-sources/swebok-v4/ka12-quality.md` | `tier3-working/checklists/code-review.md` |
 | Cohesion | `tier1-sources/swebok-v4/ka03-design.md` | `tier2-core/solid-principles/srp.md` |
 | CONTRIBUTING.md | `tier2-core/engineering-playbook/source-control.md` | `tier2-core/engineering-playbook/documentation-practices.md` |
@@ -252,7 +279,10 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Defensive programming | `tier1-sources/swebok-v4/ka04-construction.md` | — |
 | Definition of Done (DoD) | `tier2-core/engineering-playbook/agile-development.md` | `tier1-sources/swebok-v4/ka12-quality.md` |
 | Definition of Ready (DoR) | `tier2-core/engineering-playbook/agile-development.md` | `tier1-sources/swebok-v4/ka09-engineering-management.md` |
-| Dependency injection | `tier2-core/solid-principles/dip.md` | `tier3-working/worked-examples/dependency-injection.md` |
+| Dependency injection | `tier2-core/architecture-patterns/dependency-injection-bootstrap.md` | `tier3-working/worked-examples/dependency-injection.md` |
+| Domain event | `tier2-core/architecture-patterns/domain-events-message-bus.md` | `tier2-core/architecture-patterns/aggregates.md` |
+| Domain-Driven Design | `tier2-core/architecture-patterns/aggregates.md` | `tier2-core/architecture-patterns/overview.md` |
+| Domain Model | `tier2-core/architecture-patterns/domain-model.md` | `tier2-core/architecture-patterns/overview.md` |
 | Developer experience | `tier2-core/engineering-playbook/developer-experience.md` | `tier1-sources/swebok-v4/ka06-operations.md` |
 | DevEx | `tier2-core/engineering-playbook/developer-experience.md` | — |
 | Documentation | `tier2-core/engineering-playbook/documentation-practices.md` | `tier1-sources/swebok-v4/ka12-quality.md` |
@@ -261,7 +291,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | DevOps | `tier1-sources/swebok-v4/ka06-operations.md` | `tier1-sources/swebok-v4/ka10-process.md` |
 | DIP | `tier2-core/solid-principles/dip.md` | — |
 | Distributed systems | `tier2-core/distributed-systems/overview.md` | `tier1-sources/swebok-v4/ka02-architecture.md` |
-| Domain-Driven Design | `tier3-working/database-patterns/repository-pattern.md` | `tier2-core/solid-principles/srp.md` |
+| Domain service | `tier2-core/architecture-patterns/domain-model.md` | `tier2-core/architecture-patterns/service-layer.md` |
 | E2E testing | `tier2-core/testing-strategies/test-pyramid.md` | `tier1-sources/swebok-v4/ka05-testing.md` |
 | Effective Go | `tier3-working/golang/idioms.md` | `tier3-working/golang/overview.md` |
 | Engineering Fundamentals Playbook | `tier2-core/engineering-playbook/overview.md` | — |
@@ -269,7 +299,8 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Error budget | `tier3-working/observability/slo-sli-sla.md` | — |
 | Error handling | `tier3-working/worked-examples/error-handling.md` | `tier1-sources/python-peps/pep-020-zen.md` |
 | Ethics | `tier1-sources/acm-ieee-ethics/code-of-ethics.md` | `tier1-sources/swebok-v4/ka14-professional-practice.md` |
-| Event-driven architecture | `tier1-sources/swebok-v4/ka02-architecture.md` | `tier2-core/distributed-systems/overview.md` |
+| Entity (domain) | `tier2-core/architecture-patterns/domain-model.md` | `tier2-core/architecture-patterns/aggregates.md` |
+| Event-driven architecture | `tier2-core/architecture-patterns/event-driven-integration.md` | `tier2-core/architecture-patterns/domain-events-message-bus.md` |
 | Exponential backoff | `tier2-core/distributed-systems/resilience-patterns.md` | — |
 | Facade pattern | `tier2-core/design-patterns/structural.md` | — |
 | F5 Contract | `tier2-core/engineering-playbook/developer-experience.md` | — |
@@ -279,7 +310,8 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | fix (commit type) | `tier2-core/conventional-commits/overview.md` | `tier2-core/conventional-commits/specification.md` |
 | Fallacies of distributed computing | `tier2-core/distributed-systems/fallacies.md` | — |
 | Formal methods | `tier1-sources/swebok-v4/ka11-models-methods.md` | — |
-| Functional core / imperative shell | `tier3-working/python/functional-core.md` | `tier1-sources/swebok-v4/ka03-design.md` |
+| Functional core / imperative shell | `tier3-working/python/functional-core.md` | `tier2-core/architecture-patterns/ports-and-adapters.md` |
+| Functional Core Imperative Shell | `tier2-core/architecture-patterns/ports-and-adapters.md` | `tier3-working/python/functional-core.md` |
 | Free-threading (Python) | `tier3-working/python/free-threading.md` | `tier3-working/python/async-patterns.md` |
 | Functional programming | `tier3-working/python/functional-core.md` | `tier3-working/python/idioms.md` |
 | Generic (typing) | `tier3-working/python/type-system.md` | `tier1-sources/python-peps/pep-484-type-hints.md` |
@@ -288,6 +320,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | goroutine | `tier3-working/golang/concurrency.md` | — |
 | gRPC | `tier3-working/api-design/grpc.md` | — |
 | Hardcoded secrets | `tier1-sources/swebok-v4/ka13-security.md` | `tier2-core/security-practices/python-pyscg.md` |
+| Hexagonal Architecture | `tier2-core/architecture-patterns/ports-and-adapters.md` | `tier2-core/architecture-patterns/overview.md` |
 | git revert | `tier2-core/engineering-playbook/source-control.md` | `tier1-sources/swebok-v4/ka08-config-management.md` |
 | Histogram (metrics) | `tier3-working/observability/metrics.md` | — |
 | Hypothesis (library) | `tier2-core/testing-strategies/property-based-testing.md` | `tier1-sources/swebok-v4/ka05-testing.md` |
@@ -307,7 +340,8 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Keyword argument | `tier3-working/python/idioms.md` | — |
 | Knowledge silo | `tier2-core/engineering-playbook/documentation-practices.md` | — |
 | Latency (distributed) | `tier2-core/distributed-systems/cap-pacelc.md` | `tier2-core/distributed-systems/fallacies.md` |
-| Layered architecture | `tier1-sources/swebok-v4/ka02-architecture.md` | — |
+| Layered architecture | `tier1-sources/swebok-v4/ka02-architecture.md` | `tier2-core/architecture-patterns/ports-and-adapters.md` |
+| Legacy migration | `tier2-core/architecture-patterns/legacy-migration.md` | `tier1-sources/swebok-v4/ka07-maintenance.md` |
 | Least privilege | `tier1-sources/owasp/a01-broken-access-control.md` | `tier1-sources/swebok-v4/ka13-security.md` |
 | Line length | `tier1-sources/python-peps/pep-008-style.md` | — |
 | Liskov Substitution Principle | `tier2-core/solid-principles/lsp.md` | — |
@@ -317,6 +351,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | LSP | `tier2-core/solid-principles/lsp.md` | — |
 | Make-vs-buy | `tier1-sources/swebok-v4/ka15-economics.md` | — |
 | Merge strategy | `tier2-core/engineering-playbook/source-control.md` | `tier1-sources/swebok-v4/ka08-config-management.md` |
+| Message Bus | `tier2-core/architecture-patterns/domain-events-message-bus.md` | `tier2-core/architecture-patterns/commands-vs-events.md` |
 | Microservices | `tier1-sources/swebok-v4/ka02-architecture.md` | `tier2-core/distributed-systems/overview.md` |
 | Migration (database) | `tier3-working/database-patterns/migrations.md` | — |
 | Mock (testing) | `tier2-core/testing-strategies/test-pyramid.md` | `tier3-working/worked-examples/dependency-injection.md` |
@@ -326,13 +361,15 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Mutation testing | `tier2-core/testing-strategies/mutation-testing.md` | `tier1-sources/swebok-v4/ka05-testing.md` |
 | mutmut | `tier2-core/testing-strategies/mutation-testing.md` | — |
 | mypy | `tier1-sources/python-peps/pep-484-type-hints.md` | `tier3-working/python/type-system.md` |
-| N+1 query | `tier3-working/database-patterns/query-optimization.md` | — |
+| N+1 query | `tier3-working/database-patterns/query-optimization.md` | `tier2-core/architecture-patterns/cqrs.md` |
 | Onboarding | `tier2-core/engineering-playbook/developer-experience.md` | `tier2-core/engineering-playbook/documentation-practices.md` |
 | ncurses / curses | `tier3-working/python/curses.md` | `tier3-working/python/overview.md` |
 | Named return values (Go) | `tier3-working/golang/idioms.md` | — |
 | Naming conventions | `tier1-sources/python-peps/pep-008-style.md` | `tier3-working/golang/idioms.md` |
 | NFR (non-functional requirements) | `tier1-sources/swebok-v4/ka01-requirements.md` | — |
 | Observer pattern | `tier2-core/design-patterns/behavioral.md` | — |
+| Onion Architecture | `tier2-core/architecture-patterns/ports-and-adapters.md` | `tier2-core/architecture-patterns/overview.md` |
+| Optimistic concurrency | `tier2-core/architecture-patterns/aggregates.md` | `tier2-core/distributed-systems/cap-pacelc.md` |
 | OCP | `tier2-core/solid-principles/ocp.md` | — |
 | Open/Closed Principle | `tier2-core/solid-principles/ocp.md` | — |
 | OpenAPI | `tier3-working/api-design/openapi.md` | — |
@@ -374,7 +411,8 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Retrospective | `tier2-core/engineering-playbook/agile-development.md` | `tier1-sources/swebok-v4/ka10-process.md` |
 | Release management | `tier1-sources/swebok-v4/ka08-config-management.md` | `tier2-core/twelve-factor-app/factors.md` |
 | Release automation | `tier2-core/conventional-commits/overview.md` | `tier1-sources/swebok-v4/ka08-config-management.md` |
-| Repository pattern | `tier3-working/database-patterns/repository-pattern.md` | `tier3-working/worked-examples/repository-pattern.md` |
+| Read Model | `tier2-core/architecture-patterns/cqrs.md` | `tier2-core/architecture-patterns/domain-events-message-bus.md` |
+| Repository pattern | `tier2-core/architecture-patterns/repository.md` | `tier3-working/database-patterns/repository-pattern.md` |
 | Requirements | `tier1-sources/swebok-v4/ka01-requirements.md` | — |
 | Resilience | `tier2-core/distributed-systems/resilience-patterns.md` | — |
 | REST | `tier3-working/api-design/rest-conventions.md` | `tier3-working/api-design/overview.md` |
@@ -392,6 +430,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | SemVer | `tier2-core/conventional-commits/overview.md` | `tier2-core/conventional-commits/specification.md` |
 | Security misconfiguration | `tier1-sources/owasp/a05-security-misconfiguration.md` | — |
 | Service discovery | `tier2-core/distributed-systems/fallacies.md` | — |
+| Service Layer | `tier2-core/architecture-patterns/service-layer.md` | `tier2-core/architecture-patterns/overview.md` |
 | Session management | `tier1-sources/owasp/a07-auth-failures.md` | — |
 | singledispatch | `tier1-sources/python-peps/pep-443-singledispatch.md` | — |
 | Sockets (Python) | `tier3-working/python/sockets.md` | `tier3-working/python/urllib.md` |
@@ -405,6 +444,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | SRP | `tier2-core/solid-principles/srp.md` | — |
 | SSRF | `tier1-sources/owasp/a10-ssrf.md` | — |
 | Stateless processes | `tier2-core/twelve-factor-app/factors.md` | — |
+| Strangler Fig | `tier2-core/architecture-patterns/legacy-migration.md` | `tier1-sources/swebok-v4/ka07-maintenance.md` |
 | Status codes (HTTP) | `tier3-working/api-design/rest-conventions.md` | — |
 | Strategy pattern | `tier2-core/design-patterns/behavioral.md` | `tier2-core/solid-principles/ocp.md` |
 | STRIDE | `tier2-core/security-practices/threat-modeling.md` | `tier1-sources/swebok-v4/ka13-security.md` |
@@ -424,10 +464,14 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Type hints | `tier1-sources/python-peps/pep-484-type-hints.md` | `tier3-working/python/type-system.md` |
 | TypeVar | `tier3-working/python/type-system.md` | `tier1-sources/python-peps/pep-484-type-hints.md` |
 | UML | `tier1-sources/swebok-v4/ka11-models-methods.md` | — |
+| Unit of Work | `tier2-core/architecture-patterns/unit-of-work.md` | `tier2-core/architecture-patterns/service-layer.md` |
+| Use Case | `tier2-core/architecture-patterns/service-layer.md` | `tier2-core/architecture-patterns/commands-vs-events.md` |
 | Unicode | `tier3-working/python/unicode.md` | `tier1-sources/owasp/a02-cryptographic-failures.md` |
 | Unit testing | `tier2-core/testing-strategies/test-pyramid.md` | `tier1-sources/swebok-v4/ka05-testing.md` |
 | URL validation | `tier1-sources/owasp/a10-ssrf.md` | `tier3-working/python/ipaddress.md` |
 | urllib | `tier3-working/python/urllib.md` | `tier1-sources/owasp/a10-ssrf.md` |
+| Validation (where to place) | `tier2-core/architecture-patterns/validation.md` | `tier1-sources/owasp/a03-injection.md` |
+| Value Object | `tier2-core/architecture-patterns/domain-model.md` | `tier2-core/architecture-patterns/aggregates.md` |
 | Version control | `tier1-sources/swebok-v4/ka08-config-management.md` | `tier2-core/engineering-playbook/source-control.md` |
 | Virtual environment | `tier3-working/python/overview.md` | — |
 | WaitGroup (Go) | `tier3-working/golang/concurrency.md` | — |
@@ -444,8 +488,9 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Source in `references/` | Wiki Pages Generated |
 |-------------------------|---------------------|
 | `Software Development Best Practices for Agent.md` | All wiki pages (primary synthesis source) |
+| `architecture-patterns-with-python.md` | `wiki/tier2-core/architecture-patterns/` (13 pages) |
 
 ---
 
 *This file is part of the software-backend-wiki. Updated whenever new pages are created.*
-*Last updated: 2026-04-22*
+*Last updated: 2026-05-07*

@@ -66,6 +66,9 @@ For each task type, read the listed files **in order** before producing output:
 | **Sprint planning / backlog management** | `wiki/tier2-core/engineering-playbook/agile-development.md` | `wiki/tier1-sources/swebok-v4/ka09-engineering-management.md` | — |
 | **Developer experience / onboarding** | `wiki/tier2-core/engineering-playbook/developer-experience.md` | `wiki/tier2-core/engineering-playbook/documentation-practices.md` | `wiki/tier3-working/checklists/pre-commit.md` |
 | **Write or review documentation** | `wiki/tier2-core/engineering-playbook/documentation-practices.md` | `wiki/tier3-working/api-design/openapi.md` | `wiki/tier3-working/checklists/code-review.md` |
+| **Design a domain-driven service** | `wiki/tier2-core/architecture-patterns/overview.md` | `wiki/tier2-core/architecture-patterns/ports-and-adapters.md`, `wiki/tier2-core/architecture-patterns/domain-model.md`, `wiki/tier2-core/architecture-patterns/service-layer.md`, `wiki/tier2-core/architecture-patterns/unit-of-work.md`, `wiki/tier2-core/architecture-patterns/aggregates.md` | `wiki/tier3-working/checklists/design-review.md` |
+| **Build an event-driven service** | `wiki/tier2-core/architecture-patterns/domain-events-message-bus.md` | `wiki/tier2-core/architecture-patterns/commands-vs-events.md`, `wiki/tier2-core/architecture-patterns/event-driven-integration.md`, `wiki/tier2-core/architecture-patterns/cqrs.md` | `wiki/tier3-working/checklists/design-review.md` |
+| **Migrate a legacy monolith** | `wiki/tier2-core/architecture-patterns/legacy-migration.md` | `wiki/tier1-sources/swebok-v4/ka02-architecture.md`, `wiki/tier2-core/architecture-patterns/ports-and-adapters.md` | `wiki/tier3-working/checklists/design-review.md` |
 
 ---
 
@@ -185,10 +188,13 @@ These paths are defined in full in `KNOWLEDGE_GRAPH.md`. Abbreviated here for qu
 | Write commit messages | conventional-commits/overview → conventional-commits/specification → pre-commit |
 | Set up source control | engineering-playbook/source-control → ka08-config-management → pre-commit |
 | Plan a sprint | engineering-playbook/agile-development → ka09-engineering-management |
+| Build a domain-driven service | architecture-patterns/overview → ports-and-adapters → domain-model → repository → service-layer → unit-of-work → aggregates → dependency-injection-bootstrap |
+| Build an event-driven service | architecture-patterns/overview → domain-events-message-bus → commands-vs-events → event-driven-integration → cqrs |
+| Migrate a legacy monolith | architecture-patterns/legacy-migration → ka02-architecture → ports-and-adapters |
 | Onboard a developer | engineering-playbook/developer-experience → engineering-playbook/documentation-practices |
 | Write documentation | engineering-playbook/documentation-practices → api-design/openapi (if API) |
 
 ---
 
 *This file is part of the software-backend-wiki. Maintained by LLM agents; Tier 1 changes require human approval.*
-*Last updated: 2026-04-14*
+*Last updated: 2026-05-07*

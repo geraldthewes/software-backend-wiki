@@ -111,6 +111,24 @@
 | engineering-playbook/overview | REFERENCES | engineering-playbook/agile-development | Primary sub-page for agile practices |
 | engineering-playbook/overview | REFERENCES | engineering-playbook/developer-experience | Primary sub-page for DevEx |
 | engineering-playbook/overview | REFERENCES | engineering-playbook/documentation-practices | Primary sub-page for documentation |
+| architecture-patterns/overview | EXTENDS | ka02-architecture | Architecture Patterns derives from SWEBOK KA2 (architectural styles) |
+| architecture-patterns/overview | EXTENDS | ka03-design | Architecture Patterns derives from SWEBOK KA3 (design principles) |
+| architecture-patterns/ports-and-adapters | IMPLEMENTS | solid-principles/dip | Ports-and-adapters is the architectural application of DIP |
+| architecture-patterns/repository | IMPLEMENTS | architecture-patterns/ports-and-adapters | Repository pattern is the outbound port for persistence |
+| architecture-patterns/repository | IMPLEMENTS | solid-principles/dip | Repository abstracts persistence behind a Protocol (DIP) |
+| architecture-patterns/service-layer | COMPLEMENTS | architecture-patterns/domain-model | Service layer orchestrates domain without containing business logic |
+| architecture-patterns/unit-of-work | COMPLEMENTS | architecture-patterns/repository | UoW provides transactional scope for repository operations |
+| architecture-patterns/aggregates | ENFORCES | architecture-patterns/domain-model | Aggregate root enforces domain invariants as a consistency boundary |
+| architecture-patterns/domain-events-message-bus | ENABLES | architecture-patterns/event-driven-integration | In-process bus extends naturally to external brokers |
+| architecture-patterns/domain-events-message-bus | REQUIRES | architecture-patterns/aggregates | Aggregates emit events; bus cannot function without event sources |
+| architecture-patterns/commands-vs-events | COMPLEMENTS | architecture-patterns/domain-events-message-bus | Commands and events share the same bus with different routing rules |
+| architecture-patterns/cqrs | COMPLEMENTS | architecture-patterns/domain-events-message-bus | Event-fed read models are the CQRS approach for high-throughput reads |
+| architecture-patterns/dependency-injection-bootstrap | IMPLEMENTS | solid-principles/dip | Bootstrap is the composition root — the single place that wires DIP |
+| architecture-patterns/legacy-migration | MITIGATES | ka07-maintenance | Strangler Fig and incremental adoption address large-scale maintenance |
+| architecture-patterns/validation | REFERENCES | ka01-requirements | Validation placement is a requirements boundary concern |
+| architecture-patterns/overview | REFERENCES | architecture-patterns/ports-and-adapters | Ports-and-adapters is the cross-cutting architectural frame |
+| architecture-patterns/overview | REFERENCES | architecture-patterns/domain-model | Domain model is the starting point for all other patterns |
+| design-review checklist | ENFORCES | architecture-patterns/ports-and-adapters | Design review checks that dependency arrows point inward |
 
 ---
 
@@ -247,7 +265,34 @@ These are the recommended reading sequences for common agent tasks. Follow in or
 3. wiki/tier1-sources/swebok-v4/ka10-process.md                   # Process model authority
 ```
 
+### "Build a Domain-Driven Service"
+```
+1. wiki/tier1-sources/swebok-v4/ka02-architecture.md                     # Architectural styles and ADRs
+2. wiki/tier1-sources/swebok-v4/ka03-design.md                           # Design principles
+3. wiki/tier2-core/architecture-patterns/overview.md                     # Pattern catalog and layering philosophy
+4. wiki/tier2-core/architecture-patterns/ports-and-adapters.md           # Architectural frame: hexagonal/clean
+5. wiki/tier2-core/architecture-patterns/domain-model.md                 # Domain objects: entities, value objects
+6. wiki/tier2-core/architecture-patterns/repository.md                   # Persistence abstraction
+7. wiki/tier2-core/architecture-patterns/service-layer.md                # Orchestration layer; Flask as adapter
+8. wiki/tier2-core/architecture-patterns/unit-of-work.md                 # Transaction boundary
+9. wiki/tier2-core/architecture-patterns/aggregates.md                   # Consistency boundaries
+10. wiki/tier2-core/architecture-patterns/dependency-injection-bootstrap.md  # Wire everything together
+11. wiki/tier3-working/checklists/design-review.md                       # Apply before implementation
+```
+
+### "Build an Event-Driven Service"
+```
+1. wiki/tier2-core/architecture-patterns/overview.md                     # Context for Part 2 patterns
+2. wiki/tier2-core/architecture-patterns/domain-events-message-bus.md    # Domain events and in-process bus
+3. wiki/tier2-core/architecture-patterns/commands-vs-events.md           # Distinguish commands from events
+4. wiki/tier2-core/architecture-patterns/event-driven-integration.md     # External broker integration
+5. wiki/tier2-core/architecture-patterns/cqrs.md                         # Read model separation
+6. wiki/tier2-core/architecture-patterns/dependency-injection-bootstrap.md  # Composition root wiring
+7. wiki/tier2-core/distributed-systems/fallacies.md                      # Distributed system assumptions to avoid
+8. wiki/tier3-working/checklists/design-review.md                        # Apply before implementation
+```
+
 ---
 
 *This file is part of the software-backend-wiki. Update when new entities or relationships are added.*
-*Last updated: 2026-04-22 (engineering-playbook added)*
+*Last updated: 2026-05-07 (architecture-patterns added)*

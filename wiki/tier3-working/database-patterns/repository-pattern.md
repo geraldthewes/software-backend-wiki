@@ -211,6 +211,7 @@ Never let SQLAlchemy `Session` or ORM model objects leak into domain code.
 
 ## See Also
 
+- wiki/tier2-core/architecture-patterns/repository.md
 - wiki/tier3-working/worked-examples/repository-pattern.md
 - wiki/tier2-core/solid-principles/dip.md
 - wiki/tier2-core/solid-principles/srp.md
