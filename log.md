@@ -166,3 +166,4 @@ Append-only record of all ingest, creation, and update events. Never edit or del
 | 2026-05-07 | UPDATE | KNOWLEDGE_GRAPH.md | — | claude-opus-4-7 | Added 19 adjacency rows and 2 named navigation paths: "Build a Domain-Driven Service", "Build an Event-Driven Service" |
 | 2026-05-07 | UPDATE | AGENTS.md | — | claude-opus-4-7 | Added 3 Task Routing Table rows + 3 Quick Reference paths for domain-driven, event-driven, and legacy-migration tasks |
 | 2026-05-07 | UPDATE | wiki/tier3-working/database-patterns/repository-pattern.md | — | claude-opus-4-7 | Added tier2-core/architecture-patterns/repository.md to See Also (Tier 2 conceptual companion) |
+| 2026-05-19 | CREATE | wiki/tier3-working/database-patterns/database-design.md | Synthesized from Redgate, Microsoft, AWS, MongoDB, Neo4j, InfluxData, TimescaleDB | nemotron-3-super | Database design best practices covering relational, NoSQL, graph, time-series, and object storage systems |

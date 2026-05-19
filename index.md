@@ -16,7 +16,7 @@
 | Security review | `wiki/tier1-sources/swebok-v4/ka13-security.md` + `owasp/top10-2021-overview.md` | `checklists/security-review.md` |
 | Code review | `wiki/tier1-sources/swebok-v4/ka12-quality.md` | `checklists/code-review.md` |
 | Design a distributed system | `wiki/tier2-core/distributed-systems/cap-pacelc.md` | `checklists/design-review.md` |
-| Design a database layer | `wiki/tier3-working/database-patterns/overview.md` | `checklists/security-review.md` |
+| Design a database layer | `wiki/tier3-working/database-patterns/database-design.md` | `checklists/security-review.md` |
 | Design an API | `wiki/tier3-working/api-design/overview.md` | `checklists/design-review.md` |
 | Add observability | `wiki/tier3-working/observability/overview.md` | `checklists/code-review.md` |
 | Design a domain-driven service | `wiki/tier2-core/architecture-patterns/overview.md` | `checklists/design-review.md` |
@@ -180,6 +180,7 @@
 | `wiki/tier3-working/database-patterns/repository-pattern.md` | Repository Pattern | persistence abstraction, domain separation |
 | `wiki/tier3-working/database-patterns/migrations.md` | Database Migrations | alembic, golang-migrate, schema versioning |
 | `wiki/tier3-working/database-patterns/query-optimization.md` | Query Optimization | N+1, indexing, EXPLAIN, connection pooling |
+| `wiki/tier3-working/database-patterns/database-design.md` | Database Design Best Practices | relational, NoSQL, graph, time-series, object storage |
 | `wiki/tier3-working/api-design/overview.md` | API Design | REST, gRPC, OpenAPI |
 | `wiki/tier3-working/api-design/rest-conventions.md` | REST Conventions | naming, status codes, versioning, pagination, HATEOAS |
 | `wiki/tier3-working/api-design/openapi.md` | OpenAPI / Contract-First | OpenAPI 3.1, spec-first, code generation |

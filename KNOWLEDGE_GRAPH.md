@@ -16,6 +16,7 @@
 | **CHECKLIST** | Review checklist | code-review, security-review |
 | **EXAMPLE** | Worked implementation example | dependency-injection, error-handling |
 | **GUIDE** | Language or tool guide | python/idioms, golang/concurrency |
+| **REF** | External Reference | redgate-database-design, microsoft-database-basics, aws-dynamodb-nosql-design |
 
 ---
 
@@ -76,6 +77,16 @@
 | golang/concurrency | REQUIRES | ka04-construction | Concurrency is a construction-level concern |
 | database-patterns/repository | IMPLEMENTS | solid-principles/dip | Repository abstracts data access (DIP) |
 | database-patterns/repository | IMPLEMENTS | solid-principles/srp | Each layer has single responsibility |
+| database-patterns/database-design | REFERENCES | redgate-database-design | Redgate's Top 11 Best Practices for Database Design |
+| database-patterns/database-design | REFERENCES | microsoft-database-basics | Microsoft Database Design Basics |
+| database-patterns/database-design | REFERENCES | aws-dynamodb-nosql-design | AWS DynamoDB NoSQL Design Best Practices |
+| database-patterns/database-design | REFERENCES | mongodb-data-modeling | MongoDB Official Data Modeling |
+| database-patterns/database-design | REFERENCES | neo4j-graph-modeling | Neo4j Graph Data Modeling Tips & Best Practices |
+| database-patterns/database-design | REFERENCES | influxdb-timeseries-model | InfluxData Time Series Database Explained + Data Model |
+| database-patterns/database-design | REFERENCES | timescaledb-hypertables | TimescaleDB Best Practices for Time-Series Data Modeling & Hypertables |
+| database-patterns/database-design | REFERENCES | aws-s3-performance | AWS S3 Optimizing Performance (Object Key Design & Partitioning) |
+| database-patterns/database-design | IMPLEMENTS | solid-principles/srp | Database design layer has single responsibility |
+| database-patterns/database-design | IMPLEMENTS | solid-principles/dip | Database design abstracts persistence concerns (DIP) |
 | api-design/rest-conventions | REFERENCES | owasp/a01 | REST APIs must enforce server-side access control |
 | api-design/grpc | COMPLEMENTS | api-design/openapi | Choose REST+OpenAPI or gRPC based on use case |
 | observability/structured-logging | MITIGATES | owasp/a09 | Structured logging addresses A09 |
@@ -226,12 +237,13 @@ These are the recommended reading sequences for common agent tasks. Follow in or
 
 ### "Design a Database Layer"
 ```
-1. wiki/tier3-working/database-patterns/overview.md                   # Pattern overview
-2. wiki/tier3-working/database-patterns/repository-pattern.md         # Separation of concerns
-3. wiki/tier3-working/database-patterns/migrations.md                 # Schema versioning strategy
-4. wiki/tier3-working/database-patterns/query-optimization.md         # Performance concerns
-5. wiki/tier1-sources/owasp/a03-injection.md                          # SQL injection prevention
-6. wiki/tier3-working/worked-examples/repository-pattern.md           # Concrete Python example
+1. wiki/tier3-working/database-patterns/database-design.md            # Design best practices
+2. wiki/tier3-working/database-patterns/overview.md                   # Pattern overview
+3. wiki/tier3-working/database-patterns/repository-pattern.md         # Separation of concerns
+4. wiki/tier3-working/database-patterns/migrations.md                 # Schema versioning strategy
+5. wiki/tier3-working/database-patterns/query-optimization.md         # Performance concerns
+6. wiki/tier1-sources/owasp/a03-injection.md                          # SQL injection prevention
+7. wiki/tier3-working/worked-examples/repository-pattern.md           # Concrete Python example
 ```
 
 ### "Write a Commit Message"
