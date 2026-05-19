@@ -171,3 +171,4 @@ Append-only record of all ingest, creation, and update events. Never edit or del
 | 2026-05-19 | CREATE | wiki/tier1-sources/martin-fowler/bounded-context.md | references/martin-fowler-bounded-context.md | nemotron-3-super | Martin Fowler's Bounded Context article for Domain-Driven Design |
 | 2026-05-19 | CREATE | wiki/tier1-sources/eric-evans/ddd-reference.md | references/domainlanguage-ddd-reference.md | nemotron-3-super | Eric Evans' DDD Reference - condensed guide to DDD patterns and definitions |
 | 2026-05-19 | CREATE | wiki/tier2-core/data-mesh/overview.md | references/martin-fowler-data-mesh-principles.md | nemotron-3-super | Data Mesh Principles and Logical Architecture by Martin Fowler |
+| 2026-05-19 | CREATE | wiki/tier3-working/ddd/overview.md | references/ddd-crew-welcome-to-ddd.md | nemotron-3-super | Domain-Driven Design Crew resources: Welcome to DDD, starter modelling, bounded context canvas |

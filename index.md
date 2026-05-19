@@ -171,6 +171,7 @@
 | File | Topic | Key Terms |
 |------|-------|-----------|
 | `wiki/tier3-working/python/overview.md` | Python Best Practices | Python, idiomatic, PEP |
+| `wiki/tier3-working/ddd/overview.md` | Domain-Driven Design Crew Resources | DDD Crew / DDD | welcome to DDD, starter modelling, bounded context canvas, event storming |
 | `wiki/tier3-working/python/idioms.md` | Python Idioms | list comprehension, dataclass, context manager, Pythonic |
 | `wiki/tier3-working/python/type-system.md` | Python Type System | typing, Optional, Union, TypeVar, Protocol |
 | `wiki/tier3-working/python/functional-core.md` | Functional Core / Imperative Shell | pure functions, side effects, immutability |
@@ -512,6 +513,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | `w3c-skos-primer.md` | `wiki/tier1-sources/w3c/skos-primer.md` |
 | `martin-fowler-bounded-context.md` | `wiki/tier1-sources/martin-fowler/bounded-context.md` |
 | `domainlanguage-ddd-reference.md` | `wiki/tier1-sources/eric-evans/ddd-reference.md` |
+| `ddd-crew-welcome-to-ddd.md` | `wiki/tier3-working/ddd/overview.md` |
 
 ---
 
