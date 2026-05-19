@@ -167,3 +167,7 @@ Append-only record of all ingest, creation, and update events. Never edit or del
 | 2026-05-07 | UPDATE | AGENTS.md | — | claude-opus-4-7 | Added 3 Task Routing Table rows + 3 Quick Reference paths for domain-driven, event-driven, and legacy-migration tasks |
 | 2026-05-07 | UPDATE | wiki/tier3-working/database-patterns/repository-pattern.md | — | claude-opus-4-7 | Added tier2-core/architecture-patterns/repository.md to See Also (Tier 2 conceptual companion) |
 | 2026-05-19 | CREATE | wiki/tier3-working/database-patterns/database-design.md | Synthesized from Redgate, Microsoft, AWS, MongoDB, Neo4j, InfluxData, TimescaleDB | nemotron-3-super | Database design best practices covering relational, NoSQL, graph, time-series, and object storage systems |
+| 2026-05-19 | CREATE | wiki/tier1-sources/w3c/skos-primer.md | references/w3c-skos-primer.md | nemotron-3-super | W3C SKOS Primer for semantic web concept schemes and mappings |
+| 2026-05-19 | CREATE | wiki/tier1-sources/martin-fowler/bounded-context.md | references/martin-fowler-bounded-context.md | nemotron-3-super | Martin Fowler's Bounded Context article for Domain-Driven Design |
+| 2026-05-19 | CREATE | wiki/tier1-sources/eric-evans/ddd-reference.md | references/domainlanguage-ddd-reference.md | nemotron-3-super | Eric Evans' DDD Reference - condensed guide to DDD patterns and definitions |
+| 2026-05-19 | CREATE | wiki/tier2-core/data-mesh/overview.md | references/martin-fowler-data-mesh-principles.md | nemotron-3-super | Data Mesh Principles and Logical Architecture by Martin Fowler |

@@ -89,6 +89,24 @@
 |------|---------|-----------|
 | `wiki/tier1-sources/acm-ieee-ethics/code-of-ethics.md` | ACM/IEEE-CS Code of Ethics | public interest, judgment, profession, reporting risks |
 
+### Martin Fowler
+
+| File | Standard | Key Terms |
+|------|---------|-----------|
+| `wiki/tier1-sources/martin-fowler/bounded-context.md` | Bounded Context | domain-driven design, ubiquitous language, strategic design |
+
+### Eric Evans
+
+| File | Standard | Key Terms |
+|------|---------|-----------|
+| `wiki/tier1-sources/eric-evans/ddd-reference.md` | Domain-Driven Design Reference | bounded context, ubiquitous language, aggregates, entities, value objects |
+
+### W3C Standards
+
+| File | Standard | Key Terms |
+|------|---------|-----------|
+| `wiki/tier1-sources/w3c/skos-primer.md` | SKOS Simple Knowledge Organization System Primer | semantic web, concept schemes, mappings, controlled vocabularies |
+
 ---
 
 ## Tier 2 — Core Knowledge
@@ -129,6 +147,7 @@
 | `wiki/tier2-core/engineering-playbook/developer-experience.md` | Developer Experience (DevEx) | Microsoft ISE / SWEBOK KA6, KA4 | DevEx, F5 contract, onboarding, build, test, start, debug, local mock |
 | `wiki/tier2-core/engineering-playbook/documentation-practices.md` | Documentation Practices | Microsoft ISE / SWEBOK KA12 | documentation, README, anti-patterns, OpenAPI, onboarding docs, PR description |
 | `wiki/tier2-core/architecture-patterns/overview.md` | Architecture Patterns Overview | "Architecture Patterns with Python" / SWEBOK KA02, KA03, DDD | Cosmic Python, hexagonal, DDD, ports and adapters, event-driven, domain model |
+| `wiki/tier2-core/data-mesh/overview.md` | Data Mesh Principles and Logical Architecture | Martin Fowler / DDD | data mesh, domain ownership, data as product, self-serve platform, federated governance |
 | `wiki/tier2-core/architecture-patterns/domain-model.md` | Domain Model | "Architecture Patterns with Python" Ch 1 | domain model, entity, value object, domain service, rich model, plain Python |
 | `wiki/tier2-core/architecture-patterns/repository.md` | Repository Pattern (Tier 2) | "Architecture Patterns with Python" Ch 2 | repository, classical ORM mapping, SQLAlchemy, collection abstraction |
 | `wiki/tier2-core/architecture-patterns/service-layer.md` | Service Layer | "Architecture Patterns with Python" Ch 4 | service layer, orchestration, use case, Flask adapter, thin entrypoint |
@@ -490,6 +509,9 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 |-------------------------|---------------------|
 | `Software Development Best Practices for Agent.md` | All wiki pages (primary synthesis source) |
 | `architecture-patterns-with-python.md` | `wiki/tier2-core/architecture-patterns/` (13 pages) |
+| `w3c-skos-primer.md` | `wiki/tier1-sources/w3c/skos-primer.md` |
+| `martin-fowler-bounded-context.md` | `wiki/tier1-sources/martin-fowler/bounded-context.md` |
+| `domainlanguage-ddd-reference.md` | `wiki/tier1-sources/eric-evans/ddd-reference.md` |
 
 ---
 
