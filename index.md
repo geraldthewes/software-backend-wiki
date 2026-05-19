@@ -193,6 +193,7 @@
 | `wiki/tier3-working/python/free-threading.md` | Python Free-Threading | GIL, free-threaded, CPython 3.13, thread safety, parallelism |
 | `wiki/tier3-working/python/isolating-extensions.md` | Python Extension Isolation | C extension, per-module state, heap types, subinterpreters |
 | `wiki/tier3-working/golang/overview.md` | Go Best Practices | Go, Effective Go, idiomatic |
+| `wiki/tier3-working/awesome-ddd/overview.md` | Awesome Domain-Driven Design | heynickc / DDD, CQRS, Event Sourcing | books, free eBooks, training, videos, community, blogs, sample projects |
 | `wiki/tier3-working/golang/idioms.md` | Go Idioms | error wrapping, interfaces, defer, named returns |
 | `wiki/tier3-working/golang/concurrency.md` | Go Concurrency | goroutines, channels, WaitGroup, select, context |
 | `wiki/tier3-working/golang/toolchain.md` | Go Toolchain | go build, go test, golangci-lint, go mod |
@@ -209,6 +210,7 @@
 | `wiki/tier3-working/observability/structured-logging.md` | Structured Logging | JSON logs, log levels, correlation ID, no PII |
 | `wiki/tier3-working/observability/metrics.md` | Metrics | counter, gauge, histogram, Prometheus, labels |
 | `wiki/tier3-working/observability/slo-sli-sla.md` | SLO / SLI / SLA | error budget, availability, latency percentiles |
+| `wiki/tier3-working/dotnet/overview.md` | .NET Microservices Architecture | .NET, microservices, Docker, containers, eShopOnContainers |
 | `wiki/tier3-working/checklists/pre-commit.md` | Pre-Commit Checklist | secrets, linting, type check, audit |
 | `wiki/tier3-working/checklists/code-review.md` | Code Review Checklist | correctness, style, design, security, testing |
 | `wiki/tier3-working/checklists/design-review.md` | Design Review Checklist | architecture, SOLID, distributed, security design |
@@ -514,6 +516,8 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | `martin-fowler-bounded-context.md` | `wiki/tier1-sources/martin-fowler/bounded-context.md` |
 | `domainlanguage-ddd-reference.md` | `wiki/tier1-sources/eric-evans/ddd-reference.md` |
 | `ddd-crew-welcome-to-ddd.md` | `wiki/tier3-working/ddd/overview.md` |
+| `awesome-ddd.md` | `wiki/tier3-working/awesome-ddd/overview.md` |
+| `dotnet-microservices-architecture.md` | `wiki/tier3-working/dotnet/overview.md` |
 
 ---
 

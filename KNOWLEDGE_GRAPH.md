@@ -15,7 +15,7 @@
 | **PATTERN** | Design or Resilience Pattern | repository-pattern, circuit-breaker |
 | **CHECKLIST** | Review checklist | code-review, security-review |
 | **EXAMPLE** | Worked implementation example | dependency-injection, error-handling |
-| **GUIDE** | Language or tool guide | python/idioms, golang/concurrency |
+| **GUIDE** | Language or tool guide | python/idioms, golang/concurrency, dotnet/microservices |
 | **REF** | External Reference | redgate-database-design, microsoft-database-basics, aws-dynamodb-nosql-design |
 
 ---
@@ -87,6 +87,12 @@
 | database-patterns/database-design | REFERENCES | aws-s3-performance | AWS S3 Optimizing Performance (Object Key Design & Partitioning) |
 | database-patterns/database-design | IMPLEMENTS | solid-principles/srp | Database design layer has single responsibility |
 | database-patterns/database-design | IMPLEMENTS | solid-principles/dip | Database design abstracts persistence concerns (DIP) |
+| dotnet/microservices | REFERENCES | ka02-architecture | .NET microservices guide builds on software architecture principles |
+| dotnet/microservices | REFERENCES | ka03-design | .NET microservices guide applies software design principles |
+| dotnet/microservices | EXTENDS | distributed-systems/overview | .NET microservices guide extends distributed systems concepts |
+| dotnet/microservices | REFERENCES | api-design/overview | .NET microservices guide includes API design considerations |
+| dotnet/microservices | REFERENCES | observability/overview | .NET microservices guide includes observability practices |
+| dotnet/microservices | COMPLEMENTS | twelve-factor-app/factors | .NET microservices guide aligns with 12-factor app principles |
 | api-design/rest-conventions | REFERENCES | owasp/a01 | REST APIs must enforce server-side access control |
 | api-design/grpc | COMPLEMENTS | api-design/openapi | Choose REST+OpenAPI or gRPC based on use case |
 | observability/structured-logging | MITIGATES | owasp/a09 | Structured logging addresses A09 |
@@ -302,6 +308,19 @@ These are the recommended reading sequences for common agent tasks. Follow in or
 6. wiki/tier2-core/architecture-patterns/dependency-injection-bootstrap.md  # Composition root wiring
 7. wiki/tier2-core/distributed-systems/fallacies.md                      # Distributed system assumptions to avoid
 8. wiki/tier3-working/checklists/design-review.md                        # Apply before implementation
+```
+
+### "Design a .NET Microservice"
+```
+1. wiki/tier1-sources/swebok-v4/ka02-architecture.md                     # Architectural styles and ADRs
+2. wiki/tier1-sources/swebok-v4/ka03-design.md                           # Design principles
+3. wiki/tier3-working/dotnet/overview.md                                 # .NET microservices architecture guide
+4. wiki/tier2-core/distributed-systems/cap-pacelc.md                     # Data store selection framework
+5. wiki/tier2-core/distributed-systems/fallacies.md                      # Distributed system assumptions to avoid
+6. wiki/tier2-core/twelve-factor-app/factors.md                          # Cloud-native operational requirements
+7. wiki/tier3-working/api-design/overview.md                             # API design context
+8. wiki/tier3-working/observability/overview.md                          # Observability practices
+9. wiki/tier3-working/checklists/design-review.md                        # Apply before finalizing design
 ```
 
 ---
