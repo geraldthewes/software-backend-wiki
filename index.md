@@ -216,6 +216,8 @@
 | `wiki/tier3-working/checklists/design-review.md` | Design Review Checklist | architecture, SOLID, distributed, security design |
 | `wiki/tier3-working/checklists/testing-review.md` | Testing Review Checklist | coverage, property tests, mutation score |
 | `wiki/tier3-working/checklists/security-review.md` | Security Review Checklist | OWASP, injection, auth, crypto, dependencies |
+| `wiki/tier3-working/owasp-code-review/overview.md` | OWASP Code Review Guide | OWASP Top 10, security review, vulnerability identification |
+| `wiki/tier3-working/code-review-guidelines/overview.md` | Comprehensive Code Review Guidelines | Google, Microsoft, SmartBear, Palantir, Thoughtbot |
 | `wiki/tier3-working/worked-examples/repository-pattern.md` | Repository Pattern (Python) | SQLite, Protocol, dataclass, SRP, DIP |
 | `wiki/tier3-working/worked-examples/dependency-injection.md` | Dependency Injection (Python) | Protocol, constructor injection, mock, testable |
 | `wiki/tier3-working/worked-examples/error-handling.md` | Error Handling (Python) | PEP 20, context manager, Result type, logging |
@@ -518,6 +520,8 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | `ddd-crew-welcome-to-ddd.md` | `wiki/tier3-working/ddd/overview.md` |
 | `awesome-ddd.md` | `wiki/tier3-working/awesome-ddd/overview.md` |
 | `dotnet-microservices-architecture.md` | `wiki/tier3-working/dotnet/overview.md` |
+| `OWASP_Code_Review_Guide_v2.pdf` | `wiki/tier3-working/owasp-code-review/overview.md` |
+| `Google-eng-practices-review/*.html` | `wiki/tier3-working/code-review-guidelines/overview.md` |
 
 ---
 
