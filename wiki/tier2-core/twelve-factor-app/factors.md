@@ -276,6 +276,7 @@ async def startup():
 - `wiki/tier1-sources/swebok-v4/ka02-architecture.md`
 - `wiki/tier1-sources/swebok-v4/ka06-operations.md`
 - `wiki/tier2-core/distributed-systems/overview.md`
+- `wiki/tier2-core/xdg-base-directory/overview.md`
 
 ## Source
 

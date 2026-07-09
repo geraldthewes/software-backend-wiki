@@ -174,3 +174,9 @@ Append-only record of all ingest, creation, and update events. Never edit or del
 | 2026-05-19 | CREATE | wiki/tier3-working/ddd/overview.md | references/ddd-crew-welcome-to-ddd.md | nemotron-3-super | Domain-Driven Design Crew resources: Welcome to DDD, starter modelling, bounded context canvas |
 | 2026-05-19 | CREATE | wiki/tier3-working/awesome-ddd/overview.md | references/awesome-ddd.md | nemotron-3-super | Awesome Domain-Driven Design by heynickc - curated list of DDD, CQRS, Event Sourcing, and Event Storming resources |
 | 2026-05-19 | CREATE | wiki/tier3-working/dotnet/overview.md | https://learn.microsoft.com/en-us/dotnet/architecture/microservices/ | nemotron-3-super | .NET Microservices Architecture for Containerized .NET Applications from Microsoft Learn |
+| 2026-07-09 | INGEST | references/xdg-basedir-spec-0.8.md | https://specifications.freedesktop.org/basedir/latest/ | claude-fable-5 | Raw capture of XDG Base Directory Specification v0.8 (freedesktop.org, 2021-05-08) |
+| 2026-07-09 | CREATE | wiki/tier2-core/xdg-base-directory/overview.md | references/xdg-basedir-spec-0.8.md | claude-fable-5 | XDG Base Directory Specification: 7 env vars with defaults, precedence, category selection, XDG_RUNTIME_DIR rules, read/write rules |
+| 2026-07-09 | UPDATE | index.md | — | claude-fable-5 | Added Quick Reference row, Tier 2 catalog row, 7 keyword index entries, source mapping row for xdg-base-directory |
+| 2026-07-09 | UPDATE | KNOWLEDGE_GRAPH.md | — | claude-fable-5 | Added 3 adjacency rows for xdg-base-directory (twelve-factor-app/factors, ka06-operations, owasp/a05) |
+| 2026-07-09 | UPDATE | wiki/tier2-core/twelve-factor-app/factors.md | — | claude-fable-5 | Added xdg-base-directory/overview.md to See Also (file placement complements config factor) |
+| 2026-07-09 | UPDATE | README.md | — | claude-fable-5 | Added Freedesktop.org XDG Base Directory Specification to Third-Party Copyright Notice |

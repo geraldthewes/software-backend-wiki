@@ -72,5 +72,6 @@ This wiki synthesizes and summarizes content from authoritative third-party sour
 - **PACELC Theorem** — © Daniel Abadi.
 - **Zero Trust Architecture (NIST SP 800-207)** — © National Institute of Standards and Technology (public domain).
 - **Hypothesis (property-based testing)** — © David R. MacIver and contributors. Licensed under [MPL 2.0](https://github.com/HypothesisWorks/hypothesis/blob/master/LICENSE.txt).
+- **XDG Base Directory Specification** — © Freedesktop.org (Waldo Bastian, Allison Karlitskaya, Lennart Poettering, Johannes Löthberg). [specifications.freedesktop.org](https://specifications.freedesktop.org/basedir/latest/)
 
 The summaries and wiki pages in this repository are transformative works for educational purposes. No claim of ownership is made over the original standards, specifications, or publications referenced herein.

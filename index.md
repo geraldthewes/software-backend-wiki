@@ -22,6 +22,7 @@
 | Design a domain-driven service | `wiki/tier2-core/architecture-patterns/overview.md` | `checklists/design-review.md` |
 | Build an event-driven service | `wiki/tier2-core/architecture-patterns/domain-events-message-bus.md` | `checklists/design-review.md` |
 | Write a commit message | `wiki/tier2-core/conventional-commits/overview.md` | `checklists/pre-commit.md` |
+| Decide where a CLI/service stores config, data, cache files | `wiki/tier2-core/xdg-base-directory/overview.md` | `checklists/design-review.md` |
 | Set up source control / branching | `wiki/tier2-core/engineering-playbook/source-control.md` | `checklists/pre-commit.md` |
 | Plan a sprint / manage backlog | `wiki/tier2-core/engineering-playbook/agile-development.md` | `wiki/tier1-sources/swebok-v4/ka09-engineering-management.md` |
 | Improve developer experience | `wiki/tier2-core/engineering-playbook/developer-experience.md` | `checklists/pre-commit.md` |
@@ -141,6 +142,7 @@
 | `wiki/tier2-core/security-practices/zero-trust.md` | Zero Trust Architecture | NIST SP 800-207 | never trust, always verify, microsegmentation |
 | `wiki/tier2-core/conventional-commits/overview.md` | Conventional Commits Overview | conventionalcommits.org 1.0.0 / SWEBOK KA8 | commit message, feat, fix, BREAKING CHANGE, SemVer, changelog |
 | `wiki/tier2-core/conventional-commits/specification.md` | Conventional Commits Specification | conventionalcommits.org 1.0.0 | 16 rules, RFC 2119, footer format, type prefix, scope |
+| `wiki/tier2-core/xdg-base-directory/overview.md` | XDG Base Directory Specification | freedesktop.org basedir-spec 0.8 | XDG_DATA_HOME, XDG_CONFIG_HOME, XDG_STATE_HOME, XDG_CACHE_HOME, XDG_RUNTIME_DIR, dotfiles, config directory |
 | `wiki/tier2-core/engineering-playbook/overview.md` | Engineering Playbook Overview | Microsoft ISE / SWEBOK KA8, KA9, KA10, KA12 | playbook, ISE, engineering fundamentals, coverage map |
 | `wiki/tier2-core/engineering-playbook/source-control.md` | Source Control Practices | Microsoft ISE / SWEBOK KA8 | git, branch naming, PR workflow, commit hygiene, merge strategy, secrets |
 | `wiki/tier2-core/engineering-playbook/agile-development.md` | Agile Development Practices | Microsoft ISE / SWEBOK KA9, KA10 | agile, sprint, backlog, DoR, DoD, retrospective, working agreements, technical debt |
@@ -267,6 +269,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | BREAKING CHANGE | `tier2-core/conventional-commits/overview.md` | `tier2-core/conventional-commits/specification.md` |
 | Builder pattern | `tier2-core/design-patterns/creational.md` | — |
 | Bulkhead pattern | `tier2-core/distributed-systems/resilience-patterns.md` | — |
+| Cache directory (XDG_CACHE_HOME) | `tier2-core/xdg-base-directory/overview.md` | — |
 | CAP theorem | `tier2-core/distributed-systems/cap-pacelc.md` | `tier1-sources/swebok-v4/ka02-architecture.md` |
 | CHANGELOG | `tier2-core/conventional-commits/overview.md` | `tier1-sources/swebok-v4/ka08-config-management.md` |
 | CI/CD | `tier1-sources/swebok-v4/ka06-operations.md` | `tier2-core/twelve-factor-app/factors.md` |
@@ -286,6 +289,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | CONTRIBUTING.md | `tier2-core/engineering-playbook/source-control.md` | `tier2-core/engineering-playbook/documentation-practices.md` |
 | Command pattern | `tier2-core/design-patterns/behavioral.md` | — |
 | Config (12-Factor III) | `tier2-core/twelve-factor-app/factors.md` | `tier1-sources/owasp/a05-security-misconfiguration.md` |
+| Config directory (XDG_CONFIG_HOME) | `tier2-core/xdg-base-directory/overview.md` | `tier2-core/twelve-factor-app/factors.md` |
 | Connection pooling | `tier3-working/database-patterns/query-optimization.md` | — |
 | Consistency (CAP) | `tier2-core/distributed-systems/cap-pacelc.md` | — |
 | Context manager | `tier3-working/python/idioms.md` | `tier2-core/security-practices/python-pyscg.md` |
@@ -317,6 +321,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | DIP | `tier2-core/solid-principles/dip.md` | — |
 | Distributed systems | `tier2-core/distributed-systems/overview.md` | `tier1-sources/swebok-v4/ka02-architecture.md` |
 | Domain service | `tier2-core/architecture-patterns/domain-model.md` | `tier2-core/architecture-patterns/service-layer.md` |
+| Dotfiles | `tier2-core/xdg-base-directory/overview.md` | — |
 | E2E testing | `tier2-core/testing-strategies/test-pyramid.md` | `tier1-sources/swebok-v4/ka05-testing.md` |
 | Effective Go | `tier3-working/golang/idioms.md` | `tier3-working/golang/overview.md` |
 | Engineering Fundamentals Playbook | `tier2-core/engineering-playbook/overview.md` | — |
@@ -502,6 +507,9 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | WaitGroup (Go) | `tier3-working/golang/concurrency.md` | — |
 | Working agreements | `tier2-core/engineering-playbook/agile-development.md` | — |
 | with statement | `tier3-working/python/idioms.md` | `tier2-core/security-practices/python-pyscg.md` |
+| XDG Base Directory | `tier2-core/xdg-base-directory/overview.md` | `tier2-core/twelve-factor-app/factors.md` |
+| XDG_RUNTIME_DIR | `tier2-core/xdg-base-directory/overview.md` | — |
+| XDG_STATE_HOME | `tier2-core/xdg-base-directory/overview.md` | — |
 | XXE | `tier1-sources/owasp/a03-injection.md` | — |
 | Zen of Python | `tier1-sources/python-peps/pep-020-zen.md` | `tier1-sources/swebok-v4/ka04-construction.md` |
 | Zero Trust | `tier2-core/security-practices/zero-trust.md` | `tier1-sources/swebok-v4/ka13-security.md` |
@@ -522,8 +530,9 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | `dotnet-microservices-architecture.md` | `wiki/tier3-working/dotnet/overview.md` |
 | `OWASP_Code_Review_Guide_v2.pdf` | `wiki/tier3-working/owasp-code-review/overview.md` |
 | `Google-eng-practices-review/*.html` | `wiki/tier3-working/code-review-guidelines/overview.md` |
+| `xdg-basedir-spec-0.8.md` | `wiki/tier2-core/xdg-base-directory/overview.md` |
 
 ---
 
 *This file is part of the software-backend-wiki. Updated whenever new pages are created.*
-*Last updated: 2026-05-07*
+*Last updated: 2026-07-09*

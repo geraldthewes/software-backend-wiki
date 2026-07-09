@@ -146,6 +146,9 @@
 | architecture-patterns/overview | REFERENCES | architecture-patterns/ports-and-adapters | Ports-and-adapters is the cross-cutting architectural frame |
 | architecture-patterns/overview | REFERENCES | architecture-patterns/domain-model | Domain model is the starting point for all other patterns |
 | design-review checklist | ENFORCES | architecture-patterns/ports-and-adapters | Design review checks that dependency arrows point inward |
+| xdg-base-directory | COMPLEMENTS | twelve-factor-app/factors | XDG governs where user-machine files live; 12-factor governs deploy config — both externalize environment specifics |
+| xdg-base-directory | EXTENDS | ka06-operations | File placement (config/data/cache/state/runtime) is an operational concern for deployed tools |
+| xdg-base-directory | MITIGATES | owasp/a05 | 0700 directory creation and predictable file locations prevent misconfigured, world-readable user files |
 
 ---
 
@@ -326,4 +329,4 @@ These are the recommended reading sequences for common agent tasks. Follow in or
 ---
 
 *This file is part of the software-backend-wiki. Update when new entities or relationships are added.*
-*Last updated: 2026-05-07 (architecture-patterns added)*
+*Last updated: 2026-07-09 (xdg-base-directory added)*
