@@ -99,6 +99,7 @@ Both may be combined: `feat(api)!:` with a `BREAKING CHANGE:` footer provides th
 - wiki/tier1-sources/swebok-v4/ka08-config-management.md
 - wiki/tier1-sources/swebok-v4/ka06-operations.md
 - wiki/tier2-core/twelve-factor-app/factors.md
+- wiki/tier2-core/code-review-method/overview.md
 - wiki/tier3-working/checklists/pre-commit.md
 
 ## Source

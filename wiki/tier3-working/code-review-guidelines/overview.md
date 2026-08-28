@@ -226,6 +226,7 @@ This page consolidates high-quality code review guidelines from multiple reputab
 ## Relationship to Other Wiki Pages
 
 This page connects to several important wiki sections:
+- Linus Torvalds review method — what to look for, in what order, and how to grade severity (wiki/tier2-core/code-review-method/overview.md)
 - Code review checklist (wiki/tier3-working/checklists/code-review.md)
 - OWASP Code Review Guide (wiki/tier3-working/owasp-code-review/overview.md)
 - Security review checklist (wiki/tier3-working/checklists/security-review.md)
@@ -235,7 +236,11 @@ This page connects to several important wiki sections:
 - Engineering playbook source control practices (wiki/tier2-core/engineering-playbook/source-control.md)
 - Conventional commits specification (wiki/tier2-core/conventional-commits/specification.md)
 
+Google's "approve when the change improves code health" and the Linus method's "say no early" combine as: reject invariant-false findings immediately; approve incremental improvements that do not violate invariants; never block on style nits. The Linus source persona's abusive tone is not adopted — ACM/IEEE Principle 7 and this page's culture rules win on how comments are written.
+
 ## See Also
+- wiki/tier2-core/code-review-method/overview.md
+- wiki/tier2-core/code-review-method/triggers.md
 - wiki/tier3-working/checklists/code-review.md
 - wiki/tier3-working/owasp-code-review/overview.md
 - wiki/tier3-working/checklists/security-review.md

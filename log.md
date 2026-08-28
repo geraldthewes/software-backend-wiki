@@ -180,3 +180,17 @@ Append-only record of all ingest, creation, and update events. Never edit or del
 | 2026-07-09 | UPDATE | KNOWLEDGE_GRAPH.md | — | claude-fable-5 | Added 3 adjacency rows for xdg-base-directory (twelve-factor-app/factors, ka06-operations, owasp/a05) |
 | 2026-07-09 | UPDATE | wiki/tier2-core/twelve-factor-app/factors.md | — | claude-fable-5 | Added xdg-base-directory/overview.md to See Also (file placement complements config factor) |
 | 2026-07-09 | UPDATE | README.md | — | claude-fable-5 | Added Freedesktop.org XDG Base Directory Specification to Third-Party Copyright Notice |
+| 2026-08-26 | INGEST | references/linus-torvalds-skill/SKILL.md | https://github.com/Mte90/linus-torvalds-skill | grok-4.6 | Raw capture of distilled Linus Torvalds review skill (SKILL.md, README.md, CC0 LICENSE) from 38,293 LKML review moves |
+| 2026-08-26 | CREATE | wiki/tier2-core/code-review-method/overview.md | references/linus-torvalds-skill/SKILL.md | grok-4.6 | Review method: mindset, Correctness>Performance>Complexity>Style, definitions, [REASON]→[ACT]; ACM/IEEE ethics override on tone |
+| 2026-08-26 | CREATE | wiki/tier2-core/code-review-method/triggers.md | references/linus-torvalds-skill/SKILL.md | grok-4.6 | Trigger catalog (Level 1 invariants + Level 2 themes A–J), severity tree, anti-patterns, Python/Go translations |
+| 2026-08-26 | UPDATE | wiki/tier3-working/checklists/code-review.md | references/linus-torvalds-skill/SKILL.md | grok-4.6 | Added invariant/precedence checklist section; linked method + triggers |
+| 2026-08-26 | UPDATE | wiki/tier3-working/code-review-guidelines/overview.md | — | grok-4.6 | Cross-linked method; documented Google-approve vs say-no-early combined rule |
+| 2026-08-26 | UPDATE | wiki/tier3-working/owasp-code-review/overview.md | — | grok-4.6 | Cross-linked method for invariant-level security triggers |
+| 2026-08-26 | UPDATE | wiki/tier2-core/engineering-playbook/overview.md | — | grok-4.6 | Code Reviews coverage row now includes code-review-method |
+| 2026-08-26 | UPDATE | wiki/tier2-core/engineering-playbook/source-control.md | — | grok-4.6 | See Also: code-review-method/overview.md |
+| 2026-08-26 | UPDATE | wiki/tier2-core/conventional-commits/overview.md | — | grok-4.6 | See Also: method supplies commit *why*; CC supplies format |
+| 2026-08-26 | UPDATE | wiki/tier3-working/checklists/pre-commit.md | — | grok-4.6 | Self-review item: invariant scan from the review method |
+| 2026-08-26 | UPDATE | AGENTS.md | — | grok-4.6 | Code review task routing + "Review a PR" path now include method and triggers |
+| 2026-08-26 | UPDATE | index.md | — | grok-4.6 | Quick Reference, Tier 2 catalog, keyword index, source mapping for linus-torvalds-skill |
+| 2026-08-26 | UPDATE | KNOWLEDGE_GRAPH.md | — | grok-4.6 | Adjacency rows + expanded "Review a Pull Request" navigation path |
+| 2026-08-26 | UPDATE | README.md | — | grok-4.6 | Third-party notice: linus-torvalds-skill CC0; tone override noted |

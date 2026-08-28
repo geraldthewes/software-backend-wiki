@@ -62,6 +62,7 @@
 ### Self-Review
 
 - [ ] Code review checklist self-applied (wiki/tier3-working/checklists/code-review.md)
+- [ ] Invariant scan from the review method applied (wiki/tier2-core/code-review-method/overview.md)
 - [ ] Security review checklist applied for any auth, data handling, or external-call changes
 - [ ] Design review checklist applied for any new components or services
 - [ ] Commit messages describe why, not just what
@@ -69,6 +70,7 @@
 ## See Also
 
 - wiki/tier3-working/checklists/code-review.md
+- wiki/tier2-core/code-review-method/overview.md
 - wiki/tier3-working/checklists/security-review.md
 - wiki/tier1-sources/python-peps/pep-008-style.md
 - wiki/tier1-sources/python-peps/pep-484-type-hints.md

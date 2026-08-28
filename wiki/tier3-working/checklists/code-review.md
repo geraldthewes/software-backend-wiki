@@ -1,6 +1,23 @@
 # Code Review Checklist
 
-> **Tier 3** | Enforces: wiki/tier1-sources/swebok-v4/ka04-construction.md, wiki/tier1-sources/swebok-v4/ka12-quality.md, wiki/tier1-sources/python-peps/pep-008-style.md, wiki/tier1-sources/python-peps/pep-484-type-hints.md, wiki/tier2-core/solid-principles/overview.md
+> **Tier 3** | Enforces: wiki/tier1-sources/swebok-v4/ka04-construction.md, wiki/tier1-sources/swebok-v4/ka12-quality.md, wiki/tier1-sources/python-peps/pep-008-style.md, wiki/tier1-sources/python-peps/pep-484-type-hints.md, wiki/tier2-core/solid-principles/overview.md, wiki/tier2-core/code-review-method/overview.md
+
+Scan invariants first (Correctness > Performance > Complexity > Style). Style findings never block a merge that fails an invariant. Method: wiki/tier2-core/code-review-method/overview.md. Triggers: wiki/tier2-core/code-review-method/triggers.md.
+
+## Invariants and precedence (Linus review method)
+
+- [ ] No fatal abort (`panic`, `sys.exit`, `os.Exit`, `assert` as control flow) on a recoverable, user-reachable condition
+- [ ] No public API / ABI / CLI / schema change without a deprecation or versioned migration path
+- [ ] New endpoints or exported functions run the same authz and validation as existing paths
+- [ ] Every resource (lock, file, connection) is released on all error paths; no cleanup-while-held
+- [ ] Copies, format strings, and indexes are bounded; no untrusted data used as a format string
+- [ ] Error-return convention is consistent inside the module; no mixed `None` / `-1` / exception / errno contracts
+- [ ] Shared mutable state uses atomic/happens-before semantics; lock order is consistent; no read-to-write lock upgrade
+- [ ] Special-case branches have a data-structure justification — not a one-off `if is_head`
+- [ ] No new abstraction used only once; no copy-paste of a non-trivial algorithm
+- [ ] Commit message explains *why*; comments match the code they annotate
+- [ ] Every non-approval finding is [REASON] → [ACT] with a named principle and a suggested fix
+- [ ] Findings are technically direct; no personal attacks (ACM/IEEE Principle 7)
 
 ## Correctness
 
@@ -59,11 +76,14 @@
 
 ## See Also
 
+- wiki/tier2-core/code-review-method/overview.md
+- wiki/tier2-core/code-review-method/triggers.md
 - wiki/tier3-working/checklists/security-review.md
 - wiki/tier3-working/checklists/testing-review.md
+- wiki/tier3-working/code-review-guidelines/overview.md
 - wiki/tier1-sources/swebok-v4/ka12-quality.md
 - wiki/tier2-core/solid-principles/overview.md
 
 ## Source
 
-SWEBOK V4, KA4 (Construction), KA12 (Quality). PEP 8, PEP 484. OWASP Top 10. Effective Go. "Clean Code" (Martin, 2008).
+SWEBOK V4, KA4 (Construction), KA12 (Quality). PEP 8, PEP 484. OWASP Top 10. Effective Go. "Clean Code" (Martin, 2008). Linus Torvalds review method: wiki/tier2-core/code-review-method/overview.md (Mte90/linus-torvalds-skill, CC0).

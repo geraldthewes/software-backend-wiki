@@ -16,7 +16,7 @@ For a coding agent, this playbook is the practical execution layer on top of SWE
 | Agile Development | `wiki/tier2-core/engineering-playbook/agile-development.md` | KA9 Engineering Management, KA10 Process |
 | Developer Experience | `wiki/tier2-core/engineering-playbook/developer-experience.md` | KA6 Operations, KA4 Construction |
 | Documentation | `wiki/tier2-core/engineering-playbook/documentation-practices.md` | KA12 Quality, KA9 Management |
-| Code Reviews | `wiki/tier2-core/engineering-playbook/source-control.md` + `checklists/code-review.md` | KA12 Quality |
+| Code Reviews | `wiki/tier2-core/code-review-method/overview.md` + `wiki/tier2-core/engineering-playbook/source-control.md` + `checklists/code-review.md` | KA12 Quality |
 | Observability | `wiki/tier3-working/observability/` (existing) | KA6 Operations |
 | Security | `wiki/tier2-core/security-practices/` + OWASP (existing) | KA13 Security |
 
@@ -56,6 +56,7 @@ Four principles run through every section of the playbook:
 - wiki/tier2-core/engineering-playbook/agile-development.md
 - wiki/tier2-core/engineering-playbook/developer-experience.md
 - wiki/tier2-core/engineering-playbook/documentation-practices.md
+- wiki/tier2-core/code-review-method/overview.md
 - wiki/tier1-sources/swebok-v4/ka08-config-management.md
 - wiki/tier1-sources/swebok-v4/ka09-engineering-management.md
 - wiki/tier1-sources/swebok-v4/ka10-process.md

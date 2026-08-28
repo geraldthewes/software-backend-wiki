@@ -133,6 +133,7 @@ The OWASP Code Review Guide provides a comprehensive framework for identifying s
 ## Relationship to Other Wiki Pages
 
 This page connects to several important wiki sections:
+- Linus Torvalds review method — invariant-level security triggers (trust-boundary validation, no new public path that skips existing checks) (wiki/tier2-core/code-review-method/overview.md)
 - Code review checklist (wiki/tier3-working/checklists/code-review.md)
 - Security review checklist (wiki/tier3-working/checklists/security-review.md)
 - SWEBOK v4 KA12 on quality assurance (wiki/tier1-sources/swebok-v4/ka12-quality.md)
@@ -141,6 +142,8 @@ This page connects to several important wiki sections:
 - Individual OWASP risk pages (wiki/tier1-sources/owasp/a01-broken-access-control.md, etc.)
 
 ## See Also
+- wiki/tier2-core/code-review-method/overview.md
+- wiki/tier2-core/code-review-method/triggers.md
 - wiki/tier3-working/checklists/code-review.md
 - wiki/tier3-working/checklists/security-review.md
 - wiki/tier1-sources/swebok-v4/ka12-quality.md

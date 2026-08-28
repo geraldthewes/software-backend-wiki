@@ -149,6 +149,16 @@
 | xdg-base-directory | COMPLEMENTS | twelve-factor-app/factors | XDG governs where user-machine files live; 12-factor governs deploy config — both externalize environment specifics |
 | xdg-base-directory | EXTENDS | ka06-operations | File placement (config/data/cache/state/runtime) is an operational concern for deployed tools |
 | xdg-base-directory | MITIGATES | owasp/a05 | 0700 directory creation and predictable file locations prevent misconfigured, world-readable user files |
+| code-review-method/overview | EXTENDS | ka12-quality | Technical review method operationalizes KA12 reviews: invariants, precedence, severity |
+| code-review-method/overview | REFERENCES | ka14-professional-practice | "Say no early" is professional judgment; comment tone is constrained by KA14 |
+| code-review-method/overview | CONFLICTS_WITH | code-of-ethics | Source persona's abusive LKML voice is rejected; ACM/IEEE Principle 7 (colleagues) wins |
+| code-review-method/overview | COMPLEMENTS | code-review-guidelines | Method = what to look for and how to grade; guidelines = how to conduct the review |
+| code-review-method/overview | COMPLEMENTS | owasp-code-review | Invariant security triggers complement OWASP Top 10 checkpoints; neither replaces the other |
+| code-review-method/overview | COMPLEMENTS | conventional-commits/overview | Conventional Commits is message format; the method requires the *why* |
+| code-review-method/triggers | REFERENCES | code-review-method/overview | Trigger catalog is the operational companion to the method |
+| code-review-method/triggers | MITIGATES | owasp/a03 | Unbounded format/copy and trust-boundary validation catch injection-class defects |
+| code-review checklist | ENFORCES | code-review-method/overview | Checklist's invariant section is the method's first scan |
+| code-review-method/overview | REQUIRES | ka12-quality | Method is a quality-gate practice, not a substitute for SWEBOK quality attributes |
 
 ---
 
@@ -209,9 +219,12 @@ These are the recommended reading sequences for common agent tasks. Follow in or
 ### "Review a Pull Request"
 ```
 1. wiki/tier1-sources/swebok-v4/ka12-quality.md                       # Quality framework
-2. wiki/tier3-working/checklists/code-review.md                       # Correctness, style, design, security
-3. wiki/tier3-working/checklists/security-review.md                   # Security concerns
-4. wiki/tier3-working/checklists/testing-review.md                    # Test adequacy
+2. wiki/tier2-core/code-review-method/overview.md                     # Precedence, invariants, [REASON]→[ACT]
+3. wiki/tier2-core/code-review-method/triggers.md                     # Level 1/2 triggers and severity tree
+4. wiki/tier3-working/checklists/code-review.md                       # Operational checklist (invariants first)
+5. wiki/tier3-working/code-review-guidelines/overview.md              # Process, pacing, comment culture
+6. wiki/tier3-working/checklists/security-review.md                   # Security concerns
+7. wiki/tier3-working/checklists/testing-review.md                    # Test adequacy
 ```
 
 ### "Build a Distributed System"

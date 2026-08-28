@@ -150,6 +150,7 @@ Small PRs are faster to review, easier to deploy, and produce fewer merge confli
 - wiki/tier2-core/engineering-playbook/overview.md
 - wiki/tier1-sources/swebok-v4/ka08-config-management.md
 - wiki/tier3-working/checklists/pre-commit.md
+- wiki/tier2-core/code-review-method/overview.md
 - wiki/tier3-working/checklists/code-review.md
 - wiki/tier2-core/security-practices/python-pyscg.md
 

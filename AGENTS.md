@@ -54,7 +54,7 @@ For each task type, read the listed files **in order** before producing output:
 | **Write Go code** | `wiki/tier1-sources/swebok-v4/ka04-construction.md` | `wiki/tier3-working/golang/idioms.md`, `wiki/tier3-working/golang/toolchain.md` | `wiki/tier3-working/checklists/pre-commit.md` |
 | **Write tests** | `wiki/tier1-sources/swebok-v4/ka05-testing.md` | `wiki/tier2-core/testing-strategies/test-pyramid.md`, `wiki/tier2-core/testing-strategies/property-based-testing.md` | `wiki/tier3-working/checklists/testing-review.md` |
 | **Security review** | `wiki/tier1-sources/swebok-v4/ka13-security.md` | `wiki/tier1-sources/owasp/top10-2021-overview.md`, `wiki/tier2-core/security-practices/python-pyscg.md` | `wiki/tier3-working/checklists/security-review.md` |
-| **Code review** | `wiki/tier1-sources/swebok-v4/ka12-quality.md` | `wiki/tier3-working/checklists/code-review.md` | `wiki/tier3-working/checklists/security-review.md` |
+| **Code review** | `wiki/tier1-sources/swebok-v4/ka12-quality.md` | `wiki/tier2-core/code-review-method/overview.md`, `wiki/tier2-core/code-review-method/triggers.md`, `wiki/tier3-working/checklists/code-review.md` | `wiki/tier3-working/checklists/security-review.md` |
 | **Distributed system design** | `wiki/tier2-core/distributed-systems/cap-pacelc.md` | `wiki/tier2-core/distributed-systems/fallacies.md`, `wiki/tier2-core/twelve-factor-app/factors.md` | `wiki/tier3-working/checklists/design-review.md` |
 | **Database work** | `wiki/tier3-working/database-patterns/overview.md` | `wiki/tier3-working/database-patterns/repository-pattern.md`, `wiki/tier1-sources/owasp/a03-injection.md` | `wiki/tier3-working/checklists/security-review.md` |
 | **API design** | `wiki/tier3-working/api-design/overview.md` | `wiki/tier3-working/api-design/rest-conventions.md`, `wiki/tier1-sources/owasp/a01-broken-access-control.md` | `wiki/tier3-working/checklists/design-review.md` |
@@ -181,7 +181,7 @@ These paths are defined in full in `KNOWLEDGE_GRAPH.md`. Abbreviated here for qu
 | Write production Go | ka04 → golang/idioms → golang/toolchain → pre-commit |
 | Test a module | ka05 → test-pyramid → property-based-testing → mutation-testing → testing-review |
 | Security audit | ka13 → owasp/top10 → python-pyscg → security-review |
-| Review a PR | ka12 → code-review → security-review |
+| Review a PR | ka12 → code-review-method → triggers → code-review checklist → security-review |
 | Build a distributed system | ka02 → cap-pacelc → fallacies → resilience-patterns → twelve-factor-app |
 | Design a REST API | api-design/overview → rest-conventions → openapi → a01 + a03 → design-review |
 | Add observability | observability/overview → structured-logging → metrics → slo-sli-sla |
@@ -197,4 +197,4 @@ These paths are defined in full in `KNOWLEDGE_GRAPH.md`. Abbreviated here for qu
 ---
 
 *This file is part of the software-backend-wiki. Maintained by LLM agents; Tier 1 changes require human approval.*
-*Last updated: 2026-05-07*
+*Last updated: 2026-08-26*
