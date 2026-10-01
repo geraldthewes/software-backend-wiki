@@ -83,6 +83,19 @@ Standard: wiki/tier2-core/google-eng-practices/review-standard.md. Lookup list: 
 - [ ] A change too large to review was sent back to be split
 - [ ] Partial review scope is written on the change
 
+## Review conduct (good to better)
+
+Standard: wiki/tier2-core/code-review-good-to-better/overview.md. The approval bar stays in the Google section above. A follow-up change does not carry a health regression.
+
+- [ ] Title, description, and the reason for the change were read before the diff
+- [ ] Open questions that could change the verdict are resolved or still blocking; other comments are marked non-blocking
+- [ ] Approval or a change request is stated in words
+- [ ] Nits use `nit:` and do not block; a nit that keeps recurring is handed to a linter or a written standard
+- [ ] A long thread, or a first pass with many comments, moved to a conversation and the outcome was recorded on the change
+- [ ] A new joiner got explanation and pointers to the guides, on the same bar as every other author
+- [ ] Cross-time-zone review used overlap hours; a dependency that keeps crossing zones was raised as a design question
+- [ ] Urgent work was reviewed faster; it was not merged with no review unless the emergency rule applies
+
 ## Documentation
 
 - [ ] Complex logic has inline comments explaining WHY a decision was made, not just WHAT the code does
@@ -96,6 +109,7 @@ Standard: wiki/tier2-core/google-eng-practices/review-standard.md. Lookup list: 
 - wiki/tier2-core/google-eng-practices/review-standard.md
 - wiki/tier2-core/google-eng-practices/what-to-look-for.md
 - wiki/tier2-core/code-review-method/overview.md
+- wiki/tier2-core/code-review-good-to-better/overview.md
 - wiki/tier2-core/code-review-method/triggers.md
 - wiki/tier3-working/checklists/security-review.md
 - wiki/tier3-working/checklists/testing-review.md
@@ -105,4 +119,4 @@ Standard: wiki/tier2-core/google-eng-practices/review-standard.md. Lookup list: 
 
 ## Source
 
-SWEBOK V4, KA4 (Construction), KA12 (Quality). PEP 8, PEP 484. OWASP Top 10. Effective Go. "Clean Code" (Martin, 2008). Linus Torvalds review method: wiki/tier2-core/code-review-method/overview.md (Mte90/linus-torvalds-skill, CC0). Google engineering practices: wiki/tier2-core/google-eng-practices/overview.md (google/eng-practices, CC BY 3.0).
+SWEBOK V4, KA4 (Construction), KA12 (Quality). PEP 8, PEP 484. OWASP Top 10. Effective Go. "Clean Code" (Martin, 2008). Linus Torvalds review method: wiki/tier2-core/code-review-method/overview.md (Mte90/linus-torvalds-skill, CC0). Google engineering practices: wiki/tier2-core/google-eng-practices/overview.md (google/eng-practices, CC BY 3.0). Good-to-better conduct: wiki/tier2-core/code-review-good-to-better/overview.md (Gergely Orosz, Stack Overflow Blog, 2019-09-30).

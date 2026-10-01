@@ -161,6 +161,7 @@ The source skill was validated on antirez/smallchat (706 LOC, C). One model gain
 - wiki/tier3-working/checklists/code-review.md
 - wiki/tier2-core/google-eng-practices/overview.md
 - wiki/tier2-core/google-eng-practices/review-standard.md
+- wiki/tier2-core/code-review-good-to-better/overview.md
 - wiki/tier3-working/code-review-guidelines/overview.md
 - wiki/tier3-working/owasp-code-review/overview.md
 - wiki/tier2-core/conventional-commits/overview.md

@@ -244,11 +244,16 @@ The Google bullets on this page are a working summary mixed with other sources. 
 
 Size guidance above cites SmartBear's 200–400 LOC research bound. Google's Tier 2 rule is one self-contained change: about 100 lines is usually reasonable, about 1000 is usually too large, and a reviewer may reject a change for size alone.
 
+## Canonical Good-to-Better Synthesis
+
+Gergely Orosz's "How to Make Good Code Reviews Better" is synthesized at `wiki/tier2-core/code-review-good-to-better/overview.md`. That page owns the good-versus-better ladder: contextual review, comment tone, an explicit approve or change request, switching from a long thread to a conversation, repeated nits as a tooling or standards problem, the same bar with more teaching for new joiners, repeated timezone pain as a design problem, and organizational support for review. Where this Tier 3 mix disagrees with that page, the Tier 2 page wins. Where that page disagrees with Google on the approval bar or on deferring a health fix, the Google Tier 2 pages win. Tier 1 still wins over both.
+
 ## See Also
 - wiki/tier2-core/google-eng-practices/overview.md
 - wiki/tier2-core/google-eng-practices/review-standard.md
 - wiki/tier2-core/google-eng-practices/what-to-look-for.md
 - wiki/tier2-core/code-review-method/overview.md
+- wiki/tier2-core/code-review-good-to-better/overview.md
 - wiki/tier2-core/code-review-method/triggers.md
 - wiki/tier3-working/checklists/code-review.md
 - wiki/tier3-working/owasp-code-review/overview.md
@@ -266,3 +271,4 @@ Size guidance above cites SmartBear's 200–400 LOC research bound. Google's Tie
 - SmartBear. *Best Practices for Peer Code Review*. https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/
 - Palantir. *Code Review Best Practices*. https://blog.palantir.com/code-review-best-practices-19e02780015f
 - Thoughtbot. *Guides - Code Review*. https://github.com/thoughtbot/guides/blob/master/code-review/README.md
+- Gergely Orosz. "How to Make Good Code Reviews Better." Stack Overflow Blog, 30 September 2019. https://stackoverflow.blog/2019/09/30/how-to-make-good-code-reviews-better/ — authoritative synthesis at `wiki/tier2-core/code-review-good-to-better/overview.md`

@@ -57,6 +57,7 @@ Pair programming with someone qualified to review the code counts as review. An 
 | Google CL description vs Conventional Commits | Both, on different parts | Subject line uses Conventional Commits (`type(scope): imperative summary`). The body follows Google's what/why rules. |
 | Google "~100 lines / one concern" vs the Tier 3 SmartBear 200–400 LOC research bound | Tier 2 Google rule | One self-contained change. About 100 lines is usually reasonable; about 1000 is usually too large. A reviewer may reject for size alone. |
 | Emergency speed vs the review standard | `emergencies.md`, narrowly | Only a true emergency relaxes anything other than "does this resolve the emergency, correctly?" Follow with a thorough review. |
+| This directory vs Orosz on follow-up changes, tone, nits, new joiners, and time zones | This directory for the approval bar; `code-review-good-to-better/overview.md` for conduct | A promised follow-up does not justify a health decrease. Non-blocking notes may move to a later change. Orosz supplies tone, new-joiner teaching, nits as a tooling smell, timezone pain as a design problem, and organizational expectations. |
 
 The multi-source working summary at `wiki/tier3-working/code-review-guidelines/overview.md` remains useful for Microsoft, SmartBear, Palantir, and Thoughtbot material. Where it restates Google and a page in this directory disagrees, this directory wins.
 
@@ -90,6 +91,7 @@ The multi-source working summary at `wiki/tier3-working/code-review-guidelines/o
 - wiki/tier2-core/google-eng-practices/small-cls.md
 - wiki/tier2-core/google-eng-practices/cl-descriptions.md
 - wiki/tier2-core/google-eng-practices/emergencies.md
+- wiki/tier2-core/code-review-good-to-better/overview.md
 - wiki/tier2-core/code-review-method/overview.md
 - wiki/tier1-sources/swebok-v4/ka12-quality.md
 - wiki/tier1-sources/acm-ieee-ethics/code-of-ethics.md

@@ -169,6 +169,15 @@
 | google-eng-practices/cl-descriptions | COMPLEMENTS | conventional-commits/overview | Conventional Commits formats the subject; Google's rules fill what and why in the body |
 | google-eng-practices/emergencies | CONFLICTS_WITH | google-eng-practices/review-standard | Emergencies are the only case where a health decrease may land; a follow-up review is required |
 | code-review checklist | ENFORCES | google-eng-practices/review-standard | Checklist's Google section is the approval-bar scan |
+| code-review-good-to-better/overview | EXTENDS | ka12-quality | Good-to-better ladder is how review conduct implements quality assurance |
+| code-review-good-to-better/overview | EXTENDS | ka14-professional-practice | Tone, new-joiner teaching, and hostile-review handling are professional practice |
+| code-review-good-to-better/overview | REFERENCES | ka09-engineering-management | Review time as a job expectation, and investment in review tooling, are management concerns |
+| code-review-good-to-better/overview | COMPLEMENTS | google-eng-practices/overview | Orosz supplies context, tone, nits-as-tooling, timezone-as-design, and org support; Google keeps the approval bar |
+| code-review-good-to-better/overview | COMPLEMENTS | code-review-method/overview | The method grades technical findings; this page grades how the review is conducted |
+| code-review-good-to-better/overview | CONFLICTS_WITH | google-eng-practices/handling-pushback | Follow-up changes vs clean-it-up-now; Google wins for health defects; follow-up only for non-blocking notes |
+| code-review-good-to-better/overview | COMPLEMENTS | code-of-ethics | Empathetic, unopinionated comments implement Principle 7 |
+| code-review-good-to-better/overview | COMPLEMENTS | developer-experience | New-joiner reviews are part of onboarding and keep the same quality bar |
+| code-review checklist | ENFORCES | code-review-good-to-better/overview | Checklist's conduct section is the good-to-better scan |
 
 ---
 
@@ -235,10 +244,11 @@ These are the recommended reading sequences for common agent tasks. Follow in or
 5. wiki/tier2-core/google-eng-practices/review-standard.md            # Approve when health improves; nits do not block
 6. wiki/tier2-core/google-eng-practices/what-to-look-for.md           # Design through documentation, every line
 7. wiki/tier2-core/google-eng-practices/navigating-a-cl.md            # Broad view, then the main file, then the rest
-8. wiki/tier3-working/checklists/code-review.md                       # Operational checklist (invariants first)
-9. wiki/tier3-working/code-review-guidelines/overview.md              # Multi-source process notes; Google rules defer to Tier 2
-10. wiki/tier3-working/checklists/security-review.md                  # Security concerns
-11. wiki/tier3-working/checklists/testing-review.md                   # Test adequacy
+8. wiki/tier2-core/code-review-good-to-better/overview.md             # Conduct: tone, nits, conversation, new joiners, time zones, org support
+9. wiki/tier3-working/checklists/code-review.md                       # Operational checklist (invariants first)
+10. wiki/tier3-working/code-review-guidelines/overview.md             # Multi-source process notes; Tier 2 rules win
+11. wiki/tier3-working/checklists/security-review.md                  # Security concerns
+12. wiki/tier3-working/checklists/testing-review.md                   # Test adequacy
 ```
 
 ### "Prepare a Change for Review"

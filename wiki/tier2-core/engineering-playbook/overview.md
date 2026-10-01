@@ -16,7 +16,7 @@ For a coding agent, this playbook is the practical execution layer on top of SWE
 | Agile Development | `wiki/tier2-core/engineering-playbook/agile-development.md` | KA9 Engineering Management, KA10 Process |
 | Developer Experience | `wiki/tier2-core/engineering-playbook/developer-experience.md` | KA6 Operations, KA4 Construction |
 | Documentation | `wiki/tier2-core/engineering-playbook/documentation-practices.md` | KA12 Quality, KA9 Management |
-| Code Reviews | `wiki/tier2-core/code-review-method/overview.md` + `wiki/tier2-core/google-eng-practices/overview.md` + `wiki/tier2-core/engineering-playbook/source-control.md` + `checklists/code-review.md` | KA12 Quality |
+| Code Reviews | `wiki/tier2-core/code-review-method/overview.md` + `wiki/tier2-core/google-eng-practices/overview.md` + `wiki/tier2-core/code-review-good-to-better/overview.md` + `wiki/tier2-core/engineering-playbook/source-control.md` + `checklists/code-review.md` | KA12 Quality |
 | Observability | `wiki/tier3-working/observability/` (existing) | KA6 Operations |
 | Security | `wiki/tier2-core/security-practices/` + OWASP (existing) | KA13 Security |
 

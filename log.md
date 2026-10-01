@@ -216,3 +216,15 @@ Append-only record of all ingest, creation, and update events. Never edit or del
 | 2026-10-01 | UPDATE | wiki/tier2-core/engineering-playbook/source-control.md | — | grok-4.7 | See Also: small-cls and cl-descriptions |
 | 2026-10-01 | UPDATE | wiki/tier2-core/engineering-playbook/overview.md | — | grok-4.7 | Code Reviews coverage row includes google-eng-practices |
 | 2026-10-01 | UPDATE | README.md | — | grok-4.7 | Third-party notice: Google eng-practices CC BY 3.0; coverage row |
+| 2026-10-01 | INGEST | references/orosz-how-to-make-good-code-reviews-better.md | https://stackoverflow.blog/2019/09/30/how-to-make-good-code-reviews-better/ | grok-4.7 | Structured summary of Gergely Orosz, "How to Make Good Code Reviews Better" (The Pragmatic Engineer; Stack Overflow Blog, 2019-09-30). Summary, not a reproduction |
+| 2026-10-01 | CREATE | wiki/tier2-core/code-review-good-to-better/overview.md | references/orosz-how-to-make-good-code-reviews-better.md | grok-4.7 | Good-vs-better conduct ladder; Google keeps the approval bar; Tier 1 still wins |
+| 2026-10-01 | UPDATE | index.md | — | grok-4.7 | Quick Reference, Tier 2 catalog, keyword index, source mapping for Orosz good-to-better reviews |
+| 2026-10-01 | UPDATE | KNOWLEDGE_GRAPH.md | — | grok-4.7 | Adjacency rows; Review a Pull Request path includes code-review-good-to-better |
+| 2026-10-01 | UPDATE | AGENTS.md | — | grok-4.7 | Code review routing and Review a PR path include code-review-good-to-better |
+| 2026-10-01 | UPDATE | wiki/tier3-working/checklists/code-review.md | — | grok-4.7 | Added good-to-better conduct checklist section |
+| 2026-10-01 | UPDATE | wiki/tier3-working/code-review-guidelines/overview.md | — | grok-4.7 | Pointed the Orosz ladder at the Tier 2 page; Google still wins on the approval bar |
+| 2026-10-01 | UPDATE | wiki/tier2-core/google-eng-practices/overview.md | — | grok-4.7 | Authority row: Google keeps approval; Orosz supplies conduct |
+| 2026-10-01 | UPDATE | wiki/tier2-core/code-review-method/overview.md | — | grok-4.7 | See Also: code-review-good-to-better |
+| 2026-10-01 | UPDATE | wiki/tier2-core/engineering-playbook/overview.md | — | grok-4.7 | Code Reviews coverage row includes code-review-good-to-better |
+| 2026-10-01 | UPDATE | wiki/tier2-core/engineering-playbook/developer-experience.md | — | grok-4.7 | See Also: new-joiner reviews on the good-to-better page |
+| 2026-10-01 | UPDATE | README.md | — | grok-4.7 | Third-party notice for Orosz / Stack Overflow Blog; coverage row |

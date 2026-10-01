@@ -16,6 +16,7 @@
 | Security review | `wiki/tier1-sources/swebok-v4/ka13-security.md` + `owasp/top10-2021-overview.md` | `checklists/security-review.md` |
 | Code review | `wiki/tier1-sources/swebok-v4/ka12-quality.md` + `wiki/tier2-core/code-review-method/overview.md` | `checklists/code-review.md` |
 | Review with Google's engineering practices | `wiki/tier2-core/google-eng-practices/overview.md` | `checklists/code-review.md` |
+| Review conduct (tone, nits, new joiners, time zones, org support) | `wiki/tier2-core/code-review-good-to-better/overview.md` | `checklists/code-review.md` |
 | Prepare a change for review (size, description, comments) | `wiki/tier2-core/google-eng-practices/small-cls.md` | `checklists/pre-commit.md` |
 | Design a distributed system | `wiki/tier2-core/distributed-systems/cap-pacelc.md` | `checklists/design-review.md` |
 | Design a database layer | `wiki/tier3-working/database-patterns/database-design.md` | `checklists/security-review.md` |
@@ -178,6 +179,7 @@
 | `wiki/tier2-core/google-eng-practices/cl-descriptions.md` | Change Descriptions | google/eng-practices `review/developer/cl-descriptions.md` | what and why, imperative first line, body context |
 | `wiki/tier2-core/google-eng-practices/handling-comments.md` | Handling Reviewer Comments | google/eng-practices `review/developer/handling-comments.md` | fix the code, collaborative disagreement, no angry replies |
 | `wiki/tier2-core/google-eng-practices/emergencies.md` | Emergency Changes | google/eng-practices `review/emergencies.md` | hard deadline, production bug, security hole, follow-up review |
+| `wiki/tier2-core/code-review-good-to-better/overview.md` | Good and Better Code Reviews | Gergely Orosz, Stack Overflow Blog 2019-09-30 / The Pragmatic Engineer / SWEBOK KA12, KA14, KA9 | good vs better, tone, nit as tooling, new joiner, cross-time zone, org support |
 
 ---
 
@@ -309,6 +311,11 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Code review comments | `tier2-core/google-eng-practices/review-comments.md` | `tier2-core/google-eng-practices/handling-comments.md` |
 | Code review method | `tier2-core/code-review-method/overview.md` | `tier2-core/code-review-method/triggers.md` |
 | Code review speed | `tier2-core/google-eng-practices/review-speed.md` | `tier2-core/google-eng-practices/emergencies.md` |
+| Code review tone | `tier2-core/code-review-good-to-better/overview.md` | `tier1-sources/acm-ieee-ethics/code-of-ethics.md` |
+| Code review (organization) | `tier2-core/code-review-good-to-better/overview.md` | `tier1-sources/swebok-v4/ka09-engineering-management.md` |
+| Cross-time zone code review | `tier2-core/code-review-good-to-better/overview.md` | `tier2-core/google-eng-practices/review-speed.md` |
+| Better code review | `tier2-core/code-review-good-to-better/overview.md` | `tier2-core/google-eng-practices/review-standard.md` |
+| Good code review | `tier2-core/code-review-good-to-better/overview.md` | `tier2-core/google-eng-practices/review-standard.md` |
 | Cohesion | `tier1-sources/swebok-v4/ka03-design.md` | `tier2-core/solid-principles/srp.md` |
 | CONTRIBUTING.md | `tier2-core/engineering-playbook/source-control.md` | `tier2-core/engineering-playbook/documentation-practices.md` |
 | Command pattern | `tier2-core/design-patterns/behavioral.md` | — |
@@ -375,6 +382,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Generic (typing) | `tier3-working/python/type-system.md` | `tier1-sources/python-peps/pep-484-type-hints.md` |
 | GoF design patterns | `tier2-core/design-patterns/overview.md` | `tier1-sources/swebok-v4/ka03-design.md` |
 | Google engineering practices | `tier2-core/google-eng-practices/overview.md` | `tier2-core/google-eng-practices/review-standard.md` |
+| Gergely Orosz | `tier2-core/code-review-good-to-better/overview.md` | — |
 | golang-migrate | `tier3-working/database-patterns/migrations.md` | — |
 | goroutine | `tier3-working/golang/concurrency.md` | — |
 | gRPC | `tier3-working/api-design/grpc.md` | — |
@@ -431,6 +439,8 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Named return values (Go) | `tier3-working/golang/idioms.md` | — |
 | Naming conventions | `tier1-sources/python-peps/pep-008-style.md` | `tier3-working/golang/idioms.md` |
 | Nit (review comment) | `tier2-core/google-eng-practices/review-comments.md` | `tier2-core/google-eng-practices/review-standard.md` |
+| New joiner (code review) | `tier2-core/code-review-good-to-better/overview.md` | `tier2-core/engineering-playbook/developer-experience.md` |
+| Recurring nit | `tier2-core/code-review-good-to-better/overview.md` | `tier2-core/google-eng-practices/review-comments.md` |
 | NFR (non-functional requirements) | `tier1-sources/swebok-v4/ka01-requirements.md` | — |
 | Observer pattern | `tier2-core/design-patterns/behavioral.md` | — |
 | Onion Architecture | `tier2-core/architecture-patterns/ports-and-adapters.md` | `tier2-core/architecture-patterns/overview.md` |
@@ -575,6 +585,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | `google-eng-practices/` | `wiki/tier2-core/google-eng-practices/` (11 pages). Also cited by `wiki/tier3-working/code-review-guidelines/overview.md` |
 | `xdg-basedir-spec-0.8.md` | `wiki/tier2-core/xdg-base-directory/overview.md` |
 | `linus-torvalds-skill/SKILL.md` | `wiki/tier2-core/code-review-method/overview.md`, `wiki/tier2-core/code-review-method/triggers.md` |
+| `orosz-how-to-make-good-code-reviews-better.md` | `wiki/tier2-core/code-review-good-to-better/overview.md` |
 
 ---
 
