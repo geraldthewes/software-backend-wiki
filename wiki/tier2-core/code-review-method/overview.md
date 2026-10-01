@@ -159,6 +159,8 @@ The source skill was validated on antirez/smallchat (706 LOC, C). One model gain
 - wiki/tier1-sources/swebok-v4/ka14-professional-practice.md
 - wiki/tier1-sources/acm-ieee-ethics/code-of-ethics.md
 - wiki/tier3-working/checklists/code-review.md
+- wiki/tier2-core/google-eng-practices/overview.md
+- wiki/tier2-core/google-eng-practices/review-standard.md
 - wiki/tier3-working/code-review-guidelines/overview.md
 - wiki/tier3-working/owasp-code-review/overview.md
 - wiki/tier2-core/conventional-commits/overview.md

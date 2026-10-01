@@ -67,6 +67,22 @@ Scan invariants first (Correctness > Performance > Complexity > Style). Style fi
 - [ ] No test makes real network calls without `@pytest.mark.integration` or equivalent marker
 - [ ] Test doubles (fakes, mocks) are at the right level — mock the I/O boundary, not the business logic
 
+## Google engineering practices (code health)
+
+Standard: wiki/tier2-core/google-eng-practices/review-standard.md. Lookup list: wiki/tier2-core/google-eng-practices/what-to-look-for.md. Read order: wiki/tier2-core/google-eng-practices/navigating-a-cl.md.
+
+- [ ] The change definitely improves code health, or it was rejected for worsening it (emergency exception only)
+- [ ] Polish that is not required is labeled `Nit:`, `Optional:`/`Consider:`, or `FYI:` and does not block
+- [ ] Design was judged before a line-by-line pass; a wrong direction was rejected with an alternative
+- [ ] Functionality, complexity (including over-engineering), tests, naming, comments, style, and docs were each considered
+- [ ] Tests for the new behavior are in this change unless it is an emergency
+- [ ] Every assigned human-written line was understood in file and system context
+- [ ] Style-guide violations block; personal style preferences do not
+- [ ] Major reformats and renames are not mixed with the functional change
+- [ ] Comments discuss the code, explain why, and do not attack the author
+- [ ] A change too large to review was sent back to be split
+- [ ] Partial review scope is written on the change
+
 ## Documentation
 
 - [ ] Complex logic has inline comments explaining WHY a decision was made, not just WHAT the code does
@@ -76,6 +92,9 @@ Scan invariants first (Correctness > Performance > Complexity > Style). Style fi
 
 ## See Also
 
+- wiki/tier2-core/google-eng-practices/overview.md
+- wiki/tier2-core/google-eng-practices/review-standard.md
+- wiki/tier2-core/google-eng-practices/what-to-look-for.md
 - wiki/tier2-core/code-review-method/overview.md
 - wiki/tier2-core/code-review-method/triggers.md
 - wiki/tier3-working/checklists/security-review.md
@@ -86,4 +105,4 @@ Scan invariants first (Correctness > Performance > Complexity > Style). Style fi
 
 ## Source
 
-SWEBOK V4, KA4 (Construction), KA12 (Quality). PEP 8, PEP 484. OWASP Top 10. Effective Go. "Clean Code" (Martin, 2008). Linus Torvalds review method: wiki/tier2-core/code-review-method/overview.md (Mte90/linus-torvalds-skill, CC0).
+SWEBOK V4, KA4 (Construction), KA12 (Quality). PEP 8, PEP 484. OWASP Top 10. Effective Go. "Clean Code" (Martin, 2008). Linus Torvalds review method: wiki/tier2-core/code-review-method/overview.md (Mte90/linus-torvalds-skill, CC0). Google engineering practices: wiki/tier2-core/google-eng-practices/overview.md (google/eng-practices, CC BY 3.0).

@@ -54,14 +54,15 @@ For each task type, read the listed files **in order** before producing output:
 | **Write Go code** | `wiki/tier1-sources/swebok-v4/ka04-construction.md` | `wiki/tier3-working/golang/idioms.md`, `wiki/tier3-working/golang/toolchain.md` | `wiki/tier3-working/checklists/pre-commit.md` |
 | **Write tests** | `wiki/tier1-sources/swebok-v4/ka05-testing.md` | `wiki/tier2-core/testing-strategies/test-pyramid.md`, `wiki/tier2-core/testing-strategies/property-based-testing.md` | `wiki/tier3-working/checklists/testing-review.md` |
 | **Security review** | `wiki/tier1-sources/swebok-v4/ka13-security.md` | `wiki/tier1-sources/owasp/top10-2021-overview.md`, `wiki/tier2-core/security-practices/python-pyscg.md` | `wiki/tier3-working/checklists/security-review.md` |
-| **Code review** | `wiki/tier1-sources/swebok-v4/ka12-quality.md` | `wiki/tier2-core/code-review-method/overview.md`, `wiki/tier2-core/code-review-method/triggers.md`, `wiki/tier3-working/checklists/code-review.md` | `wiki/tier3-working/checklists/security-review.md` |
+| **Code review** | `wiki/tier1-sources/swebok-v4/ka12-quality.md` | `wiki/tier2-core/code-review-method/overview.md`, `wiki/tier2-core/code-review-method/triggers.md`, `wiki/tier2-core/google-eng-practices/overview.md`, `wiki/tier2-core/google-eng-practices/review-standard.md`, `wiki/tier2-core/google-eng-practices/what-to-look-for.md`, `wiki/tier3-working/checklists/code-review.md` | `wiki/tier3-working/checklists/security-review.md` |
+| **Prepare a change for review** | `wiki/tier1-sources/swebok-v4/ka08-config-management.md` | `wiki/tier2-core/google-eng-practices/small-cls.md`, `wiki/tier2-core/google-eng-practices/cl-descriptions.md`, `wiki/tier2-core/conventional-commits/overview.md`, `wiki/tier2-core/google-eng-practices/handling-comments.md` | `wiki/tier3-working/checklists/pre-commit.md` |
 | **Distributed system design** | `wiki/tier2-core/distributed-systems/cap-pacelc.md` | `wiki/tier2-core/distributed-systems/fallacies.md`, `wiki/tier2-core/twelve-factor-app/factors.md` | `wiki/tier3-working/checklists/design-review.md` |
 | **Database work** | `wiki/tier3-working/database-patterns/overview.md` | `wiki/tier3-working/database-patterns/repository-pattern.md`, `wiki/tier1-sources/owasp/a03-injection.md` | `wiki/tier3-working/checklists/security-review.md` |
 | **API design** | `wiki/tier3-working/api-design/overview.md` | `wiki/tier3-working/api-design/rest-conventions.md`, `wiki/tier1-sources/owasp/a01-broken-access-control.md` | `wiki/tier3-working/checklists/design-review.md` |
 | **Observability / logging** | `wiki/tier3-working/observability/overview.md` | `wiki/tier3-working/observability/structured-logging.md`, `wiki/tier1-sources/owasp/a09-logging-monitoring.md` | `wiki/tier3-working/checklists/code-review.md` |
 | **Ethics / professional judgment** | `wiki/tier1-sources/acm-ieee-ethics/code-of-ethics.md` | `wiki/tier1-sources/swebok-v4/ka14-professional-practice.md` | — |
 | **Release / deployment** | `wiki/tier1-sources/swebok-v4/ka06-operations.md` | `wiki/tier2-core/twelve-factor-app/factors.md`, `wiki/tier3-working/observability/slo-sli-sla.md` | `wiki/tier3-working/checklists/pre-commit.md` |
-| **Write commit messages** | `wiki/tier2-core/conventional-commits/overview.md` | `wiki/tier2-core/conventional-commits/specification.md` | `wiki/tier3-working/checklists/pre-commit.md` |
+| **Write commit messages** | `wiki/tier2-core/conventional-commits/overview.md` | `wiki/tier2-core/conventional-commits/specification.md`, `wiki/tier2-core/google-eng-practices/cl-descriptions.md` | `wiki/tier3-working/checklists/pre-commit.md` |
 | **Set up / manage source control** | `wiki/tier2-core/engineering-playbook/source-control.md` | `wiki/tier1-sources/swebok-v4/ka08-config-management.md` | `wiki/tier3-working/checklists/pre-commit.md` |
 | **Sprint planning / backlog management** | `wiki/tier2-core/engineering-playbook/agile-development.md` | `wiki/tier1-sources/swebok-v4/ka09-engineering-management.md` | — |
 | **Developer experience / onboarding** | `wiki/tier2-core/engineering-playbook/developer-experience.md` | `wiki/tier2-core/engineering-playbook/documentation-practices.md` | `wiki/tier3-working/checklists/pre-commit.md` |
@@ -181,11 +182,12 @@ These paths are defined in full in `KNOWLEDGE_GRAPH.md`. Abbreviated here for qu
 | Write production Go | ka04 → golang/idioms → golang/toolchain → pre-commit |
 | Test a module | ka05 → test-pyramid → property-based-testing → mutation-testing → testing-review |
 | Security audit | ka13 → owasp/top10 → python-pyscg → security-review |
-| Review a PR | ka12 → code-review-method → triggers → code-review checklist → security-review |
+| Review a PR | ka12 → code-review-method → triggers → google-eng-practices → code-review checklist → security-review |
+| Prepare a change for review | ka08 → google-eng-practices/small-cls → cl-descriptions → conventional-commits → handling-comments → pre-commit |
 | Build a distributed system | ka02 → cap-pacelc → fallacies → resilience-patterns → twelve-factor-app |
 | Design a REST API | api-design/overview → rest-conventions → openapi → a01 + a03 → design-review |
 | Add observability | observability/overview → structured-logging → metrics → slo-sli-sla |
-| Write commit messages | conventional-commits/overview → conventional-commits/specification → pre-commit |
+| Write commit messages | conventional-commits/overview → conventional-commits/specification → google-eng-practices/cl-descriptions → pre-commit |
 | Set up source control | engineering-playbook/source-control → ka08-config-management → pre-commit |
 | Plan a sprint | engineering-playbook/agile-development → ka09-engineering-management |
 | Build a domain-driven service | architecture-patterns/overview → ports-and-adapters → domain-model → repository → service-layer → unit-of-work → aggregates → dependency-injection-bootstrap |
@@ -197,4 +199,4 @@ These paths are defined in full in `KNOWLEDGE_GRAPH.md`. Abbreviated here for qu
 ---
 
 *This file is part of the software-backend-wiki. Maintained by LLM agents; Tier 1 changes require human approval.*
-*Last updated: 2026-08-26*
+*Last updated: 2026-10-01*

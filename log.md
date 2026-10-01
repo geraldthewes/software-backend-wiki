@@ -194,3 +194,25 @@ Append-only record of all ingest, creation, and update events. Never edit or del
 | 2026-08-26 | UPDATE | index.md | — | grok-4.6 | Quick Reference, Tier 2 catalog, keyword index, source mapping for linus-torvalds-skill |
 | 2026-08-26 | UPDATE | KNOWLEDGE_GRAPH.md | — | grok-4.6 | Adjacency rows + expanded "Review a Pull Request" navigation path |
 | 2026-08-26 | UPDATE | README.md | — | grok-4.6 | Third-party notice: linus-torvalds-skill CC0; tone override noted |
+| 2026-10-01 | INGEST | references/google-eng-practices/ | https://google.github.io/eng-practices/ | grok-4.7 | Raw snapshot of archived google/eng-practices at 3bb3ec25 (README, LICENSE, review guide). CC BY 3.0. SOURCE.txt is wiki provenance, not upstream |
+| 2026-10-01 | CREATE | wiki/tier2-core/google-eng-practices/overview.md | references/google-eng-practices/README.md, review/index.md | grok-4.7 | Terminology, coverage map, authority resolution against Tier 1, the Linus method, and Conventional Commits |
+| 2026-10-01 | CREATE | wiki/tier2-core/google-eng-practices/review-standard.md | references/google-eng-practices/review/reviewer/standard.md | grok-4.7 | Senior principle: approve once the change definitely improves code health |
+| 2026-10-01 | CREATE | wiki/tier2-core/google-eng-practices/what-to-look-for.md | references/google-eng-practices/review/reviewer/looking-for.md | grok-4.7 | Design through documentation, every line, context, partial-review scope |
+| 2026-10-01 | CREATE | wiki/tier2-core/google-eng-practices/navigating-a-cl.md | references/google-eng-practices/review/reviewer/navigate.md | grok-4.7 | Broad view, main file first, send design comments immediately |
+| 2026-10-01 | CREATE | wiki/tier2-core/google-eng-practices/review-speed.md | references/google-eng-practices/review/reviewer/speed.md | grok-4.7 | One-business-day response, LGTM-with-comments, do not interrupt flow |
+| 2026-10-01 | CREATE | wiki/tier2-core/google-eng-practices/review-comments.md | references/google-eng-practices/review/reviewer/comments.md | grok-4.7 | Courtesy, severity labels, explanations belong in the code |
+| 2026-10-01 | CREATE | wiki/tier2-core/google-eng-practices/handling-pushback.md | references/google-eng-practices/review/reviewer/pushback.md | grok-4.7 | Who is right, clean it up now, strictness fades when reviews are fast |
+| 2026-10-01 | CREATE | wiki/tier2-core/google-eng-practices/small-cls.md | references/google-eng-practices/review/developer/small-cls.md | grok-4.7 | One self-contained change; splitting strategies; tests stay with the change |
+| 2026-10-01 | CREATE | wiki/tier2-core/google-eng-practices/cl-descriptions.md | references/google-eng-practices/review/developer/cl-descriptions.md | grok-4.7 | What and why; Conventional Commits keeps the subject format |
+| 2026-10-01 | CREATE | wiki/tier2-core/google-eng-practices/handling-comments.md | references/google-eng-practices/review/developer/handling-comments.md | grok-4.7 | Author side: fix the code, disagree on the tradeoff, no angry replies |
+| 2026-10-01 | CREATE | wiki/tier2-core/google-eng-practices/emergencies.md | references/google-eng-practices/review/emergencies.md | grok-4.7 | Narrow emergency exception, hard vs soft deadlines, follow-up review |
+| 2026-10-01 | UPDATE | index.md | — | grok-4.7 | Quick Reference, Tier 2 catalog, keyword index, source mapping for google-eng-practices |
+| 2026-10-01 | UPDATE | KNOWLEDGE_GRAPH.md | — | grok-4.7 | Adjacency rows; expanded Review a Pull Request; added Prepare a Change for Review |
+| 2026-10-01 | UPDATE | AGENTS.md | — | grok-4.7 | Code review and commit-message routing; new prepare-a-change task and path |
+| 2026-10-01 | UPDATE | wiki/tier3-working/code-review-guidelines/overview.md | — | grok-4.7 | Pointed Google rules at the Tier 2 synthesis; size rule defers to small-cls |
+| 2026-10-01 | UPDATE | wiki/tier3-working/checklists/code-review.md | — | grok-4.7 | Added Google code-health checklist section |
+| 2026-10-01 | UPDATE | wiki/tier2-core/code-review-method/overview.md | — | grok-4.7 | See Also: google-eng-practices overview and review standard |
+| 2026-10-01 | UPDATE | wiki/tier2-core/conventional-commits/overview.md | — | grok-4.7 | See Also: cl-descriptions supplies what/why beside the CC subject |
+| 2026-10-01 | UPDATE | wiki/tier2-core/engineering-playbook/source-control.md | — | grok-4.7 | See Also: small-cls and cl-descriptions |
+| 2026-10-01 | UPDATE | wiki/tier2-core/engineering-playbook/overview.md | — | grok-4.7 | Code Reviews coverage row includes google-eng-practices |
+| 2026-10-01 | UPDATE | README.md | — | grok-4.7 | Third-party notice: Google eng-practices CC BY 3.0; coverage row |

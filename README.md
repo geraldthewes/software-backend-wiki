@@ -41,6 +41,7 @@ wiki/
 | API design (REST, OpenAPI, gRPC) | 4 |
 | Observability (logging, metrics, SLO/SLI) | 4 |
 | Review checklists | 5 |
+| Google engineering practices (code review) | 11 |
 | Worked examples (executable Python code) | 3 |
 | **Total** | **94** |
 
@@ -74,5 +75,6 @@ This wiki synthesizes and summarizes content from authoritative third-party sour
 - **Hypothesis (property-based testing)** — © David R. MacIver and contributors. Licensed under [MPL 2.0](https://github.com/HypothesisWorks/hypothesis/blob/master/LICENSE.txt).
 - **XDG Base Directory Specification** — © Freedesktop.org (Waldo Bastian, Allison Karlitskaya, Lennart Poettering, Johannes Löthberg). [specifications.freedesktop.org](https://specifications.freedesktop.org/basedir/latest/)
 - **linus-torvalds-skill** — Distilled Linus Torvalds LKML review method. Released under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) by [Mte90/linus-torvalds-skill](https://github.com/Mte90/linus-torvalds-skill). This wiki adopts the technical method, not the source persona's abusive tone.
+- **Google Engineering Practices** — © Google. Licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). [google.github.io/eng-practices](https://google.github.io/eng-practices/). Upstream repository archived read-only on 2025-11-21.
 
 The summaries and wiki pages in this repository are transformative works for educational purposes. No claim of ownership is made over the original standards, specifications, or publications referenced herein.

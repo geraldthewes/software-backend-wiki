@@ -15,6 +15,8 @@
 | Write tests | `wiki/tier1-sources/swebok-v4/ka05-testing.md` | `checklists/testing-review.md` |
 | Security review | `wiki/tier1-sources/swebok-v4/ka13-security.md` + `owasp/top10-2021-overview.md` | `checklists/security-review.md` |
 | Code review | `wiki/tier1-sources/swebok-v4/ka12-quality.md` + `wiki/tier2-core/code-review-method/overview.md` | `checklists/code-review.md` |
+| Review with Google's engineering practices | `wiki/tier2-core/google-eng-practices/overview.md` | `checklists/code-review.md` |
+| Prepare a change for review (size, description, comments) | `wiki/tier2-core/google-eng-practices/small-cls.md` | `checklists/pre-commit.md` |
 | Design a distributed system | `wiki/tier2-core/distributed-systems/cap-pacelc.md` | `checklists/design-review.md` |
 | Design a database layer | `wiki/tier3-working/database-patterns/database-design.md` | `checklists/security-review.md` |
 | Design an API | `wiki/tier3-working/api-design/overview.md` | `checklists/design-review.md` |
@@ -165,6 +167,17 @@
 | `wiki/tier2-core/architecture-patterns/legacy-migration.md` | Legacy Migration | "Architecture Patterns with Python" Epilogue | strangler fig, big ball of mud, architecture tax, incremental adoption, Django |
 | `wiki/tier2-core/code-review-method/overview.md` | Linus Torvalds Review Method | Mte90/linus-torvalds-skill / SWEBOK KA12, KA14 | correctness-first, invariants, data-structure-first, say no early, [REASON]→[ACT] |
 | `wiki/tier2-core/code-review-method/triggers.md` | Review Triggers and Severity | Mte90/linus-torvalds-skill | invariant-false, API stability, special-case, lock order, severity decision tree |
+| `wiki/tier2-core/google-eng-practices/overview.md` | Google Engineering Practices Overview | google/eng-practices (CC BY 3.0) / SWEBOK KA12, KA8, KA14 | CL, LGTM, code health, reviewer selection, authority resolution |
+| `wiki/tier2-core/google-eng-practices/review-standard.md` | Standard of Code Review | google/eng-practices `review/reviewer/standard.md` | approve when health improves, Nit, facts over opinions, conflict escalation |
+| `wiki/tier2-core/google-eng-practices/what-to-look-for.md` | What to Look For in Review | google/eng-practices `review/reviewer/looking-for.md` | design, functionality, complexity, tests, naming, comments, style, every line |
+| `wiki/tier2-core/google-eng-practices/navigating-a-cl.md` | Navigating a Change in Review | google/eng-practices `review/reviewer/navigate.md` | broad view first, main file first, send design comments immediately |
+| `wiki/tier2-core/google-eng-practices/review-speed.md` | Speed of Code Reviews | google/eng-practices `review/reviewer/speed.md` | one business day, LGTM with comments, do not interrupt flow |
+| `wiki/tier2-core/google-eng-practices/review-comments.md` | How to Write Review Comments | google/eng-practices `review/reviewer/comments.md` | courtesy, Nit/Optional/FYI, explain why, clarify the code |
+| `wiki/tier2-core/google-eng-practices/handling-pushback.md` | Handling Pushback | google/eng-practices `review/reviewer/pushback.md` | clean it up now, strictness, code health in small steps |
+| `wiki/tier2-core/google-eng-practices/small-cls.md` | Small Changelists | google/eng-practices `review/developer/small-cls.md` | one self-contained change, ~100 lines, stack, split, tests in the CL |
+| `wiki/tier2-core/google-eng-practices/cl-descriptions.md` | Change Descriptions | google/eng-practices `review/developer/cl-descriptions.md` | what and why, imperative first line, body context |
+| `wiki/tier2-core/google-eng-practices/handling-comments.md` | Handling Reviewer Comments | google/eng-practices `review/developer/handling-comments.md` | fix the code, collaborative disagreement, no angry replies |
+| `wiki/tier2-core/google-eng-practices/emergencies.md` | Emergency Changes | google/eng-practices `review/emergencies.md` | hard deadline, production bug, security hole, follow-up review |
 
 ---
 
@@ -289,8 +302,13 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Composition Root | `tier2-core/architecture-patterns/dependency-injection-bootstrap.md` | `tier2-core/solid-principles/dip.md` |
 | Consistency Boundary | `tier2-core/architecture-patterns/aggregates.md` | `tier2-core/distributed-systems/cap-pacelc.md` |
 | CQRS | `tier2-core/architecture-patterns/cqrs.md` | `tier2-core/architecture-patterns/commands-vs-events.md` |
+| Changelist (CL) | `tier2-core/google-eng-practices/overview.md` | `tier2-core/google-eng-practices/small-cls.md` |
+| CL description | `tier2-core/google-eng-practices/cl-descriptions.md` | `tier2-core/conventional-commits/overview.md` |
+| Code health | `tier2-core/google-eng-practices/review-standard.md` | `tier1-sources/swebok-v4/ka12-quality.md` |
 | Code review | `tier1-sources/swebok-v4/ka12-quality.md` | `tier2-core/code-review-method/overview.md` |
+| Code review comments | `tier2-core/google-eng-practices/review-comments.md` | `tier2-core/google-eng-practices/handling-comments.md` |
 | Code review method | `tier2-core/code-review-method/overview.md` | `tier2-core/code-review-method/triggers.md` |
+| Code review speed | `tier2-core/google-eng-practices/review-speed.md` | `tier2-core/google-eng-practices/emergencies.md` |
 | Cohesion | `tier1-sources/swebok-v4/ka03-design.md` | `tier2-core/solid-principles/srp.md` |
 | CONTRIBUTING.md | `tier2-core/engineering-playbook/source-control.md` | `tier2-core/engineering-playbook/documentation-practices.md` |
 | Command pattern | `tier2-core/design-patterns/behavioral.md` | — |
@@ -333,6 +351,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | E2E testing | `tier2-core/testing-strategies/test-pyramid.md` | `tier1-sources/swebok-v4/ka05-testing.md` |
 | Effective Go | `tier3-working/golang/idioms.md` | `tier3-working/golang/overview.md` |
 | Engineering Fundamentals Playbook | `tier2-core/engineering-playbook/overview.md` | — |
+| Emergency change (code review) | `tier2-core/google-eng-practices/emergencies.md` | `tier2-core/google-eng-practices/review-speed.md` |
 | Enum (Python) | `tier3-working/python/enum.md` | `tier3-working/python/overview.md` |
 | Error budget | `tier3-working/observability/slo-sli-sla.md` | — |
 | Error handling | `tier3-working/worked-examples/error-handling.md` | `tier1-sources/python-peps/pep-020-zen.md` |
@@ -355,6 +374,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Functional programming | `tier3-working/python/functional-core.md` | `tier3-working/python/idioms.md` |
 | Generic (typing) | `tier3-working/python/type-system.md` | `tier1-sources/python-peps/pep-484-type-hints.md` |
 | GoF design patterns | `tier2-core/design-patterns/overview.md` | `tier1-sources/swebok-v4/ka03-design.md` |
+| Google engineering practices | `tier2-core/google-eng-practices/overview.md` | `tier2-core/google-eng-practices/review-standard.md` |
 | golang-migrate | `tier3-working/database-patterns/migrations.md` | — |
 | goroutine | `tier3-working/golang/concurrency.md` | — |
 | gRPC | `tier3-working/api-design/grpc.md` | — |
@@ -385,6 +405,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Legacy migration | `tier2-core/architecture-patterns/legacy-migration.md` | `tier1-sources/swebok-v4/ka07-maintenance.md` |
 | Least privilege | `tier1-sources/owasp/a01-broken-access-control.md` | `tier1-sources/swebok-v4/ka13-security.md` |
 | Line length | `tier1-sources/python-peps/pep-008-style.md` | — |
+| LGTM | `tier2-core/google-eng-practices/review-speed.md` | `tier2-core/google-eng-practices/overview.md` |
 | Linus Torvalds review method | `tier2-core/code-review-method/overview.md` | `tier2-core/code-review-method/triggers.md` |
 | Liskov Substitution Principle | `tier2-core/solid-principles/lsp.md` | — |
 | log.md (this wiki) | `log.md` | — |
@@ -409,6 +430,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | ncurses / curses | `tier3-working/python/curses.md` | `tier3-working/python/overview.md` |
 | Named return values (Go) | `tier3-working/golang/idioms.md` | — |
 | Naming conventions | `tier1-sources/python-peps/pep-008-style.md` | `tier3-working/golang/idioms.md` |
+| Nit (review comment) | `tier2-core/google-eng-practices/review-comments.md` | `tier2-core/google-eng-practices/review-standard.md` |
 | NFR (non-functional requirements) | `tier1-sources/swebok-v4/ka01-requirements.md` | — |
 | Observer pattern | `tier2-core/design-patterns/behavioral.md` | — |
 | Onion Architecture | `tier2-core/architecture-patterns/ports-and-adapters.md` | `tier2-core/architecture-patterns/overview.md` |
@@ -470,6 +492,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Say no early | `tier2-core/code-review-method/overview.md` | `tier1-sources/swebok-v4/ka14-professional-practice.md` |
 | SBOM | `tier1-sources/owasp/a06-vulnerable-components.md` | — |
 | Scrum | `tier1-sources/swebok-v4/ka10-process.md` | — |
+| Small CL | `tier2-core/google-eng-practices/small-cls.md` | `tier2-core/engineering-playbook/source-control.md` |
 | Source control practices | `tier2-core/engineering-playbook/source-control.md` | `tier1-sources/swebok-v4/ka08-config-management.md` |
 | Sprint | `tier2-core/engineering-playbook/agile-development.md` | `tier1-sources/swebok-v4/ka09-engineering-management.md` |
 | Sprint planning | `tier2-core/engineering-playbook/agile-development.md` | — |
@@ -549,11 +572,11 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | `awesome-ddd.md` | `wiki/tier3-working/awesome-ddd/overview.md` |
 | `dotnet-microservices-architecture.md` | `wiki/tier3-working/dotnet/overview.md` |
 | `OWASP_Code_Review_Guide_v2.pdf` | `wiki/tier3-working/owasp-code-review/overview.md` |
-| `Google-eng-practices-review/*.html` | `wiki/tier3-working/code-review-guidelines/overview.md` |
+| `google-eng-practices/` | `wiki/tier2-core/google-eng-practices/` (11 pages). Also cited by `wiki/tier3-working/code-review-guidelines/overview.md` |
 | `xdg-basedir-spec-0.8.md` | `wiki/tier2-core/xdg-base-directory/overview.md` |
 | `linus-torvalds-skill/SKILL.md` | `wiki/tier2-core/code-review-method/overview.md`, `wiki/tier2-core/code-review-method/triggers.md` |
 
 ---
 
 *This file is part of the software-backend-wiki. Updated whenever new pages are created.*
-*Last updated: 2026-08-26*
+*Last updated: 2026-10-01*

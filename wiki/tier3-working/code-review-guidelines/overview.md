@@ -238,7 +238,16 @@ This page connects to several important wiki sections:
 
 Google's "approve when the change improves code health" and the Linus method's "say no early" combine as: reject invariant-false findings immediately; approve incremental improvements that do not violate invariants; never block on style nits. The Linus source persona's abusive tone is not adopted — ACM/IEEE Principle 7 and this page's culture rules win on how comments are written.
 
+## Canonical Google Synthesis
+
+The Google bullets on this page are a working summary mixed with other sources. The authoritative synthesis of https://google.github.io/eng-practices/ is the Tier 2 directory `wiki/tier2-core/google-eng-practices/`, starting at `overview.md`. Where this page and a page in that directory disagree about a Google rule, the Tier 2 page wins. Where either disagrees with SWEBOK, OWASP, a PEP, or the ACM/IEEE Code of Ethics, Tier 1 wins.
+
+Size guidance above cites SmartBear's 200–400 LOC research bound. Google's Tier 2 rule is one self-contained change: about 100 lines is usually reasonable, about 1000 is usually too large, and a reviewer may reject a change for size alone.
+
 ## See Also
+- wiki/tier2-core/google-eng-practices/overview.md
+- wiki/tier2-core/google-eng-practices/review-standard.md
+- wiki/tier2-core/google-eng-practices/what-to-look-for.md
 - wiki/tier2-core/code-review-method/overview.md
 - wiki/tier2-core/code-review-method/triggers.md
 - wiki/tier3-working/checklists/code-review.md

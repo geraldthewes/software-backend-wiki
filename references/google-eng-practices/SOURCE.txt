@@ -1,0 +1,7 @@
+Upstream: https://github.com/google/eng-practices
+Site: https://google.github.io/eng-practices/
+Commit: 3bb3ec25b3b0199f4940b1aa75f0ac5c5753301c (master tree at ingest)
+Retrieved: 2026-10-01
+License: CC BY 3.0 (see LICENSE)
+Status: repository archived read-only by Google on 2025-11-21
+Note: SOURCE.txt is wiki provenance, not part of the upstream tree. Do not edit the other files in this directory.

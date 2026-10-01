@@ -159,6 +159,16 @@
 | code-review-method/triggers | MITIGATES | owasp/a03 | Unbounded format/copy and trust-boundary validation catch injection-class defects |
 | code-review checklist | ENFORCES | code-review-method/overview | Checklist's invariant section is the method's first scan |
 | code-review-method/overview | REQUIRES | ka12-quality | Method is a quality-gate practice, not a substitute for SWEBOK quality attributes |
+| google-eng-practices/overview | EXTENDS | ka12-quality | Google's review process operationalizes KA12: code health over time, not perfection |
+| google-eng-practices/overview | COMPLEMENTS | code-review-method/overview | Google says when to approve and how to conduct the review; the method says what is invariant-false and how to grade it |
+| google-eng-practices/overview | COMPLEMENTS | code-review-guidelines | Tier 2 is the Google source; the Tier 3 page mixes Google with Microsoft, SmartBear, Palantir, and Thoughtbot |
+| google-eng-practices/overview | REFERENCES | code-of-ethics | Comment courtesy is required by ACM/IEEE Principle 7 and restated by the comment pages |
+| google-eng-practices/review-standard | REFERENCES | google-eng-practices/overview | Senior principle: approve once the change definitely improves code health |
+| google-eng-practices/what-to-look-for | REFERENCES | google-eng-practices/review-standard | The lookup list is applied under the approval bar |
+| google-eng-practices/small-cls | EXTENDS | ka08-config-management | One self-contained change is the SCM unit of review |
+| google-eng-practices/cl-descriptions | COMPLEMENTS | conventional-commits/overview | Conventional Commits formats the subject; Google's rules fill what and why in the body |
+| google-eng-practices/emergencies | CONFLICTS_WITH | google-eng-practices/review-standard | Emergencies are the only case where a health decrease may land; a follow-up review is required |
+| code-review checklist | ENFORCES | google-eng-practices/review-standard | Checklist's Google section is the approval-bar scan |
 
 ---
 
@@ -221,10 +231,24 @@ These are the recommended reading sequences for common agent tasks. Follow in or
 1. wiki/tier1-sources/swebok-v4/ka12-quality.md                       # Quality framework
 2. wiki/tier2-core/code-review-method/overview.md                     # Precedence, invariants, [REASON]→[ACT]
 3. wiki/tier2-core/code-review-method/triggers.md                     # Level 1/2 triggers and severity tree
-4. wiki/tier3-working/checklists/code-review.md                       # Operational checklist (invariants first)
-5. wiki/tier3-working/code-review-guidelines/overview.md              # Process, pacing, comment culture
-6. wiki/tier3-working/checklists/security-review.md                   # Security concerns
-7. wiki/tier3-working/checklists/testing-review.md                    # Test adequacy
+4. wiki/tier2-core/google-eng-practices/overview.md                   # Code health standard, terminology, authority resolution
+5. wiki/tier2-core/google-eng-practices/review-standard.md            # Approve when health improves; nits do not block
+6. wiki/tier2-core/google-eng-practices/what-to-look-for.md           # Design through documentation, every line
+7. wiki/tier2-core/google-eng-practices/navigating-a-cl.md            # Broad view, then the main file, then the rest
+8. wiki/tier3-working/checklists/code-review.md                       # Operational checklist (invariants first)
+9. wiki/tier3-working/code-review-guidelines/overview.md              # Multi-source process notes; Google rules defer to Tier 2
+10. wiki/tier3-working/checklists/security-review.md                  # Security concerns
+11. wiki/tier3-working/checklists/testing-review.md                   # Test adequacy
+```
+
+### "Prepare a Change for Review"
+```
+1. wiki/tier2-core/google-eng-practices/overview.md                   # CL / LGTM terminology and authority resolution
+2. wiki/tier2-core/google-eng-practices/small-cls.md                  # One self-contained change; how to split
+3. wiki/tier2-core/google-eng-practices/cl-descriptions.md            # What and why; subject line with Conventional Commits
+4. wiki/tier2-core/conventional-commits/overview.md                   # Subject format
+5. wiki/tier2-core/google-eng-practices/handling-comments.md          # How to respond once review starts
+6. wiki/tier3-working/checklists/pre-commit.md                        # Apply before sending the change
 ```
 
 ### "Build a Distributed System"
