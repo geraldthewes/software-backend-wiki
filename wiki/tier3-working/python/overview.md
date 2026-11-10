@@ -51,6 +51,7 @@ These four rules apply to every Python file an agent writes or reviews:
 | wiki/tier3-working/python/isolating-extensions.md | C extension modules: per-module state, heap types, multi-phase init, subinterpreters |
 | wiki/tier3-working/python/pytest-patterns.md | pytest discovery, assert, parametrize, fixtures, marks, async tests |
 | wiki/tier3-working/python-testing/overview.md | Reconciled Python testing practices from six practitioner guides |
+| wiki/tier3-working/software-design-practices/overview.md | Reconciled design practices: signatures, I/O split, class versus function |
 
 ## Key Tools
 
@@ -73,6 +74,7 @@ These four rules apply to every Python file an agent writes or reviews:
 - wiki/tier3-working/python/async-patterns.md
 - wiki/tier3-working/python/pytest-patterns.md
 - wiki/tier3-working/python-testing/overview.md
+- wiki/tier3-working/software-design-practices/overview.md
 
 ## Source
 

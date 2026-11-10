@@ -188,6 +188,19 @@
 | python-testing/async-squad | CONFLICTS_WITH | ka05-testing | Its 80% coverage gate loses to KA5 unit-level statement >90% and branch >80% |
 | testing-review checklist | ENFORCES | python-testing/overview | Python style section of the checklist is the overview's scan |
 | testing-review checklist | ENFORCES | python-testing/thea-style-guide | Autospec, outcome assertions, and factory-vs-fixture are checklist items |
+| software-design-practices/overview | EXTENDS | ka03-design | Module-design habits implement KA3; KA3, SOLID, and the GoF pages win on conflict |
+| software-design-practices/overview | EXTENDS | ka04-construction | Signature, error, and style habits implement KA4; PEP 8 and PEP 20 win on conflict |
+| software-design-practices/overview | REQUIRES | solid-principles/overview | Cohesion, coupling, and dependency direction stay on the SOLID pages |
+| software-design-practices/overview | COMPLEMENTS | design-patterns/overview | Patterns are chosen from the Tier 2 pages; the Refactoring.Guru catalog adds no rules |
+| software-design-practices/overview | COMPLEMENTS | python/functional-core | The I/O split is the same rule as functional core / imperative shell |
+| software-design-practices/overview | CONFLICTS_WITH | architecture-patterns/aggregates | "Stop writing classes" applies to scientific data with no invariant; an aggregate that protects an invariant stays a type |
+| software-design-practices/nsls-ii-principles | COMPLEMENTS | software-design-practices/overview | Wide vs deep, strict core, keyword-only arguments, stable returns |
+| software-design-practices/foord-30-practices | CONFLICTS_WITH | ka05-testing | Foord's 100% coverage starting point loses to KA5 unit-level statement and branch targets |
+| software-design-practices/hitchhikers-style | COMPLEMENTS | pep-008-style | Explicit signatures and idiom notes; PEP 8 wins on layout, and ruff wins over the guide's formatters |
+| software-design-practices/ist-python-guide | CONFLICTS_WITH | pep-008-style | Indent, line length, symbol imports, `__` privacy, and reverse notation lose to PEP 8 |
+| software-design-practices/wikipedia-coding-practices | REFERENCES | ka12-quality | The survey's quality lists defer to KA12; name the attribute the change optimizes |
+| software-design-practices/refactoring-guru-python | REFERENCES | design-patterns/overview | Catalog names map onto the Tier 2 pages; examples were not ingested |
+| design-review checklist | ENFORCES | software-design-practices/overview | The module-design section is the overview's scan |
 
 ---
 
@@ -203,7 +216,18 @@ These are the recommended reading sequences for common agent tasks. Follow in or
 4. wiki/tier1-sources/swebok-v4/ka03-design.md             # Detailed design principles
 5. wiki/tier2-core/solid-principles/overview.md            # SOLID application
 6. wiki/tier2-core/twelve-factor-app/factors.md            # Cloud-native operational requirements
-7. wiki/tier3-working/checklists/design-review.md          # Apply before finalizing design
+7. wiki/tier3-working/software-design-practices/overview.md  # Module shape; Tier 1 and Tier 2 win conflicts
+8. wiki/tier3-working/checklists/design-review.md          # Apply before finalizing design
+```
+
+### "Design a Python Module"
+```
+1. wiki/tier1-sources/swebok-v4/ka03-design.md             # Coupling, cohesion, abstraction
+2. wiki/tier2-core/solid-principles/overview.md            # SOLID
+3. wiki/tier2-core/design-patterns/overview.md             # Use a pattern only when a simpler form fails
+4. wiki/tier3-working/software-design-practices/overview.md  # Reconciled practitioner rules
+5. wiki/tier3-working/python/functional-core.md            # I/O separated from decisions
+6. wiki/tier3-working/checklists/design-review.md          # Apply before finalizing design
 ```
 
 ### "Write Production Python"
@@ -212,9 +236,10 @@ These are the recommended reading sequences for common agent tasks. Follow in or
 2. wiki/tier1-sources/python-peps/pep-008-style.md         # Style requirements
 3. wiki/tier1-sources/python-peps/pep-484-type-hints.md    # Type annotation requirements
 4. wiki/tier1-sources/python-peps/pep-020-zen.md           # Python philosophy
-5. wiki/tier3-working/python/idioms.md                     # Pythonic patterns
-6. wiki/tier3-working/python/functional-core.md            # Separate pure logic from I/O
-7. wiki/tier3-working/checklists/pre-commit.md             # Apply before every commit
+5. wiki/tier3-working/software-design-practices/overview.md  # Signatures, errors, class vs function; PEPs win
+6. wiki/tier3-working/python/idioms.md                     # Pythonic patterns
+7. wiki/tier3-working/python/functional-core.md            # Separate pure logic from I/O
+8. wiki/tier3-working/checklists/pre-commit.md             # Apply before every commit
 ```
 
 ### "Write Production Go"

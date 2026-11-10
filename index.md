@@ -10,6 +10,7 @@
 |--------------|-----------|-----------|
 | Design a service | `wiki/tier1-sources/swebok-v4/ka02-architecture.md` | `checklists/design-review.md` |
 | Design classes/modules | `wiki/tier1-sources/swebok-v4/ka03-design.md` | `checklists/design-review.md` |
+| Apply software design practices (Python modules) | `wiki/tier3-working/software-design-practices/overview.md` | `checklists/design-review.md` |
 | Write Python | `wiki/tier1-sources/swebok-v4/ka04-construction.md` + `python-peps/pep-008-style.md` | `checklists/pre-commit.md` |
 | Write Go | `wiki/tier1-sources/swebok-v4/ka04-construction.md` + `golang/idioms.md` | `checklists/pre-commit.md` |
 | Write tests | `wiki/tier1-sources/swebok-v4/ka05-testing.md` | `checklists/testing-review.md` |
@@ -220,6 +221,15 @@
 | `wiki/tier3-working/python-testing/hitchhikers-guide.md` | Hitchhiker's Guide Testing | test independence, doctest, bug-first tests, CC BY-NC-SA |
 | `wiki/tier3-working/python-testing/thea-style-guide.md` | Flowers Python Testing Style | outcome vs path, autospec, fake, stub, spy, factories |
 | `wiki/tier3-working/python-testing/async-squad.md` | Async Squad Testing Practices | pyramid layout, pytest-asyncio, sleep anti-pattern, coverage gate |
+| `wiki/tier3-working/software-design-practices/overview.md` | Software Design Practices | YAGNI, I/O split, keyword-only, class versus function, authority resolution |
+| `wiki/tier3-working/software-design-practices/nsls-ii-principles.md` | NSLS-II Design Principles | wide vs deep, duck typing, stop writing classes, stable return type |
+| `wiki/tier3-working/software-design-practices/foord-30-practices.md` | Foord's 30 Practices | YAGNI, rule of three, fail fast, dependency injection, generators |
+| `wiki/tier3-working/software-design-practices/hitchhikers-style.md` | Hitchhiker's Guide Code Style | explicit signatures, *args, single return, CC BY-NC-SA |
+| `wiki/tier3-working/software-design-practices/ist-python-guide.md` | IST Python Guide | teaching gist, PEP 8 conflicts, imports, docstrings |
+| `wiki/tier3-working/software-design-practices/wikipedia-coding-practices.md` | Wikipedia Coding Best Practices | prerequisites, quality goals, CC BY-SA, weak citations |
+| `wiki/tier3-working/software-design-practices/realpython-catalog.md` | Real Python Best-Practices Index | Pythonic, project layout, unread tutorials |
+| `wiki/tier3-working/software-design-practices/manning-mak.md` | Software Design for Python Programmers | Manning product page, cohesion, book text not ingested |
+| `wiki/tier3-working/software-design-practices/refactoring-guru-python.md` | Refactoring.Guru Python Catalog | GoF name map, Python substitutes, examples not ingested |
 | `wiki/tier3-working/golang/overview.md` | Go Best Practices | Go, Effective Go, idiomatic |
 | `wiki/tier3-working/awesome-ddd/overview.md` | Awesome Domain-Driven Design | heynickc / DDD, CQRS, Event Sourcing | books, free eBooks, training, videos, community, blogs, sample projects |
 | `wiki/tier3-working/golang/idioms.md` | Go Idioms | error wrapping, interfaces, defer, named returns |
@@ -326,6 +336,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Better code review | `tier2-core/code-review-good-to-better/overview.md` | `tier2-core/google-eng-practices/review-standard.md` |
 | Good code review | `tier2-core/code-review-good-to-better/overview.md` | `tier2-core/google-eng-practices/review-standard.md` |
 | Cohesion | `tier1-sources/swebok-v4/ka03-design.md` | `tier2-core/solid-principles/srp.md` |
+| Coding best practices | `tier3-working/software-design-practices/overview.md` | `tier1-sources/swebok-v4/ka03-design.md` |
 | CONTRIBUTING.md | `tier2-core/engineering-playbook/source-control.md` | `tier2-core/engineering-playbook/documentation-practices.md` |
 | Command pattern | `tier2-core/design-patterns/behavioral.md` | — |
 | Config (12-Factor III) | `tier2-core/twelve-factor-app/factors.md` | `tier1-sources/owasp/a05-security-misconfiguration.md` |
@@ -348,6 +359,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Database migrations | `tier3-working/database-patterns/migrations.md` | — |
 | Decorator pattern | `tier2-core/design-patterns/structural.md` | — |
 | Defensive programming | `tier1-sources/swebok-v4/ka04-construction.md` | — |
+| Duck typing | `tier3-working/software-design-practices/nsls-ii-principles.md` | `tier2-core/solid-principles/isp.md` |
 | Definition of Done (DoD) | `tier2-core/engineering-playbook/agile-development.md` | `tier1-sources/swebok-v4/ka12-quality.md` |
 | Definition of Ready (DoR) | `tier2-core/engineering-playbook/agile-development.md` | `tier1-sources/swebok-v4/ka09-engineering-management.md` |
 | Dependency injection | `tier2-core/architecture-patterns/dependency-injection-bootstrap.md` | `tier3-working/worked-examples/dependency-injection.md` |
@@ -376,6 +388,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Event-driven architecture | `tier2-core/architecture-patterns/event-driven-integration.md` | `tier2-core/architecture-patterns/domain-events-message-bus.md` |
 | Exponential backoff | `tier2-core/distributed-systems/resilience-patterns.md` | — |
 | Facade pattern | `tier2-core/design-patterns/structural.md` | — |
+| Fail fast | `tier3-working/software-design-practices/foord-30-practices.md` | `tier3-working/software-design-practices/overview.md` |
 | F5 Contract | `tier2-core/engineering-playbook/developer-experience.md` | — |
 | Factory pattern | `tier2-core/design-patterns/creational.md` | — |
 | Feature flag | `tier2-core/engineering-playbook/source-control.md` | — |
@@ -416,6 +429,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Jitter (backoff) | `tier2-core/distributed-systems/resilience-patterns.md` | — |
 | JSON logging | `tier3-working/observability/structured-logging.md` | — |
 | Keyword argument | `tier3-working/python/idioms.md` | — |
+| Keyword-only argument | `tier3-working/software-design-practices/nsls-ii-principles.md` | `tier3-working/software-design-practices/overview.md` |
 | Knowledge silo | `tier2-core/engineering-playbook/documentation-practices.md` | — |
 | Latency (distributed) | `tier2-core/distributed-systems/cap-pacelc.md` | `tier2-core/distributed-systems/fallacies.md` |
 | Layered architecture | `tier1-sources/swebok-v4/ka02-architecture.md` | `tier2-core/architecture-patterns/ports-and-adapters.md` |
@@ -478,6 +492,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Pull request template | `tier2-core/engineering-playbook/source-control.md` | — |
 | Property-based testing | `tier2-core/testing-strategies/property-based-testing.md` | `tier1-sources/swebok-v4/ka05-testing.md` |
 | Protocol (Python) | `tier2-core/solid-principles/isp.md` | `tier3-working/python/type-system.md` |
+| Pythonic | `tier3-working/software-design-practices/realpython-catalog.md` | `tier1-sources/python-peps/pep-020-zen.md` |
 | protobuf | `tier3-working/api-design/grpc.md` | — |
 | Proxy pattern | `tier2-core/design-patterns/structural.md` | — |
 | Pure functions | `tier3-working/python/functional-core.md` | — |
@@ -495,6 +510,8 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | ReDoS | `tier3-working/python/regex.md` | `tier1-sources/swebok-v4/ka13-security.md` |
 | README.md | `tier2-core/engineering-playbook/documentation-practices.md` | `tier2-core/engineering-playbook/source-control.md` |
 | Refactoring | `tier1-sources/swebok-v4/ka07-maintenance.md` | `tier1-sources/swebok-v4/ka04-construction.md` |
+| Return type stability | `tier3-working/software-design-practices/nsls-ii-principles.md` | `tier3-working/software-design-practices/overview.md` |
+| Rule of three | `tier3-working/software-design-practices/foord-30-practices.md` | `tier3-working/software-design-practices/overview.md` |
 | Retrospective | `tier2-core/engineering-playbook/agile-development.md` | `tier1-sources/swebok-v4/ka10-process.md` |
 | Release management | `tier1-sources/swebok-v4/ka08-config-management.md` | `tier2-core/twelve-factor-app/factors.md` |
 | Release automation | `tier2-core/conventional-commits/overview.md` | `tier1-sources/swebok-v4/ka08-config-management.md` |
@@ -584,6 +601,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | XDG_RUNTIME_DIR | `tier2-core/xdg-base-directory/overview.md` | — |
 | XDG_STATE_HOME | `tier2-core/xdg-base-directory/overview.md` | — |
 | XXE | `tier1-sources/owasp/a03-injection.md` | — |
+| YAGNI | `tier3-working/software-design-practices/foord-30-practices.md` | `tier3-working/software-design-practices/overview.md` |
 | Zen of Python | `tier1-sources/python-peps/pep-020-zen.md` | `tier1-sources/swebok-v4/ka04-construction.md` |
 | Zero Trust | `tier2-core/security-practices/zero-trust.md` | `tier1-sources/swebok-v4/ka13-security.md` |
 
@@ -607,6 +625,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | `linus-torvalds-skill/SKILL.md` | `wiki/tier2-core/code-review-method/overview.md`, `wiki/tier2-core/code-review-method/triggers.md` |
 | `orosz-how-to-make-good-code-reviews-better.md` | `wiki/tier2-core/code-review-good-to-better/overview.md` |
 | `python-testing/` | `wiki/tier3-working/python-testing/` (7 pages) and `wiki/tier3-working/python/pytest-patterns.md`. Summaries, not reproductions. Tier 1 and Tier 2 testing pages win on pyramid levels, coverage targets, Hypothesis, and mutation testing |
+| `software-design-practices/` | `wiki/tier3-working/software-design-practices/` (9 pages). Summaries, not reproductions. The Manning book text and Refactoring.Guru examples were not ingested. Real Python tutorial bodies linked from the category index were not ingested. SWEBOK, PEP 8, PEP 20, SOLID, GoF, architecture-patterns, and the testing pages win on conflict |
 
 ---
 

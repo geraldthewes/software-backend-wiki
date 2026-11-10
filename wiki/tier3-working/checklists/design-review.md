@@ -50,13 +50,27 @@
 - [ ] Alerting criteria defined — what failure condition triggers a page? What triggers a ticket?
 - [ ] Runbook / on-call guide identified or planned for the new component
 
+## Python and module design
+
+- [ ] The quality attribute this change optimizes is named before structure is chosen
+- [ ] I/O functions only do I/O; decision logic takes and returns ordinary values
+- [ ] A new class protects an invariant or owns a life cycle; otherwise the unit is a function
+- [ ] The simple call needs no configuration; options are keyword-only; the return type does not depend on a flag
+- [ ] Library code raises an error that names the bad value; application code is what catches it
+- [ ] No behavior was added for a caller that does not exist; a published signature may still grow by a keyword argument
+- [ ] Constructors only store dependencies; `__init__.py` only publishes names
+- [ ] Hosts, ports, user names, and absolute paths are configuration
+- [ ] A pattern, if used, was checked against a callable, a generator, or a decorator first
+- [ ] Style taken from a practitioner guide does not override PEP 8, ruff, or a SWEBOK page
+
 ## See Also
 
 - wiki/tier3-working/checklists/security-review.md
 - wiki/tier2-core/solid-principles/overview.md
 - wiki/tier2-core/distributed-systems/overview.md
 - wiki/tier1-sources/swebok-v4/ka02-architecture.md
+- wiki/tier3-working/software-design-practices/overview.md
 
 ## Source
 
-SWEBOK V4, KA2 (Architecture), KA3 (Design), KA13 (Security). "Designing Distributed Systems" (Burns, O'Reilly 2018). "Building Microservices" (Newman, O'Reilly 2021). OWASP Threat Modeling Cheat Sheet.
+SWEBOK V4, KA2 (Architecture), KA3 (Design), KA13 (Security). "Designing Distributed Systems" (Burns, O'Reilly 2018). "Building Microservices" (Newman, O'Reilly 2021). OWASP Threat Modeling Cheat Sheet. The Python and module design section enforces `wiki/tier3-working/software-design-practices/overview.md`, which reconciles the 2026-11-09 design-practice ingest. Tier 1 and Tier 2 still win on conflict.

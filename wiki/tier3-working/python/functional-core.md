@@ -308,6 +308,8 @@ def totals_by_department(invoices: list[Invoice]) -> dict[str, float]:
 - wiki/tier2-core/solid-principles/dip.md
 - wiki/tier3-working/worked-examples/dependency-injection.md
 - wiki/tier3-working/python/sorting.md
+- wiki/tier3-working/software-design-practices/overview.md
+- wiki/tier3-working/software-design-practices/nsls-ii-principles.md
 
 ## Source
 

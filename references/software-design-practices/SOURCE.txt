@@ -1,0 +1,72 @@
+Software design best-practices ingest
+Captured: 2026-11-09
+Method: structured summaries for wiki re-synthesis. These files are not reproductions of the articles, the book, or the pattern catalog.
+
+Sources
+1. realpython-best-practices-index.md
+   https://realpython.com/tutorials/best-practices/
+   Real Python category index, "Python Best Practices for More Pythonic Code".
+   Captured 2026-11-09. The page is a moving catalog of tutorials, quizzes, and podcasts plus a short FAQ.
+   © Real Python. Summary of the page's own claims only. Linked tutorial bodies were not fetched.
+
+2. ist-python-guide.md
+   https://gist.github.com/ruimaranhao/4e18cbe3dad6f68040c32ed6709090a3
+   Rui Maranhão, "A Guide of Best Practices for Python" (python-guide-ist.md).
+   Teaching guide for first-year students at Instituto Superior Técnico, University of Lisbon.
+   Inspired by Steve Loria's gist https://gist.github.com/sloria/7001839.
+   Raw revision captured: f410e2be18b199f94895a3d1f4d455b2a50d8912
+   Gist page "last active" 2026-07-16. No license is stated on the gist. Summary only.
+
+3. nsls-ii-guiding-design-principles.md
+   https://nsls-ii.github.io/scientific-python-cookiecutter/guiding-design-principles.html
+   NSLS-II / Brookhaven National Laboratory, Scientific Python Cookiecutter 0.1 documentation,
+   "Guiding Design Principles".
+   Repository license: BSD 3-Clause, Copyright (c) 2019, Brookhaven National Laboratory.
+   https://github.com/NSLS-II/scientific-python-cookiecutter
+   Summary only. The rest of the cookiecutter tutorial (packaging, Travis CI, doctr) was not ingested.
+   Travis CI advice elsewhere in that tutorial is historical and is not wiki guidance.
+
+4. hitchhikers-guide-style.md
+   https://docs.python-guide.org/writing/style/
+   Kenneth Reitz and Real Python, "Code Style", The Hitchhiker's Guide to Python.
+   Site footer: © 2011–2026 Kenneth Reitz & Real Python. CC BY-NC-SA 3.0.
+   https://creativecommons.org/licenses/by-nc-sa/3.0/
+   Summary only. Do not paste the guide back into the wiki.
+   The testing chapter of the same guide is already in references/python-testing/.
+
+5. manning-mak-software-design.md
+   https://www.manning.com/books/software-design-for-python-programmers
+   Ronald Mak, Software Design for Python Programmers, Manning, January 2026.
+   ISBN 9781633439498. 456 pages.
+   © Manning Publications Co. The book text was not ingested. This file records the public
+   product-page claims only. Source code linked from the page was not copied.
+   https://github.com/RonMakBooks/SoftwareDesignPython is the publisher's code link, not a wiki source.
+
+6. refactoring-guru-python-catalog.md
+   https://refactoring.guru/design-patterns/python
+   Alexander Shvets, Refactoring.Guru, "Design Patterns in Python" catalog.
+   The user listed this URL twice. It is one source.
+   © Refactoring.Guru. The catalog's pattern intents are summarized. Code examples were not fetched
+   and must not be copied into the wiki. Pattern rules already live in wiki/tier2-core/design-patterns/.
+
+7. foord-30-best-practices.md
+   https://opensource.com/article/17/5/30-best-practices-software-development-and-testing
+   Michael Foord, "30 best practices for software development and testing", Opensource.com.
+   URL path is 2017-05. Foord is a Python core developer (unittest, mock). Written from Ansible-team practice.
+   The page states the list is non-definitive and should be applied with judgment.
+   © the author, licensed CC BY-SA 4.0.
+   https://creativecommons.org/licenses/by-sa/4.0/
+   Summary only.
+
+8. wikipedia-coding-best-practices.md
+   https://en.wikipedia.org/wiki/Coding_best_practices
+   Wikipedia, "Coding best practices". CC BY-SA 4.0.
+   The article carries maintenance banners: insufficient inline citations (since July 2012) and
+   a tone that may not be encyclopedic (since April 2008). It is a tertiary survey.
+   Summary only. SWEBOK wins wherever this article restates a knowledge area.
+
+Read-only after ingest. Re-synthesize wiki/tier3-working/software-design-practices/ from these summaries.
+Do not paste the articles, the Manning book, or Refactoring.Guru examples into the wiki.
+
+Tier: 3 (working design and Python-construction guides). They do not override SWEBOK KA3 or KA4,
+PEP 8, PEP 20, PEP 484, SOLID, the GoF pages, the architecture-patterns pages, or the testing pages.

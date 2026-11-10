@@ -71,6 +71,8 @@ When a GoF pattern requires boilerplate in Java, check whether Python already pr
 - `wiki/tier2-core/design-patterns/behavioral.md`
 - `wiki/tier2-core/solid-principles/overview.md`
 - `wiki/tier1-sources/swebok-v4/ka01-requirements.md`
+- `wiki/tier3-working/software-design-practices/overview.md`
+- `wiki/tier3-working/software-design-practices/refactoring-guru-python.md`
 
 ## Source
 

@@ -53,6 +53,7 @@ The five principles are not independent rules — they form a mutually reinforci
 - `wiki/tier2-core/solid-principles/dip.md`
 - `wiki/tier2-core/design-patterns/overview.md`
 - `wiki/tier1-sources/swebok-v4/ka01-requirements.md`
+- `wiki/tier3-working/software-design-practices/overview.md`
 
 ## Source
 
