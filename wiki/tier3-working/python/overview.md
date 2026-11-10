@@ -49,6 +49,8 @@ These four rules apply to every Python file an agent writes or reviews:
 | wiki/tier3-working/python/curses.md | Terminal UI: windows, color, keyboard input, wrapper(), noutrefresh/doupdate |
 | wiki/tier3-working/python/free-threading.md | Free-threaded CPython 3.13+, GIL removal, thread safety, migration guide |
 | wiki/tier3-working/python/isolating-extensions.md | C extension modules: per-module state, heap types, multi-phase init, subinterpreters |
+| wiki/tier3-working/python/pytest-patterns.md | pytest discovery, assert, parametrize, fixtures, marks, async tests |
+| wiki/tier3-working/python-testing/overview.md | Reconciled Python testing practices from six practitioner guides |
 
 ## Key Tools
 
@@ -69,6 +71,8 @@ These four rules apply to every Python file an agent writes or reviews:
 - wiki/tier3-working/python/functional-core.md
 - wiki/tier3-working/python/logging.md
 - wiki/tier3-working/python/async-patterns.md
+- wiki/tier3-working/python/pytest-patterns.md
+- wiki/tier3-working/python-testing/overview.md
 
 ## Source
 

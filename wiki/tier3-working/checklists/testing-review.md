@@ -38,6 +38,22 @@
 - [ ] Test data (fixtures, factories) is self-contained and does not depend on external state
 - [ ] Flaky tests (randomly failing) treated as bugs; tracked and fixed immediately — not ignored
 
+## Python Test Style
+
+Applies when the change includes Python tests. Rules are reconciled in `wiki/tier3-working/python-testing/overview.md`. SWEBOK KA5 and the Tier 2 testing pages win on levels, coverage numbers, properties, and mutation score.
+
+- [ ] Test module is `test_<module>.py` and the test name states the behavior and the condition
+- [ ] The test arranges, acts, and asserts one outcome. It does not assert private steps or a call sequence unless that call is the contract
+- [ ] Equivalent input rows are parametrized. Empty, boundary, and error cases use explicit values. Expected exceptions use `pytest.raises` or `assertRaises`
+- [ ] The test passes alone. It does not read state created by another test, draw unseeded `random` values, or wait with `time.sleep`
+- [ ] In-process collaborators are real objects or fakes. Mocks sit on an I/O boundary, are created with autospec, and are named as the collaborator
+- [ ] Varied inputs come from a factory. A fixture is reserved for teardown or for injecting one of several implementations
+- [ ] Async tests use `pytest-asyncio` and an `AsyncMock` or an async fake
+- [ ] Integration and end-to-end tests are marked or live in their own directory and are outside the fast suite
+- [ ] A reproduced bug has a failing test added before the production change, when the bug can be reproduced in-process
+- [ ] Unit-level coverage for owned code meets KA5 (statement above 90%, branch above 80%). The gate is not a flat 80%, and tests were not added only to move the percentage
+- [ ] Doctests, if present, run with the suite and do not replace edge-case tests
+
 ## CI Integration
 
 - [ ] All tests run automatically on every push (not just on PRs)
@@ -51,6 +67,9 @@
 - wiki/tier3-working/checklists/code-review.md
 - wiki/tier1-sources/swebok-v4/ka05-testing.md
 - wiki/tier1-sources/swebok-v4/ka12-quality.md
+- wiki/tier3-working/python-testing/overview.md
+- wiki/tier3-working/python/pytest-patterns.md
+- wiki/tier3-working/python-testing/thea-style-guide.md
 
 ## Source
 

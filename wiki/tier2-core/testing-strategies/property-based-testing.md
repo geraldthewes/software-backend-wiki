@@ -190,6 +190,8 @@ def test_validate_email_never_crashes(email: str) -> None:
 - `wiki/tier2-core/testing-strategies/test-pyramid.md`
 - `wiki/tier2-core/testing-strategies/mutation-testing.md`
 - `wiki/tier1-sources/swebok-v4/ka05-testing.md`
+- `wiki/tier3-working/python-testing/hitchhikers-guide.md`
+- `wiki/tier3-working/python/pytest-patterns.md`
 
 ## Source
 

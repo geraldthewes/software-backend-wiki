@@ -228,3 +228,28 @@ Append-only record of all ingest, creation, and update events. Never edit or del
 | 2026-10-01 | UPDATE | wiki/tier2-core/engineering-playbook/overview.md | — | grok-4.7 | Code Reviews coverage row includes code-review-good-to-better |
 | 2026-10-01 | UPDATE | wiki/tier2-core/engineering-playbook/developer-experience.md | — | grok-4.7 | See Also: new-joiner reviews on the good-to-better page |
 | 2026-10-01 | UPDATE | README.md | — | grok-4.7 | Third-party notice for Orosz / Stack Overflow Blog; coverage row |
+| 2026-11-09 | INGEST | references/python-testing/SOURCE.txt | six testing URLs | grok-4.7 | Provenance for the Python testing ingest. Summaries, not reproductions |
+| 2026-11-09 | INGEST | references/python-testing/realpython-code-testing.md | https://realpython.com/ref/best-practices/code-testing/ | grok-4.7 | Structured summary of Leodanis Pozo Ramos, Real Python code-testing card, updated 2026-08-14 |
+| 2026-11-09 | INGEST | references/python-testing/madhu-deepak-unit-tests.md | https://madhudeepak.medium.com/best-practices-for-writing-unit-tests-in-python-cd1da23d3b79 | grok-4.7 | Structured summary of Madhu Deepak, Medium, 2025-01-20. Unrelated Medium sidebar posts excluded |
+| 2026-11-09 | INGEST | references/python-testing/realpython-getting-started.md | https://realpython.com/python-testing/ | grok-4.7 | Structured summary of Anthony Shaw, Real Python, updated 2018-10-22. nose2, Travis, and Python 2.7 marked historical |
+| 2026-11-09 | INGEST | references/python-testing/hitchhikers-guide-testing.md | https://docs.python-guide.org/writing/tests/ | grok-4.7 | Structured summary of Hitchhiker's Guide testing chapter. CC BY-NC-SA 3.0. Guide samples not copied |
+| 2026-11-09 | INGEST | references/python-testing/thea-flowers-style-guide.md | https://blog.thea.codes/my-python-testing-style-guide/ | grok-4.7 | Structured summary of Stargirl Flowers, 2017-07-15 |
+| 2026-11-09 | INGEST | references/python-testing/async-squad-best-practices.md | https://asyncsquadlabs.com/blog/python-testing-best-practices/ | grok-4.7 | Structured summary of Async Squad Labs, 2025-10-29. 80% coverage gate and sync async-mock sample rejected |
+| 2026-11-09 | CREATE | wiki/tier3-working/python-testing/overview.md | references/python-testing/ | grok-4.7 | Reconciled Python testing practices. KA5 and Tier 2 win on levels, coverage, properties, and mutation score |
+| 2026-11-09 | CREATE | wiki/tier3-working/python/pytest-patterns.md | references/python-testing/ | grok-4.7 | pytest mechanics. Fills the page KA5 already linked |
+| 2026-11-09 | CREATE | wiki/tier3-working/python-testing/realpython-code-testing.md | references/python-testing/realpython-code-testing.md | grok-4.7 | Eight-practice card with authority notes |
+| 2026-11-09 | CREATE | wiki/tier3-working/python-testing/madhu-unit-tests.md | references/python-testing/madhu-deepak-unit-tests.md | grok-4.7 | AAA, edges, cadence, CI. Mock sample that never calls production code is rejected |
+| 2026-11-09 | CREATE | wiki/tier3-working/python-testing/realpython-getting-started.md | references/python-testing/realpython-getting-started.md | grok-4.7 | Suite layout, assertions, integration fixtures, matrix, bandit. Dated tools rejected |
+| 2026-11-09 | CREATE | wiki/tier3-working/python-testing/hitchhikers-guide.md | references/python-testing/hitchhikers-guide-testing.md | grok-4.7 | Independence, speed, bug-first tests, doctest role, tool map |
+| 2026-11-09 | CREATE | wiki/tier3-working/python-testing/thea-style-guide.md | references/python-testing/thea-flowers-style-guide.md | grok-4.7 | Outcome assertions, autospec, stubs, fakes, spies, factories. Pyramid levels kept |
+| 2026-11-09 | CREATE | wiki/tier3-working/python-testing/async-squad.md | references/python-testing/async-squad-best-practices.md | grok-4.7 | Plugin set, async tests, anti-patterns. Coverage number loses to KA5 |
+| 2026-11-09 | UPDATE | index.md | — | grok-4.7 | Quick Reference, Tier 3 catalog, keyword index, source mapping for python-testing |
+| 2026-11-09 | UPDATE | KNOWLEDGE_GRAPH.md | — | grok-4.7 | Adjacency rows; Test a Module path includes python-testing overview and pytest-patterns |
+| 2026-11-09 | UPDATE | AGENTS.md | — | grok-4.7 | Write-tests routing and Test a Module path include the new Python testing pages |
+| 2026-11-09 | UPDATE | wiki/tier3-working/checklists/testing-review.md | references/python-testing/ | grok-4.7 | Appended Python test-style checks |
+| 2026-11-09 | UPDATE | wiki/tier2-core/testing-strategies/overview.md | — | grok-4.7 | See Also: python-testing overview and pytest-patterns |
+| 2026-11-09 | UPDATE | wiki/tier2-core/testing-strategies/test-pyramid.md | — | grok-4.7 | See Also: python-testing overview and Flowers style guide |
+| 2026-11-09 | UPDATE | wiki/tier2-core/testing-strategies/property-based-testing.md | — | grok-4.7 | See Also: Hitchhiker's Guide page and pytest-patterns |
+| 2026-11-09 | UPDATE | wiki/tier2-core/testing-strategies/mutation-testing.md | — | grok-4.7 | See Also: Async Squad page and python-testing overview |
+| 2026-11-09 | UPDATE | wiki/tier3-working/python/overview.md | — | grok-4.7 | Sub-page table and See Also include pytest-patterns and python-testing overview |
+| 2026-11-09 | UPDATE | README.md | — | grok-4.7 | Third-party notices for the six testing sources; coverage row. Hitchhiker's Guide is CC BY-NC-SA 3.0 |

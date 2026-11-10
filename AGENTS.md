@@ -52,7 +52,7 @@ For each task type, read the listed files **in order** before producing output:
 | **Detailed design (classes/modules)** | `wiki/tier1-sources/swebok-v4/ka03-design.md` | `wiki/tier2-core/solid-principles/overview.md`, `wiki/tier2-core/design-patterns/overview.md` | `wiki/tier3-working/checklists/design-review.md` |
 | **Write Python code** | `wiki/tier1-sources/swebok-v4/ka04-construction.md` | `wiki/tier1-sources/python-peps/pep-008-style.md`, `wiki/tier1-sources/python-peps/pep-484-type-hints.md`, `wiki/tier3-working/python/idioms.md` | `wiki/tier3-working/checklists/pre-commit.md` |
 | **Write Go code** | `wiki/tier1-sources/swebok-v4/ka04-construction.md` | `wiki/tier3-working/golang/idioms.md`, `wiki/tier3-working/golang/toolchain.md` | `wiki/tier3-working/checklists/pre-commit.md` |
-| **Write tests** | `wiki/tier1-sources/swebok-v4/ka05-testing.md` | `wiki/tier2-core/testing-strategies/test-pyramid.md`, `wiki/tier2-core/testing-strategies/property-based-testing.md` | `wiki/tier3-working/checklists/testing-review.md` |
+| **Write tests** | `wiki/tier1-sources/swebok-v4/ka05-testing.md` | `wiki/tier2-core/testing-strategies/test-pyramid.md`, `wiki/tier2-core/testing-strategies/property-based-testing.md`, `wiki/tier3-working/python-testing/overview.md`, `wiki/tier3-working/python/pytest-patterns.md` | `wiki/tier3-working/checklists/testing-review.md` |
 | **Security review** | `wiki/tier1-sources/swebok-v4/ka13-security.md` | `wiki/tier1-sources/owasp/top10-2021-overview.md`, `wiki/tier2-core/security-practices/python-pyscg.md` | `wiki/tier3-working/checklists/security-review.md` |
 | **Code review** | `wiki/tier1-sources/swebok-v4/ka12-quality.md` | `wiki/tier2-core/code-review-method/overview.md`, `wiki/tier2-core/code-review-method/triggers.md`, `wiki/tier2-core/google-eng-practices/overview.md`, `wiki/tier2-core/google-eng-practices/review-standard.md`, `wiki/tier2-core/google-eng-practices/what-to-look-for.md`, `wiki/tier2-core/code-review-good-to-better/overview.md`, `wiki/tier3-working/checklists/code-review.md` | `wiki/tier3-working/checklists/security-review.md` |
 | **Prepare a change for review** | `wiki/tier1-sources/swebok-v4/ka08-config-management.md` | `wiki/tier2-core/google-eng-practices/small-cls.md`, `wiki/tier2-core/google-eng-practices/cl-descriptions.md`, `wiki/tier2-core/conventional-commits/overview.md`, `wiki/tier2-core/google-eng-practices/handling-comments.md` | `wiki/tier3-working/checklists/pre-commit.md` |
@@ -180,7 +180,7 @@ These paths are defined in full in `KNOWLEDGE_GRAPH.md`. Abbreviated here for qu
 | Design a new service | ka02 → ka03 → solid-principles → twelve-factor-app → design-review |
 | Write production Python | ka04 → pep-008 → pep-484 → python/idioms → pre-commit |
 | Write production Go | ka04 → golang/idioms → golang/toolchain → pre-commit |
-| Test a module | ka05 → test-pyramid → property-based-testing → mutation-testing → testing-review |
+| Test a module | ka05 → test-pyramid → property-based-testing → mutation-testing → python-testing/overview → pytest-patterns → testing-review |
 | Security audit | ka13 → owasp/top10 → python-pyscg → security-review |
 | Review a PR | ka12 → code-review-method → triggers → google-eng-practices → code-review-good-to-better → code-review checklist → security-review |
 | Prepare a change for review | ka08 → google-eng-practices/small-cls → cl-descriptions → conventional-commits → handling-comments → pre-commit |
@@ -199,4 +199,4 @@ These paths are defined in full in `KNOWLEDGE_GRAPH.md`. Abbreviated here for qu
 ---
 
 *This file is part of the software-backend-wiki. Maintained by LLM agents; Tier 1 changes require human approval.*
-*Last updated: 2026-10-01*
+*Last updated: 2026-11-09*

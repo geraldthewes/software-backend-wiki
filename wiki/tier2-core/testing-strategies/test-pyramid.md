@@ -197,6 +197,8 @@ def test_repository_persists_and_retrieves_order(db_session):
 - `wiki/tier2-core/testing-strategies/property-based-testing.md`
 - `wiki/tier2-core/testing-strategies/mutation-testing.md`
 - `wiki/tier1-sources/swebok-v4/ka05-testing.md`
+- `wiki/tier3-working/python-testing/overview.md`
+- `wiki/tier3-working/python-testing/thea-style-guide.md`
 
 ## Source
 

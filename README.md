@@ -33,6 +33,7 @@ wiki/
 | 12-Factor App | 2 |
 | Distributed systems (CAP/PACELC, fallacies, resilience patterns) | 4 |
 | Testing strategies (pyramid, property-based, mutation) | 4 |
+| Python testing practices (pytest and six practitioner guides) | 8 |
 | GoF design patterns | 4 |
 | Security practices (Pyscg, STRIDE, Zero Trust) | 4 |
 | Python best practices | 5 |
@@ -44,7 +45,7 @@ wiki/
 | Google engineering practices (code review) | 11 |
 | Good-to-better code reviews (Orosz) | 1 |
 | Worked examples (executable Python code) | 3 |
-| **Total** | **95** |
+| **Total** | **109** |
 
 ## Extending the Wiki
 
@@ -78,5 +79,11 @@ This wiki synthesizes and summarizes content from authoritative third-party sour
 - **linus-torvalds-skill** — Distilled Linus Torvalds LKML review method. Released under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) by [Mte90/linus-torvalds-skill](https://github.com/Mte90/linus-torvalds-skill). This wiki adopts the technical method, not the source persona's abusive tone.
 - **Google Engineering Practices** — © Google. Licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). [google.github.io/eng-practices](https://google.github.io/eng-practices/). Upstream repository archived read-only on 2025-11-21.
 - **"How to Make Good Code Reviews Better"** — © Gergely Orosz / Stack Overflow. Originally published on [The Pragmatic Engineer](https://blog.pragmaticengineer.com/); republished on the [Stack Overflow Blog](https://stackoverflow.blog/2019/09/30/how-to-make-good-code-reviews-better/), 30 September 2019. This wiki stores a structured summary, not the article text.
+- **Real Python, "code testing"** — © Real Python. Leodanis Pozo Ramos, updated 2026-08-14. [realpython.com/ref/best-practices/code-testing](https://realpython.com/ref/best-practices/code-testing/). Structured summary only.
+- **Real Python, "Getting Started With Testing in Python"** — © Real Python. Anthony Shaw, updated 2018-10-22. [realpython.com/python-testing](https://realpython.com/python-testing/). Structured summary only. 2018 tool advice (nose2, Travis CI, Python 2.7) is not current guidance.
+- **"Best Practices for Writing Unit Tests in Python"** — © Madhu Deepak. Medium, 2025-01-20. [madhudeepak.medium.com](https://madhudeepak.medium.com/best-practices-for-writing-unit-tests-in-python-cd1da23d3b79). Structured summary only.
+- **"Testing Your Code", The Hitchhiker's Guide to Python** — © 2011–2026 Kenneth Reitz & Real Python. Licensed [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/). [docs.python-guide.org/writing/tests](https://docs.python-guide.org/writing/tests/). This wiki stores a structured summary, not the guide text.
+- **"My Python testing style guide"** — © Stargirl Flowers, 2017-07-15. [blog.thea.codes](https://blog.thea.codes/my-python-testing-style-guide/). Structured summary only. The author describes the post as personal practice, not dogma.
+- **"Python Testing Best Practices"** — © Async Squad Labs, 2025-10-29. [asyncsquadlabs.com](https://asyncsquadlabs.com/blog/python-testing-best-practices/). Structured summary only.
 
 The summaries and wiki pages in this repository are transformative works for educational purposes. No claim of ownership is made over the original standards, specifications, or publications referenced herein.

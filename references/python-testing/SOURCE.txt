@@ -1,0 +1,47 @@
+Python testing best-practices ingest
+Captured: 2026-11-09
+Method: structured summaries for wiki re-synthesis. These files are not reproductions of the articles.
+
+Sources
+1. realpython-code-testing.md
+   https://realpython.com/ref/best-practices/code-testing/
+   Leodanis Pozo Ramos, Real Python reference "code testing"
+   Updated 2026-08-14. Reviewed by Brenda Weleschuk and Bartosz Zaczyński.
+   © Real Python. Summary only.
+
+2. madhu-deepak-unit-tests.md
+   https://madhudeepak.medium.com/best-practices-for-writing-unit-tests-in-python-cd1da23d3b79
+   Madhu Deepak, "Best Practices for Writing Unit Tests in Python"
+   Medium, 2025-01-20.
+   © Madhu Deepak. Summary only.
+   The Medium page sidebar recommends unrelated posts. Those posts are not part of this source and were not ingested.
+
+3. realpython-getting-started.md
+   https://realpython.com/python-testing/
+   Anthony Shaw, "Getting Started With Testing in Python"
+   Real Python. Updated 2018-10-22. Intermediate tutorial.
+   © Real Python. Summary only.
+   Tool advice from 2018 (nose2, Travis CI, flake8, Python 2.7) is recorded as historical and is not current wiki guidance.
+
+4. hitchhikers-guide-testing.md
+   https://docs.python-guide.org/writing/tests/
+   Kenneth Reitz and Real Python, "Testing Your Code", The Hitchhiker's Guide to Python.
+   Site footer: © 2011–2026 Kenneth Reitz & Real Python. CC BY-NC-SA 3.0.
+   https://creativecommons.org/licenses/by-nc-sa/3.0/
+   Summary only. Do not paste the guide back into the wiki.
+
+5. thea-flowers-style-guide.md
+   https://blog.thea.codes/my-python-testing-style-guide/
+   Stargirl (Thea) Flowers, "My Python testing style guide"
+   Posted 2017-07-15. The author says the post is not dogma.
+   © Stargirl Flowers. Summary only.
+
+6. async-squad-best-practices.md
+   https://asyncsquadlabs.com/blog/python-testing-best-practices/
+   Async Squad Labs Team, "Python Testing Best Practices: A Complete Guide to Test Automation"
+   Dated 2025-10-29 on the page.
+   © Async Squad Labs. Summary only.
+
+Read-only after ingest. Re-synthesize wiki/tier3-working/python-testing/ from these summaries. Do not paste the articles into the wiki.
+
+Tier: 3 (working Python guides). They do not override SWEBOK KA5 or wiki/tier2-core/testing-strategies/.

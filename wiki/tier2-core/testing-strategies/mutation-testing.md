@@ -219,6 +219,8 @@ Aim for both metrics: line coverage ensures all paths are exercised; mutation sc
 - `wiki/tier2-core/testing-strategies/test-pyramid.md`
 - `wiki/tier2-core/testing-strategies/overview.md`
 - `wiki/tier1-sources/swebok-v4/ka05-testing.md`
+- `wiki/tier3-working/python-testing/async-squad.md`
+- `wiki/tier3-working/python-testing/overview.md`
 
 ## Source
 

@@ -13,6 +13,7 @@
 | Write Python | `wiki/tier1-sources/swebok-v4/ka04-construction.md` + `python-peps/pep-008-style.md` | `checklists/pre-commit.md` |
 | Write Go | `wiki/tier1-sources/swebok-v4/ka04-construction.md` + `golang/idioms.md` | `checklists/pre-commit.md` |
 | Write tests | `wiki/tier1-sources/swebok-v4/ka05-testing.md` | `checklists/testing-review.md` |
+| Write Python tests | `wiki/tier3-working/python-testing/overview.md` | `checklists/testing-review.md` |
 | Security review | `wiki/tier1-sources/swebok-v4/ka13-security.md` + `owasp/top10-2021-overview.md` | `checklists/security-review.md` |
 | Code review | `wiki/tier1-sources/swebok-v4/ka12-quality.md` + `wiki/tier2-core/code-review-method/overview.md` | `checklists/code-review.md` |
 | Review with Google's engineering practices | `wiki/tier2-core/google-eng-practices/overview.md` | `checklists/code-review.md` |
@@ -211,6 +212,14 @@
 | `wiki/tier3-working/python/curses.md` | Python curses | terminal UI, ncurses, window, color, keyboard input |
 | `wiki/tier3-working/python/free-threading.md` | Python Free-Threading | GIL, free-threaded, CPython 3.13, thread safety, parallelism |
 | `wiki/tier3-working/python/isolating-extensions.md` | Python Extension Isolation | C extension, per-module state, heap types, subinterpreters |
+| `wiki/tier3-working/python/pytest-patterns.md` | pytest Patterns | pytest, discovery, parametrize, fixtures, marks, AsyncMock |
+| `wiki/tier3-working/python-testing/overview.md` | Python Testing Best Practices | AAA, outcome assertions, autospec, coverage authority, CI |
+| `wiki/tier3-working/python-testing/realpython-code-testing.md` | Real Python Code-Testing Card | focused tests, parametrize, deterministic unit tests |
+| `wiki/tier3-working/python-testing/madhu-unit-tests.md` | Madhu Deepak Unit-Test Practices | Arrange-Act-Assert, edge cases, pytest-watch, CI |
+| `wiki/tier3-working/python-testing/realpython-getting-started.md` | Getting Started With Testing in Python | runners, layout, integration fixtures, tox, bandit |
+| `wiki/tier3-working/python-testing/hitchhikers-guide.md` | Hitchhiker's Guide Testing | test independence, doctest, bug-first tests, CC BY-NC-SA |
+| `wiki/tier3-working/python-testing/thea-style-guide.md` | Flowers Python Testing Style | outcome vs path, autospec, fake, stub, spy, factories |
+| `wiki/tier3-working/python-testing/async-squad.md` | Async Squad Testing Practices | pyramid layout, pytest-asyncio, sleep anti-pattern, coverage gate |
 | `wiki/tier3-working/golang/overview.md` | Go Best Practices | Go, Effective Go, idiomatic |
 | `wiki/tier3-working/awesome-ddd/overview.md` | Awesome Domain-Driven Design | heynickc / DDD, CQRS, Event Sourcing | books, free eBooks, training, videos, community, blogs, sample projects |
 | `wiki/tier3-working/golang/idioms.md` | Go Idioms | error wrapping, interfaces, defer, named returns |
@@ -426,7 +435,7 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Message Bus | `tier2-core/architecture-patterns/domain-events-message-bus.md` | `tier2-core/architecture-patterns/commands-vs-events.md` |
 | Microservices | `tier1-sources/swebok-v4/ka02-architecture.md` | `tier2-core/distributed-systems/overview.md` |
 | Migration (database) | `tier3-working/database-patterns/migrations.md` | — |
-| Mock (testing) | `tier2-core/testing-strategies/test-pyramid.md` | `tier3-working/worked-examples/dependency-injection.md` |
+| Mock (testing) | `tier2-core/testing-strategies/test-pyramid.md` | `tier3-working/python-testing/thea-style-guide.md` |
 | Monitoring | `tier1-sources/swebok-v4/ka06-operations.md` | `tier3-working/observability/metrics.md` |
 | MRO (Method Resolution Order) | `tier3-working/python/mro.md` | `tier2-core/solid-principles/lsp.md` |
 | mTLS | `tier2-core/security-practices/zero-trust.md` | — |
@@ -539,8 +548,18 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Technical debt | `tier1-sources/swebok-v4/ka07-maintenance.md` | `tier2-core/engineering-playbook/agile-development.md` |
 | Time to First Commit | `tier2-core/engineering-playbook/developer-experience.md` | — |
 | Template Method pattern | `tier2-core/design-patterns/behavioral.md` | — |
-| Test doubles | `tier2-core/testing-strategies/test-pyramid.md` | — |
+| Test doubles | `tier2-core/testing-strategies/test-pyramid.md` | `tier3-working/python-testing/thea-style-guide.md` |
 | Test pyramid | `tier2-core/testing-strategies/test-pyramid.md` | `tier1-sources/swebok-v4/ka05-testing.md` |
+| Arrange-Act-Assert | `tier3-working/python-testing/overview.md` | `tier3-working/python-testing/madhu-unit-tests.md` |
+| autospec | `tier3-working/python-testing/thea-style-guide.md` | `tier3-working/python/pytest-patterns.md` |
+| doctest | `tier3-working/python-testing/hitchhikers-guide.md` | `tier3-working/python/pytest-patterns.md` |
+| fake (test double) | `tier3-working/python-testing/thea-style-guide.md` | `tier2-core/testing-strategies/test-pyramid.md` |
+| pytest | `tier3-working/python/pytest-patterns.md` | `tier3-working/python-testing/overview.md` |
+| pytest fixture | `tier3-working/python/pytest-patterns.md` | `tier3-working/python-testing/thea-style-guide.md` |
+| pytest.raises | `tier3-working/python/pytest-patterns.md` | `tier3-working/python-testing/madhu-unit-tests.md` |
+| spy (test double) | `tier3-working/python-testing/thea-style-guide.md` | — |
+| stub (test double) | `tier3-working/python-testing/thea-style-guide.md` | — |
+| tox | `tier3-working/python-testing/realpython-getting-started.md` | `tier3-working/python-testing/hitchhikers-guide.md` |
 | Threat modeling | `tier2-core/security-practices/threat-modeling.md` | `tier1-sources/swebok-v4/ka13-security.md` |
 | Timeout pattern | `tier2-core/distributed-systems/resilience-patterns.md` | — |
 | TLS | `tier1-sources/owasp/a02-cryptographic-failures.md` | `tier2-core/security-practices/zero-trust.md` |
@@ -550,7 +569,8 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | Unit of Work | `tier2-core/architecture-patterns/unit-of-work.md` | `tier2-core/architecture-patterns/service-layer.md` |
 | Use Case | `tier2-core/architecture-patterns/service-layer.md` | `tier2-core/architecture-patterns/commands-vs-events.md` |
 | Unicode | `tier3-working/python/unicode.md` | `tier1-sources/owasp/a02-cryptographic-failures.md` |
-| Unit testing | `tier2-core/testing-strategies/test-pyramid.md` | `tier1-sources/swebok-v4/ka05-testing.md` |
+| Unit testing | `tier2-core/testing-strategies/test-pyramid.md` | `tier3-working/python-testing/overview.md` |
+| unittest | `tier3-working/python-testing/realpython-getting-started.md` | `tier3-working/python/pytest-patterns.md` |
 | URL validation | `tier1-sources/owasp/a10-ssrf.md` | `tier3-working/python/ipaddress.md` |
 | urllib | `tier3-working/python/urllib.md` | `tier1-sources/owasp/a10-ssrf.md` |
 | Validation (where to place) | `tier2-core/architecture-patterns/validation.md` | `tier1-sources/owasp/a03-injection.md` |
@@ -586,8 +606,9 @@ Alphabetical. Each term → primary wiki page. Use Ctrl+F / grep to find a term 
 | `xdg-basedir-spec-0.8.md` | `wiki/tier2-core/xdg-base-directory/overview.md` |
 | `linus-torvalds-skill/SKILL.md` | `wiki/tier2-core/code-review-method/overview.md`, `wiki/tier2-core/code-review-method/triggers.md` |
 | `orosz-how-to-make-good-code-reviews-better.md` | `wiki/tier2-core/code-review-good-to-better/overview.md` |
+| `python-testing/` | `wiki/tier3-working/python-testing/` (7 pages) and `wiki/tier3-working/python/pytest-patterns.md`. Summaries, not reproductions. Tier 1 and Tier 2 testing pages win on pyramid levels, coverage targets, Hypothesis, and mutation testing |
 
 ---
 
 *This file is part of the software-backend-wiki. Updated whenever new pages are created.*
-*Last updated: 2026-10-01*
+*Last updated: 2026-11-09*

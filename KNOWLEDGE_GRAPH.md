@@ -178,6 +178,16 @@
 | code-review-good-to-better/overview | COMPLEMENTS | code-of-ethics | Empathetic, unopinionated comments implement Principle 7 |
 | code-review-good-to-better/overview | COMPLEMENTS | developer-experience | New-joiner reviews are part of onboarding and keep the same quality bar |
 | code-review checklist | ENFORCES | code-review-good-to-better/overview | Checklist's conduct section is the good-to-better scan |
+| python-testing/overview | EXTENDS | ka05-testing | Python testing habits implement KA5; KA5 wins on coverage targets and test levels |
+| python-testing/overview | REQUIRES | test-pyramid | Pyramid levels and proportions override Flowers' collapsed "unit" term and Async Squad's restatement |
+| python-testing/overview | COMPLEMENTS | property-based-testing | Example-test style here; properties stay on the Tier 2 page |
+| python-testing/overview | COMPLEMENTS | mutation-testing | Suite style here; mutation score stays on the Tier 2 page |
+| python/pytest-patterns | IMPLEMENTS | python-testing/overview | pytest mechanics for the reconciled practices |
+| python-testing/thea-style-guide | COMPLEMENTS | test-pyramid | Outcome assertions, autospec, fakes, and factories apply inside a pyramid level |
+| python-testing/hitchhikers-guide | COMPLEMENTS | python-testing/overview | Independence, speed, bug-first tests, doctest role |
+| python-testing/async-squad | CONFLICTS_WITH | ka05-testing | Its 80% coverage gate loses to KA5 unit-level statement >90% and branch >80% |
+| testing-review checklist | ENFORCES | python-testing/overview | Python style section of the checklist is the overview's scan |
+| testing-review checklist | ENFORCES | python-testing/thea-style-guide | Autospec, outcome assertions, and factory-vs-fixture are checklist items |
 
 ---
 
@@ -223,7 +233,9 @@ These are the recommended reading sequences for common agent tasks. Follow in or
 2. wiki/tier2-core/testing-strategies/test-pyramid.md                 # Proportion and type
 3. wiki/tier2-core/testing-strategies/property-based-testing.md       # For data-transformation logic
 4. wiki/tier2-core/testing-strategies/mutation-testing.md             # Verify suite quality
-5. wiki/tier3-working/checklists/testing-review.md                    # Apply before PR
+5. wiki/tier3-working/python-testing/overview.md                      # Python habits; Tier 1 and Tier 2 win conflicts
+6. wiki/tier3-working/python/pytest-patterns.md                       # pytest mechanics
+7. wiki/tier3-working/checklists/testing-review.md                    # Apply before PR
 ```
 
 ### "Security Audit"
